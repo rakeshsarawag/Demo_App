@@ -28,9 +28,7 @@
 	},
 	"sap.fiori": {
 		"_version": "1.1.0",
-		"registrationIds": [
-			"F1000"
-		],
+		"registrationIds": ["F1000"],
 		"archeType": "transactional"
 	},
 	"sap.ui": {
@@ -49,10 +47,7 @@
 			"tablet": true,
 			"phone": true
 		},
-		"supportedThemes": [
-			"sap_hcb",
-			"sap_bluecrystal"
-		]
+		"supportedThemes": ["sap_hcb", "sap_bluecrystal"]
 	},
 	"sap.ui5": {
 		"_version": "1.2.0",
@@ -106,42 +101,27 @@
 				"controlId": "sapcdpDoeApplicationName",
 				"controlAggregation": "pages",
 				"bypassed": {
-					"target": [
-						"notFound"
-					]
+					"target": ["notFound"]
 				},
 				"async": true
 			},
-			"routes": [
-				{
-					"pattern": "",
-					"name": "taskList",
-					"target": [
-						"taskList"
-					]
-				},
-				{
-					"name": "createClaim",
-					"pattern": "{VendorNo}/{Company}",
-					"target": [
-						"createClaim"
-					]
-				},
-				{
-					"name": "viewClaim",
-					"pattern": "ViewClaim/{VendorNo}/{Company}/{ClaimNo}/{Guid}",
-					"target": [
-						"viewClaim"
-					]
-				},
-				{
-					"name": "viewRemittanceDetail",
-					"pattern": "{VendorNo}/{Company}/{RefNumber}/{PaymentNumber}",
-					"target": [
-						"viewRemittanceDetail"
-					]
-				}
-			],
+			"routes": [{
+				"pattern": "",
+				"name": "taskList",
+				"target": ["taskList"]
+			}, {
+				"name": "createClaim",
+				"pattern": "{VendorNo}/{Company}",
+				"target": ["createClaim"]
+			}, {
+				"name": "viewClaim",
+				"pattern": "ViewClaim/{VendorNo}/{Company}/{ClaimNo}/{Guid}",
+				"target": ["viewClaim"]
+			}, {
+				"name": "viewRemittanceDetail",
+				"pattern": "{VendorNo}/{Company}/{RefNumber}/{PaymentNumber}",
+				"target": ["viewRemittanceDetail"]
+			}],
 			"targets": {
 				"notFound": {
 					"viewName": "NotFound",
