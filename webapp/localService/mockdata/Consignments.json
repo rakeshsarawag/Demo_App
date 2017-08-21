@@ -5,8 +5,8 @@
 			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ConsignmentsSet('PoNumber10')",
 			"type": "payer_direct_srv.Consignments"
 		},
-		"Company": "any1",
-		"Currency": "ncy10",
+		"Company": "001",
+		"Currency": "3056700",
 		"ExtendedCost": "0.00000000000",
 		"InvoiceNumber": "InvoiceNumber10",
 		"InvoiceItemNumber": "nvoiceItemNumber10",

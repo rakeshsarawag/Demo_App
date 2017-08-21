@@ -1,40 +1,55 @@
 {
 	"d": {
-		"__count": "5",
+		"__count": "4",
 		"results": [{
 			"__metadata": {
-				"id": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='100000801',Company='001')",
-				"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='100000801',Company='001')",
+				"id": "http://apvendorqat2.np.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='3056700',Company='001')",
+				"uri": "http://apvendorqat2.np.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='3056700',Company='001')",
 				"type": "/COSTPD/PAYER_DIRECT_SRV.VendorSelection"
 			},
-			"VendorNo": "100000801",
-			"VendorName": "GRANDOE CORP C/O ROSENTHAL & ROSENT",
+			"VendorNo": "3056700",
+			"VendorName": "PROCTER & GAMBLE ATTN: SHAWN HORNIN",
 			"Company": "001",
 			"Inactive": false,
 			"AboutYou": {
 				"__deferred": {
-					"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='100000801',Company='001')/AboutYou"
+					"uri": "http://apvendorqat2.np.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='3056700',Company='001')/AboutYou"
 				}
 			}
 		}, {
 			"__metadata": {
-				"id": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='100001237',Company='004')",
-				"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='100001237',Company='004')",
+				"id": "http://apvendorqat2.np.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='3158700',Company='001')",
+				"uri": "http://apvendorqat2.np.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='3158700',Company='001')",
 				"type": "/COSTPD/PAYER_DIRECT_SRV.VendorSelection"
 			},
-			"VendorNo": "100001237",
-			"VendorName": "**FRONTERA PRODUCE LTD**",
-			"Company": "004",
+			"VendorNo": "3158700",
+			"VendorName": "CG ROXANE ATTN: JAMILE IMBODEN",
+			"Company": "001",
 			"Inactive": false,
 			"AboutYou": {
 				"__deferred": {
-					"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='100001237',Company='004')/AboutYou"
+					"uri": "http://apvendorqat2.np.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='3158700',Company='001')/AboutYou"
 				}
 			}
 		}, {
 			"__metadata": {
-				"id": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='10000001',Company='001')",
-				"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='10000001',Company='001')",
+				"id": "http://apvendorqat2.np.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='77500',Company='001')",
+				"uri": "http://apvendorqat2.np.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='77500',Company='001')",
+				"type": "/COSTPD/PAYER_DIRECT_SRV.VendorSelection"
+			},
+			"VendorNo": "77500",
+			"VendorName": "MONSTER ENERGY COMPANY ATTN: CREDIT",
+			"Company": "001",
+			"Inactive": false,
+			"AboutYou": {
+				"__deferred": {
+					"uri": "http://apvendorqat2.np.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='77500',Company='001')/AboutYou"
+				}
+			}
+		}, {
+			"__metadata": {
+				"id": "http://apvendorqat2.np.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='10000001',Company='001')",
+				"uri": "http://apvendorqat2.np.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='10000001',Company='001')",
 				"type": "/COSTPD/PAYER_DIRECT_SRV.VendorSelection"
 			},
 			"VendorNo": "10000001",
@@ -43,37 +58,7 @@
 			"Inactive": false,
 			"AboutYou": {
 				"__deferred": {
-					"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='10000001',Company='001')/AboutYou"
-				}
-			}
-		}, {
-			"__metadata": {
-				"id": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='3059800',Company='001')",
-				"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='3059800',Company='001')",
-				"type": "/COSTPD/PAYER_DIRECT_SRV.VendorSelection"
-			},
-			"VendorNo": "3059800",
-			"VendorName": "HANDY SEAFOOD INC ATTN: CREDIT DEPA",
-			"Company": "001",
-			"Inactive": false,
-			"AboutYou": {
-				"__deferred": {
-					"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='3059800',Company='001')/AboutYou"
-				}
-			}
-		}, {
-			"__metadata": {
-				"id": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='42800',Company='001')",
-				"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='42800',Company='001')",
-				"type": "/COSTPD/PAYER_DIRECT_SRV.VendorSelection"
-			},
-			"VendorNo": "42800",
-			"VendorName": "GEORGIA PAC CONSUMER PROD DIXIE CON",
-			"Company": "001",
-			"Inactive": false,
-			"AboutYou": {
-				"__deferred": {
-					"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='42800',Company='001')/AboutYou"
+					"uri": "http://apvendorqat2.np.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='10000001',Company='001')/AboutYou"
 				}
 			}
 		}]

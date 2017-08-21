@@ -113,13 +113,13 @@ sap.ui.define([
             this._setAboutViewData();
             this._setDefaultIconTab();
 
-            this.getOwnerComponent().loadCollections(["PaymentMethod"], false, [this.createBaseFilter()]).done(function(data) {
+            /*this.getOwnerComponent().loadCollections(["PaymentMethod"], false, [this.createBaseFilter()]).done(function(data) {
                 debugger;
             }.bind(this)).fail(function(oError) {
                 debugger;
                 // Showing backend error
                 this.getOwnerComponent().displayErrorMessage("", "", oError);
-            }.bind(this));
+            }.bind(this));*/
         },
         handleVendorSearch: function(oEvent) {
             var sValue = oEvent.getParameter("value"),

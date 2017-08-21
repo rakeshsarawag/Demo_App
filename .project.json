@@ -14,10 +14,15 @@
     "resourceModelName": "i18n"
   },
   "mockpreview": {
-    "mockUri": "",
-    "metadataFilePath": "",
+    "mockUri": "/sap/opu/odata/costpd/payer_direct_srv/",
+    "metadataFilePath": "localService/metadata.xml",
     "loadJSONFiles": true,
     "loadCustomRequests": false,
     "mockRequestsFilePath": ""
+  },
+  "hcpdeploy": {
+    "account": "c5246748trial",
+    "name": "costcowholesale",
+    "lastVersionWeTriedToDeploy": "1.0.1"
   }
 }
