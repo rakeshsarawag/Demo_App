@@ -29,7 +29,7 @@ sap.ui.define([
             // check for auth objects load 
             /*this.getOwnerComponent().oWhenAuthIsLoaded.always(function() {
                 this.getOwnerComponent().oWhenMetadataIsLoaded.then(fnSetAppNotBusy, fnSetAppNotBusy);
-            }.bind(this));*/
+            }.bind(this)); */
 
             // apply content density mode to root view
             this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
