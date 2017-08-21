@@ -26,7 +26,7 @@ sap.ui.define([
                 oViewModel.setProperty("/delay", iOriginalBusyDelay);
             };
 
-            // check for auth objects load
+            // check for auth objects load 
             /*this.getOwnerComponent().oWhenAuthIsLoaded.always(function() {
                 this.getOwnerComponent().oWhenMetadataIsLoaded.then(fnSetAppNotBusy, fnSetAppNotBusy);
             }.bind(this));*/
