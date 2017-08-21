@@ -70,7 +70,7 @@ sap.ui.define([
             this.getRouter().navTo("createClaim", {
                 VendorNo: this.getModel("commonData").getProperty("/VendorNo"),
                 Company: this.getModel("commonData").getProperty("/Company")
-            });
+            }); 
         },
         onViewRemittanceDetailPress : function(oEvent) {
             var oContext = oEvent.getSource().getBindingContext().getObject();
