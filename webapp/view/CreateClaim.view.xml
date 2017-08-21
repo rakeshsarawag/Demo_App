@@ -99,7 +99,7 @@
                                 <Label id="idLabelNotes" required="{path: 'claimTypes>/claimType/ClaimNotes', formatter : '.formatter.formatFieldsMandatory'}" text="{i18n>EXPLANATION_601}" tooltip="{i18n>EXPLANATION_601}" />
                             </f:label>
                             <f:fields>
-                                <Textarea valueState="{claimData>/ClaimNotesValueState}" valueStateText="{claimData>/ClaimNotesValueStateText}" value="{claimData>/ClaimNotes}" change="onInputChange"></Textarea>
+                                <TextArea valueState="{claimData>/ClaimNotesValueState}" valueStateText="{claimData>/ClaimNotesValueStateText}" value="{claimData>/ClaimNotes}" change="onInputChange"></TextArea>
                             </f:fields>
                         </f:FormElement>
                         <f:FormElement visible="{parts:[
