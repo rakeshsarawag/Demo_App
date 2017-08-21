@@ -3,7 +3,7 @@
             <customHeader>
                 <Bar>
                     <contentLeft>
-                        <Image src="./sap.cdp.demo.demoApplication5/images/logoTitle.png"></Image>
+                        <Image src="./images/logoTitle.png"></Image>
                     </contentLeft>
                     <contentMiddle>
                         <Title text="{commonData>/HeaderTitle}"></Title>
