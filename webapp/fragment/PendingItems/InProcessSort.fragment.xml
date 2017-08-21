@@ -1,0 +1,7 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<ViewSettingsDialog confirm="onSortConfirm" class="sapUiSizeCompact">
+		<sortItems>
+			<ViewSettingsItem text="{i18n>INVOICE_DATE_320}" key="InProcessTab-InvoiceDate"/>
+		</sortItems>
+	</ViewSettingsDialog>
+</core:FragmentDefinition>

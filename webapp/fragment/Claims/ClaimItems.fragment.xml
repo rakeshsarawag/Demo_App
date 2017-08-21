@@ -1,0 +1,15 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form">
+    <ColumnListItem >
+            <cells>
+                <Link text="{ClaimNo}" press="onCliamViewPress" />
+                <Text text="{InvoiceNumber}" />
+                <Text text="{PoNumber}" />
+                <Text text="{parts : [{path : 'ClaimDate'}], formatter : '.formatter.getDateInDDMMYYYY'}" />
+                <Text text="{ClaimStatusDesc}" />
+                <Text text="{ClaimType}" />
+                <Text text="{ClaimCount}" />
+                <Text text="{ClaimAmount}" />
+                <Text text="{DispositionAmount}" />
+                </cells>
+        </ColumnListItem>
+</core:FragmentDefinition>

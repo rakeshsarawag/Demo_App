@@ -1,0 +1,183 @@
+[
+	{
+		"__metadata": {
+			"id": "http://sap-vd2ci.adt.np.costco.com:8001/sap/opu/odata/costpd/payer_direct_srv/RejectionsSet('1115100002772')",
+			"uri": "http://sap-vd2ci.adt.np.costco.com:8001/sap/opu/odata/costpd/payer_direct_srv/RejectionsSet('1115100002772')",
+			"type": "payer_direct_srv.Rejections",
+			"properties": {
+				"RejectionsItemsSet": {
+					"associationuri": "http://sap-vd2ci.adt.np.costco.com:8001/sap/opu/odata/costpd/payer_direct_srv/RejectionsSet('1115100002772')/$links/RejectionsItemsSet"
+				}
+			}
+		},
+		"VendorNo": "1234",
+		"Company": "any1",
+		"InvoiceNumber": "1115100002772",
+		"PoNumber": "1000002772",
+		"ProcessDate": "/Date(1410825600000)/",
+		"MessageText": "",
+		"RejectionsItemsSet": {
+			"results": []
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://sap-vd2ci.adt.np.costco.com:8001/sap/opu/odata/costpd/payer_direct_srv/RejectionsSet('1115100002773')",
+			"uri": "http://sap-vd2ci.adt.np.costco.com:8001/sap/opu/odata/costpd/payer_direct_srv/RejectionsSet('1115100002773')",
+			"type": "payer_direct_srv.Rejections",
+			"properties": {
+				"RejectionsItemsSet": {
+					"associationuri": "http://sap-vd2ci.adt.np.costco.com:8001/sap/opu/odata/costpd/payer_direct_srv/RejectionsSet('1115100002773')/$links/RejectionsItemsSet"
+				}
+			}
+		},
+		"VendorNo": "1234",
+		"Company": "any1",
+		"InvoiceNumber": "1115100002773",
+		"PoNumber": "1000002773",
+		"ProcessDate": "/Date(1410825600000)/",
+		"MessageText": "Product ID Qualifier/UPC does not match",
+		"RejectionsItemsSet": {
+			"results": [
+				{
+					"__metadata": {
+						"id": "http://sap-vd2ci.adt.np.costco.com:8001/sap/opu/odata/costpd/payer_direct_srv/RejectionsItemsSet(InvoiceNumber='1115100002773',ItemNumber='0000000001')",
+						"uri": "http://sap-vd2ci.adt.np.costco.com:8001/sap/opu/odata/costpd/payer_direct_srv/RejectionsItemsSet(InvoiceNumber='1115100002773',ItemNumber='0000000001')",
+						"type": "payer_direct_srv.RejectionsItems"
+					},
+					"InvoiceNumber": "1115100002773",
+					"ItemNumber": "0000000001",
+					"MessageText": "Product ID Qualifier/UPC does not match"
+				}
+			]
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://sap-vd2ci.adt.np.costco.com:8001/sap/opu/odata/costpd/payer_direct_srv/RejectionsSet('1115100002774')",
+			"uri": "http://sap-vd2ci.adt.np.costco.com:8001/sap/opu/odata/costpd/payer_direct_srv/RejectionsSet('1115100002774')",
+			"type": "payer_direct_srv.Rejections",
+			"properties": {
+				"RejectionsItemsSet": {
+					"associationuri": "http://sap-vd2ci.adt.np.costco.com:8001/sap/opu/odata/costpd/payer_direct_srv/RejectionsSet('1115100002774')/$links/RejectionsItemsSet"
+				}
+			}
+		},
+		"VendorNo": "1234",
+		"Company": "any1",
+		"InvoiceNumber": "1115100002774",
+		"PoNumber": "1000002774",
+		"ProcessDate": "/Date(1410825600000)/",
+		"MessageText": "",
+		"RejectionsItemsSet": {
+			"results": [
+				{
+					"__metadata": {
+						"id": "http://sap-vd2ci.adt.np.costco.com:8001/sap/opu/odata/costpd/payer_direct_srv/RejectionsItemsSet(InvoiceNumber='1115100002773',ItemNumber='0000000001')",
+						"uri": "http://sap-vd2ci.adt.np.costco.com:8001/sap/opu/odata/costpd/payer_direct_srv/RejectionsItemsSet(InvoiceNumber='1115100002773',ItemNumber='0000000001')",
+						"type": "payer_direct_srv.RejectionsItems"
+					},
+					"InvoiceNumber": "1115100002773",
+					"ItemNumber": "0000000001",
+					"MessageText": "Product ID Qualifier/UPC does not match"
+				}
+			]
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://sap-vd2ci.adt.np.costco.com:8001/sap/opu/odata/costpd/payer_direct_srv/RejectionsSet('1115100002830')",
+			"uri": "http://sap-vd2ci.adt.np.costco.com:8001/sap/opu/odata/costpd/payer_direct_srv/RejectionsSet('1115100002830')",
+			"type": "payer_direct_srv.Rejections",
+			"properties": {
+				"RejectionsItemsSet": {
+					"associationuri": "http://sap-vd2ci.adt.np.costco.com:8001/sap/opu/odata/costpd/payer_direct_srv/RejectionsSet('1115100002830')/$links/RejectionsItemsSet"
+				}
+			}
+		},
+		"VendorNo": "1234",
+		"Company": "any1",
+		"InvoiceNumber": "1115100002830",
+		"PoNumber": "1000002830",
+		"ProcessDate": "/Date(1410825600000)/",
+		"MessageText": "",
+		"RejectionsItemsSet": {
+			"results": [
+				{
+					"__metadata": {
+						"id": "http://sap-vd2ci.adt.np.costco.com:8001/sap/opu/odata/costpd/payer_direct_srv/RejectionsItemsSet(InvoiceNumber='1115100002773',ItemNumber='0000000001')",
+						"uri": "http://sap-vd2ci.adt.np.costco.com:8001/sap/opu/odata/costpd/payer_direct_srv/RejectionsItemsSet(InvoiceNumber='1115100002773',ItemNumber='0000000001')",
+						"type": "payer_direct_srv.RejectionsItems"
+					},
+					"InvoiceNumber": "1115100002773",
+					"ItemNumber": "0000000001",
+					"MessageText": "Product ID Qualifier/UPC does not match"
+				}
+			]
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://sap-vd2ci.adt.np.costco.com:8001/sap/opu/odata/costpd/payer_direct_srv/RejectionsSet('1115100002833')",
+			"uri": "http://sap-vd2ci.adt.np.costco.com:8001/sap/opu/odata/costpd/payer_direct_srv/RejectionsSet('1115100002833')",
+			"type": "payer_direct_srv.Rejections",
+			"properties": {
+				"RejectionsItemsSet": {
+					"associationuri": "http://sap-vd2ci.adt.np.costco.com:8001/sap/opu/odata/costpd/payer_direct_srv/RejectionsSet('1115100002833')/$links/RejectionsItemsSet"
+				}
+			}
+		},
+		"VendorNo": "1234",
+		"Company": "any1",
+		"InvoiceNumber": "1115100002833",
+		"PoNumber": "1000002833",
+		"ProcessDate": "/Date(1410825600000)/",
+		"MessageText": "",
+		"RejectionsItemsSet": {
+			"results": [
+				{
+					"__metadata": {
+						"id": "http://sap-vd2ci.adt.np.costco.com:8001/sap/opu/odata/costpd/payer_direct_srv/RejectionsItemsSet(InvoiceNumber='1115100002773',ItemNumber='0000000001')",
+						"uri": "http://sap-vd2ci.adt.np.costco.com:8001/sap/opu/odata/costpd/payer_direct_srv/RejectionsItemsSet(InvoiceNumber='1115100002773',ItemNumber='0000000001')",
+						"type": "payer_direct_srv.RejectionsItems"
+					},
+					"InvoiceNumber": "1115100002773",
+					"ItemNumber": "0000000001",
+					"MessageText": "Product ID Qualifier/UPC does not match"
+				}
+			]
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://sap-vd2ci.adt.np.costco.com:8001/sap/opu/odata/costpd/payer_direct_srv/RejectionsSet('5100002866')",
+			"uri": "http://sap-vd2ci.adt.np.costco.com:8001/sap/opu/odata/costpd/payer_direct_srv/RejectionsSet('5100002866')",
+			"type": "payer_direct_srv.Rejections",
+			"properties": {
+				"RejectionsItemsSet": {
+					"associationuri": "http://sap-vd2ci.adt.np.costco.com:8001/sap/opu/odata/costpd/payer_direct_srv/RejectionsSet('5100002866')/$links/RejectionsItemsSet"
+				}
+			}
+		},
+		"VendorNo": "1234",
+		"Company": "any1",
+		"InvoiceNumber": "5100002866",
+		"PoNumber": "1000002866",
+		"ProcessDate": "/Date(1410825600000)/",
+		"MessageText": "Single error message",
+		"RejectionsItemsSet": {
+			"results": [
+				{
+					"__metadata": {
+						"id": "http://sap-vd2ci.adt.np.costco.com:8001/sap/opu/odata/costpd/payer_direct_srv/RejectionsItemsSet(InvoiceNumber='1115100002773',ItemNumber='0000000001')",
+						"uri": "http://sap-vd2ci.adt.np.costco.com:8001/sap/opu/odata/costpd/payer_direct_srv/RejectionsItemsSet(InvoiceNumber='1115100002773',ItemNumber='0000000001')",
+						"type": "payer_direct_srv.RejectionsItems"
+					},
+					"InvoiceNumber": "1115100002773",
+					"ItemNumber": "0000000001",
+					"MessageText": "Product ID Qualifier/UPC does not match"
+				}
+			]
+		}
+	}
+]

@@ -1,0 +1,86 @@
+[
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/RemittanceDetailsSet('RefNumber10')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/RemittanceDetailsSet('RefNumber10')",
+			"type": "payer_direct_srv.RemittanceDetails"
+		},
+		"Company": "any1",
+		"Currency": "ncy10",
+		"PaymentAmount": "0.00000000000",
+		"PaymentMethod": "PaymentMethod10",
+		"PaymentNumber": "PaymentNumber10",
+		"PaymentDate": "/Date(1412924400000)/",
+		"PaymentMethodCode": "0",
+		"RefNumber": "RefNumber10",
+		"VendorNo": "1234",
+		"RemittanceDetailsItemsSet": {
+			"__deferred": {
+				"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/RemittanceDetailsSet('RefNumber10')/RemittanceDetailsItemsSet"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/RemittanceDetailsSet('RefNumber10')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/RemittanceDetailsSet('RefNumber10')",
+			"type": "payer_direct_srv.RemittanceDetails"
+		},
+		"Company": "any1",
+		"Currency": "ncy10",
+		"PaymentAmount": "0.00000000000",
+		"PaymentMethod": "PaymentMethod10",
+		"PaymentNumber": "PaymentNumber10",
+		"PaymentDate": "/Date(1412924400000)/",
+		"PaymentMethodCode": "0",
+		"RefNumber": "RefNumber11",
+		"VendorNo": "1234",
+		"RemittanceDetailsItemsSet": {
+			"__deferred": {
+				"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/RemittanceDetailsSet('RefNumber10')/RemittanceDetailsItemsSet"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/RemittanceDetailsSet('RefNumber10')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/RemittanceDetailsSet('RefNumber10')",
+			"type": "payer_direct_srv.RemittanceDetails"
+		},
+		"Company": "any1",
+		"Currency": "ncy10",
+		"PaymentAmount": "0.00000000000",
+		"PaymentMethod": "PaymentMethod10",
+		"PaymentNumber": "PaymentNumber10",
+		"PaymentDate": "/Date(1412924400000)/",
+		"PaymentMethodCode": "0",
+		"RefNumber": "RefNumber12",
+		"VendorNo": "1234",
+		"RemittanceDetailsItemsSet": {
+			"__deferred": {
+				"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/RemittanceDetailsSet('RefNumber10')/RemittanceDetailsItemsSet"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/RemittanceDetailsSet('RefNumber10')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/RemittanceDetailsSet('RefNumber10')",
+			"type": "payer_direct_srv.RemittanceDetails"
+		},
+		"Company": "any1",
+		"Currency": "ncy10",
+		"PaymentAmount": "0.00000000000",
+		"PaymentMethod": "PaymentMethod10",
+		"PaymentNumber": "PaymentNumber10",
+		"PaymentDate": "/Date(1412924400000)/",
+		"PaymentMethodCode": "0",
+		"RefNumber": "RefNumber13",
+		"VendorNo": "1234",
+		"RemittanceDetailsItemsSet": {
+			"__deferred": {
+				"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/RemittanceDetailsSet('RefNumber10')/RemittanceDetailsItemsSet"
+			}
+		}
+	}
+]

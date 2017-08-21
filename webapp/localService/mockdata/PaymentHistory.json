@@ -1,0 +1,142 @@
+[
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/PaymentHistorySet('InvoiceNumber10')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/PaymentHistorySet('InvoiceNumber10')",
+			"type": "payer_direct_srv.PaymentHistory"
+		},
+		"Company": "any1",
+		"Currency": "USD",
+		"DiscountAmount": "0.00000000000",
+		"InvoiceTotal": "0.00000000000",
+		"InvoiceNumber": "InvoiceNumber10",
+		"InvoiceDate": "/Date(1412924400000)/",
+		"NetAmount": "0.00000000000",
+		"PaymentNumber": "PaymentNumber10",
+		"PaymentDate": "/Date(1412924400000)/",
+		"PoNumber": "PoNumber10",
+		"RaNumber": "RaNumber10",
+		"VendorNo": "1234",
+		"ViewKey": "ViewKey10"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/PaymentHistorySet('InvoiceNumber10')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/PaymentHistorySet('InvoiceNumber10')",
+			"type": "payer_direct_srv.PaymentHistory"
+		},
+		"Company": "any1",
+		"Currency": "USD",
+		"DiscountAmount": "0.00000000000",
+		"InvoiceTotal": "0.00000000000",
+		"InvoiceNumber": "InvoiceNumber11",
+		"InvoiceDate": "/Date(1412924400000)/",
+		"NetAmount": "0.00000000000",
+		"PaymentNumber": "PaymentNumber11",
+		"PaymentDate": "/Date(1412924400000)/",
+		"PoNumber": "PoNumber10",
+		"RaNumber": "RaNumber10",
+		"VendorNo": "1234",
+		"ViewKey": "ViewKey10"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/PaymentHistorySet('InvoiceNumber10')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/PaymentHistorySet('InvoiceNumber10')",
+			"type": "payer_direct_srv.PaymentHistory"
+		},
+		"Company": "any1",
+		"Currency": "USD",
+		"DiscountAmount": "0.00000000000",
+		"InvoiceTotal": "0.00000000000",
+		"InvoiceNumber": "InvoiceNumber12",
+		"InvoiceDate": "/Date(1412924400000)/",
+		"NetAmount": "0.00000000000",
+		"PaymentNumber": "PaymentNumber12",
+		"PaymentDate": "/Date(1412924400000)/",
+		"PoNumber": "PoNumber10",
+		"RaNumber": "RaNumber10",
+		"VendorNo": "1234",
+		"ViewKey": "ViewKey10"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/PaymentHistorySet('InvoiceNumber10')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/PaymentHistorySet('InvoiceNumber10')",
+			"type": "payer_direct_srv.PaymentHistory"
+		},
+		"Company": "any1",
+		"Currency": "USD",
+		"DiscountAmount": "0.00000000000",
+		"InvoiceTotal": "0.00000000000",
+		"InvoiceNumber": "InvoiceNumber13",
+		"InvoiceDate": "/Date(1412924400000)/",
+		"NetAmount": "0.00000000000",
+		"PaymentNumber": "PaymentNumber13",
+		"PaymentDate": "/Date(1412924400000)/",
+		"PoNumber": "PoNumber10",
+		"RaNumber": "RaNumber10",
+		"VendorNo": "1234",
+		"ViewKey": "ViewKey10"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/PaymentHistorySet('InvoiceNumber10')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/PaymentHistorySet('InvoiceNumber10')",
+			"type": "payer_direct_srv.PaymentHistory"
+		},
+		"Company": "any1",
+		"Currency": "USD",
+		"DiscountAmount": "0.00000000000",
+		"InvoiceTotal": "0.00000000000",
+		"InvoiceNumber": "InvoiceNumber14",
+		"InvoiceDate": "/Date(1412924400000)/",
+		"NetAmount": "0.00000000000",
+		"PaymentNumber": "PaymentNumber14",
+		"PaymentDate": "/Date(1412924400000)/",
+		"PoNumber": "PoNumber10",
+		"RaNumber": "RaNumber10",
+		"VendorNo": "1234",
+		"ViewKey": "ViewKey10"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/PaymentHistorySet('InvoiceNumber10')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/PaymentHistorySet('InvoiceNumber10')",
+			"type": "payer_direct_srv.PaymentHistory"
+		},
+		"Company": "any1",
+		"Currency": "USD",
+		"DiscountAmount": "0.00000000000",
+		"InvoiceTotal": "0.00000000000",
+		"InvoiceNumber": "InvoiceNumber15",
+		"InvoiceDate": "/Date(1412924400000)/",
+		"NetAmount": "0.00000000000",
+		"PaymentNumber": "PaymentNumber15",
+		"PaymentDate": "/Date(1412924400000)/",
+		"PoNumber": "PoNumber10",
+		"RaNumber": "RaNumber10",
+		"VendorNo": "1234",
+		"ViewKey": "ViewKey10"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/PaymentHistorySet('InvoiceNumber10')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/PaymentHistorySet('InvoiceNumber10')",
+			"type": "payer_direct_srv.PaymentHistory"
+		},
+		"Company": "any1",
+		"Currency": "USD",
+		"DiscountAmount": "0.00000000000",
+		"InvoiceTotal": "0.00000000000",
+		"InvoiceNumber": "InvoiceNumber16",
+		"InvoiceDate": "/Date(1412924400000)/",
+		"NetAmount": "0.00000000000",
+		"PaymentNumber": "PaymentNumber16",
+		"PaymentDate": "/Date(1412924400000)/",
+		"PoNumber": "PoNumber10",
+		"RaNumber": "RaNumber10",
+		"VendorNo": "1234",
+		"ViewKey": "ViewKey10"
+	}
+]

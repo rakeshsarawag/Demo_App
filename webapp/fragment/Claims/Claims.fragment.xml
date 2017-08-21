@@ -1,0 +1,108 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form">
+    <fb:FilterBar id="idClaimsFilter" search="onClaimFilterPress" clear="onFilterClear" showClearOnFB="true" showClearButton="true" filterBarExpanded="true" filterContainerWidth="20rem" showFilterConfiguration="true" persistencyKey="sap.cdp.doe.searchsuppliers" xmlns:fb="sap.ui.comp.filterbar">
+        <fb:filterItems>
+            <fb:FilterItem id="idClaimStatus" name="ClaimStatus" label="{i18n>CLAIM_STATUS}">
+                <fb:control>
+                    <Select ariaLabelledBy="id_Payment_type" change="onClaimStatusChange" selectedKey="{filterData>/ClaimsTab/ClaimStatusSelectedKey}">
+                        <core:Item text="{i18n>CLAIM_STATUS_ALL}" key="ALL" />
+                        <core:Item text="{i18n>CLAIM_STATUS_N}" key="NEW" />
+                        <core:Item text="{i18n>CLAIM_STATUS_I}" key="PROCESS" />
+                        <core:Item text="{i18n>CLAIM_STATUS_R}" key="REJECTED" />
+                        <core:Item text="{i18n>CLAIM_STATUS_A}" key="APPROVED" />
+                        <core:Item text="{i18n>CLAIM_STATUS_C}" key="COMPLETED" />
+                        <core:Item text="{i18n>CLAIM_STATUS_X}" key="CANCELED" />
+                    </Select>
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem id="idClaimType" name="ClaimType" label="{i18n>CLAIM_TYPE_600}">
+                <fb:control>
+                    <Select ariaLabelledBy="id_Payment_type" change="onClaimTypeChange" selectedKey="{filterData>/ClaimsTab/ClaimTypeSelectedKey}">
+                        <core:Item text="{i18n>CLAIM_TYPES_ALL}" key="90-d" />
+                        <core:Item text="{i18n>CLAIM_BUYER_SUPPORT}" key="12-m" />
+                        <core:Item text="{i18n>CLAIM_FREIGHT}" key="custom" />
+                        <core:Item text="{i18n>CLAIM_COUPON}" key="custom" />
+                        <core:Item text="{i18n>CLAIM_ENDCAP}" key="custom" />
+                    </Select>
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem id="idClaimFilter" name="ClaimFilter" label="{i18n>DATE_FILER}" visible="{viewData>/ClaimsTab/DateFilterVisible}">
+                <fb:control>
+                    <Select ariaLabelledBy="id_Payment_type" change="onClaimSearchChange" selectedKey="{filterData>/ClaimsTab/DateFilterSelectedKey}">
+                        <core:Item text="{i18n>FILTER_BAR_DATEP_90DAYS}" key="90-d" />
+                        <core:Item text="{i18n>FILTER_BAR_DATEP_12MONTHS}" key="12-m" />
+                        <core:Item text="{i18n>FILTER_BAR_DATEP_CUSTOM}" key="-cd" />
+                    </Select>
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem id="id_Claims_Filter_Search" name="FilterSearch" label="{i18n>FILTER_SEARCH}">
+                <fb:control>
+                    <Select ariaLabelledBy="id_Payment_type" change="onClaimFilterTypeChange" selectedKey="{filterData>/ClaimsTab/FilterSearchKey}">
+                        <core:Item text="{i18n>FILTER_SEARCH_PO_DESC}" key="po" />
+                        <core:Item text="{i18n>FILTER_SEARCH_INVOICE_DESC}" key="invoice" />
+                    </Select>
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem id="id_Claims_Filter_Po" name="PO" label="{i18n>FILTER_SEARCH_PO_DESC}" visible="{viewData>/ClaimsTab/PoVisible}">
+                <fb:control>
+                    <Input id="idInProcessStrAdrInp" liveChange="onClaimFilterInputChange" value="{filterData>/ClaimsTab/PurchaseOrder}"/>
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem id="id_Claims_Filter_Invoice" name="Invoice" label="{i18n>FILTER_SEARCH_INVOICE_DESC}" visible="{viewData>/ClaimsTab/InvoiceVisible}">
+                <fb:control>
+                    <Input type="Text" ariaLabelledBy="idPoBox"  liveChange="onClaimFilterInputChange" value="{filterData>/ClaimsTab/InvoiceNumber}" />
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem id="id_From_Date" name="FromDate" label="{i18n>FROM_DATE}" visible="{viewData>/ClaimsTab/DateVisible}" width="50%">
+                <fb:control>
+                    <DatePicker width="50%" value="{filterData>/ClaimsTab/FromDate}" valueState="{viewData>/ClaimsTab/FromDateValueState}" valueStateText="{viewData>/ClaimsTab/FromDateValueStateText}" change="onClaimDatePickerChange"></DatePicker>
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem id="id_To_Date" name="ToDate" label="{i18n>TO_DATE}" visible="{viewData>/ClaimsTab/DateVisible}" width="50%">
+                <fb:control>
+                    <DatePicker width="50%" value="{filterData>/ClaimsTab/ToDate}" valueState="{viewData>/ClaimsTab/EndDateValueState}" valueStateText="{viewData>/ClaimsTab/EndDateValueStateText}" change="onClaimDatePickerChange"></DatePicker>
+                </fb:control>
+            </fb:FilterItem>
+            </fb:filterItems>
+    </fb:FilterBar>
+    <Table id="idClaimsTable" noDataText="{i18n>TABLE_NODATA_TITLE}" growing="true" updateFinished="onClaimsUpdateFinished" growingTriggerText="{i18n>SHOW_MORE_DOC}" growingThreshold="20">
+        <headerToolbar>
+            <Toolbar id="idToolbarClaims" design="Transparent">
+                <Title text="{ parts : [{path:'i18n>NAV_TITLE_600_TABLE_TITLE'}, {path:'commonData>/ClaimItems'}], formatter : 'jQuery.sap.formatMessage' }" tooltip="{ parts : [{path:'i18n>NAV_TITLE_600_TABLE_TITLE'}, {path:'commonData>/ClaimItems'}], formatter : 'jQuery.sap.formatMessage' }" level="H2" />
+                <ToolbarSpacer/>
+                <Button icon="sap-icon://sort" press="onSortClaims" tooltip="{i18n>SORT_SUPPLIERS_TOOL}" type="Transparent" />
+                <Button id="idBtnPersSupplier" icon="sap-icon://action-settings" press="onPersonalizeClaims" tooltip="{i18n>PERS_SUPPLIERS_TOOL}" type="Transparent" />
+                <Button id="idClaimsExportButton" icon="sap-icon://excel-attachment" press="onSupplierExportExcel" tooltip="{i18n>EXPORT_EXCEL_TOOL}" type="Transparent" />
+                <Button icon="sap-icon://add" press="onCreateClaimPress" tooltip="{i18n>NAV_TITLE_610}" type="Transparent" />
+            </Toolbar>
+        </headerToolbar>
+        <columns>
+            <Column id="id_Claim_Number">
+                <Label text="{i18n>CLAIM_NUM_600}" tooltip="{i18n>CLAIM_NUM_600}" />
+            </Column>
+            <Column id="id_Invoice_No">
+                <Label text="{i18n>INVOICE_NUM_600}" tooltip="{i18n>INVOICE_NUM_600}" />
+            </Column>
+            <Column id="id_PO_No">
+                <Label text="{i18n>PO_NUM_600}" tooltip="{i18n>PO_NUM_600}" />
+            </Column>
+            <Column id="id_Claim_Date" demandPopin="true" minScreenWidth="Phone" popinDisplay="Inline">
+                <Label text="{i18n>CLAIM_DATE_600}" tooltip="{i18n>CLAIM_DATE_600}" />
+            </Column>
+            <Column id="id_Claim_Status">
+                <Label text="{i18n>CLAIM_STATUS_600}" tooltip="{i18n>CLAIM_STATUS_600}" />
+            </Column>
+            <Column id="id_Claim_Type">
+                <Label text="{i18n>CLAIM_TYPE_600}" tooltip="{i18n>CLAIM_TYPE_600}" />
+            </Column>
+            <Column id="id_Claim_Count">
+                <Label text="{i18n>CLAIM_COUNT_600}" tooltip="{i18n>CLAIM_COUNT_600}" />
+            </Column>
+            <Column id="id_Claim_Amt">
+                <Label text="{i18n>CLAIM_AMT_600}" tooltip="{i18n>CLAIM_AMT_600}" />
+            </Column>
+            <Column id="id_Claim_Reason">
+                <Label text="{i18n>CLAIM_REASON_600}" tooltip="{i18n>CLAIM_REASON_600}" />
+            </Column>
+            </columns>
+    </Table>
+</core:FragmentDefinition>

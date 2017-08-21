@@ -1,0 +1,26 @@
+{
+	"d": {
+		"__count": "44",
+		"results": [{
+			"__metadata": {
+			"id": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/ClaimNotesSet('0050569960031EE78ED0D8DE1170E24C')",
+			"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/ClaimNotesSet('0050569960031EE78ED0D8DE1170E24C')",
+			"type": "/COSTPD/PAYER_DIRECT_SRV.ClaimNotes"
+		},
+		"Guid": "0050569960031EE78ED0D8DE1170E24C",
+		"VendorNo": "3056700",
+		"Company": "001",
+		"Notes": "Test"
+		}, {
+			"__metadata": {
+			"id": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/ClaimNotesSet('0050569912CC1EE793E7334E239969A5')",
+			"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/ClaimNotesSet('0050569912CC1EE793E7334E239969A5')",
+			"type": "/COSTPD/PAYER_DIRECT_SRV.ClaimNotes"
+		},
+		"Guid": "0050569912CC1EE793E7334E239969A5",
+		"VendorNo": "3056700",
+		"Company": "001",
+		"Notes": "Test"
+		}]
+	}
+}

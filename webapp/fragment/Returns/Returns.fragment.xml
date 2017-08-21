@@ -1,0 +1,85 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form">
+    <fb:FilterBar id="idReturnsFilter" search="onReturnItemsFilterPress" clear="onFilterClear" showClearOnFB="true" showClearButton="true" filterBarExpanded="true" filterContainerWidth="20rem" showFilterConfiguration="true" xmlns:fb="sap.ui.comp.filterbar">
+        <fb:filterItems>
+            <fb:FilterItem id="idReturnsAddType" name="AddType" label="{i18n>DATE_FILER}">
+                <fb:control>
+                    <Select ariaLabelledBy="id_Payment_type" change="onReturnSearchChange" selectedKey="{filterData>/ReceivingItemsTab/DateFilterSelectedKey}" >
+                        <core:Item text="{i18n>FILTER_BAR_DATEP_30DAYS}" key="90-d" />
+                        <core:Item text="{i18n>FILTER_BAR_DATEP_12MONTHS}" key="12-m" />
+                        <core:Item text="{i18n>FILTER_BAR_DATEP_CUSTOM}" key="-cd" />
+                    </Select>
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem id="id_Returns_Filter_Search" name="FilterSearch" label="{i18n>FILTER_SEARCH}" >
+                <fb:control>
+                    <Select ariaLabelledBy="id_Payment_type" change="onReturnTypeChange" selectedKey="{filterData>/ReceivingItemsTab/FilterSearchKey}">
+                        <core:Item text="{i18n>FILTER_SEARCH_RA_DESC}" key="po" />
+                        <core:Item text="{i18n>FILTER_SEARCH_DEDUCT_DESC}" key="invoice" />
+                    </Select>
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem id="id_Returns_Filter_Ra" name="PO" label="{i18n>FILTER_SEARCH_RA_DESC}" visible="{viewData>/ReceivingItemsTab/RaVisible}">
+                <fb:control>
+                    <Input id="idReturnsStrAdrInp" type="Text" liveChange="onReturnItemsFilterSearchChange" value="{filterData>/ReceivingItemsTab/RaNumber}"/>
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem id="id_Returns_Filter_Deduction" name="Invoice" label="{i18n>FILTER_SEARCH_DEDUCT_DESC}" visible="{viewData>/ReceivingItemsTab/DeductionVisible}">
+                <fb:control>
+                    <Input type="Text" liveChange="onReturnItemsFilterSearchChange" value="{filterData>/ReceivingItemsTab/DeductionNumber}"/>
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem id="id_Returns_From_Date" name="FromDate" label="{i18n>FROM_DATE}" visible="{viewData>/ReceivingItemsTab/DateVisible}" width="50%">
+                <fb:control>
+                    <DatePicker width="50%" value="{filterData>/ReceivingItemsTab/FromDate}" valueState="{viewData>/ReceivingItemsTab/FromDateValueState}" valueStateText="{viewData>/ReceivingItemsTab/FromDateValueStateText}" change="onReceivingDatePickerChange"></DatePicker>
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem id="id_Returns_To_Date" name="ToDate" label="{i18n>TO_DATE}" visible="{viewData>/ReceivingItemsTab/DateVisible}" width="50%">
+                <fb:control>
+                    <DatePicker width="50%" value="{filterData>/ReceivingItemsTab/ToDate}" valueState="{viewData>/ReceivingItemsTab/EndDateValueState}" valueStateText="{viewData>/ReceivingItemsTab/EndDateValueStateText}" change="onReceivingDatePickerChange"></DatePicker>
+                </fb:control>
+            </fb:FilterItem>
+        </fb:filterItems>
+    </fb:FilterBar>
+    <Table id="idReturnItemsTable" noDataText="{i18n>TABLE_NODATA_TITLE}" growing="true" updateFinished="onReturnsUpdateFinished" growingTriggerText="{i18n>SHOW_MORE_DOC}" growingThreshold="20">
+        <headerToolbar>
+            <Toolbar id="idToolbarReturns" design="Transparent">
+                <Title text="{ parts : [{path:'i18n>NAV_TITLE_500_TABLE_TITLE'}, {path:'commonData>/ReturnsItems'}], formatter : 'jQuery.sap.formatMessage' }" tooltip="{ parts : [{path:'i18n>NAV_TITLE_500_TABLE_TITLE'}, {path:'commonData>/ReturnsItems'}], formatter : 'jQuery.sap.formatMessage' }" level="H2" />
+                <ToolbarSpacer/>
+                <Button id="idBtnReturnsPers" icon="sap-icon://action-settings" press="onPersonalizeReturns" tooltip="{i18n>PERS_SUPPLIERS_TOOL}" type="Transparent" />
+                <Button id="idReturnsExportBtn" icon="sap-icon://excel-attachment" press="onSupplierExportExcel" tooltip="{i18n>EXPORT_EXCEL_TOOL}" type="Transparent" />
+            </Toolbar>
+        </headerToolbar>
+        <columns>
+            <Column id="id_Deduction_No_Colm">
+                <Label text="{i18n>DEDUCTION_NUM_500}" tooltip="{i18n>DEDUCTION_NUM_500}" />
+            </Column>
+            <Column id="id_Ra_No_Colm">
+                <Label text="{i18n>RA_NUM_500}" tooltip="{i18n>RA_NUM_500}" />
+            </Column>
+            <Column id="id_Date_Shipped_Colm" demandPopin="true" minScreenWidth="Phone" popinDisplay="Inline">
+                <Label text="{i18n>DATE_SHIPPED_500}" tooltip="{i18n>DATE_SHIPPED_500}" />
+            </Column>
+            <Column id="id_Warehouse_Name_Colm" demandPopin="true" minScreenWidth="Phone" popinDisplay="Inline">
+                <Label text="{i18n>WHAREHOUSE_NAME_500}" tooltip="{i18n>WHAREHOUSE_NAME_500}" />
+            </Column>
+            <!-- <Column id="id_Warehouse_State_Colm" demandPopin="true" minScreenWidth="Phone" popinDisplay="Inline">
+                <Label text="{i18n>WHAREHOUSE_STATE_500}" tooltip="{i18n>WHAREHOUSE_STATE_500}" />
+            </Column> -->
+            <Column id="id_Carrier_Colm" demandPopin="true" minScreenWidth="Phone" popinDisplay="Inline">
+                <Label text="{i18n>CARRIER_500}" tooltip="{i18n>SUPP_PHONE_NUM}" />
+            </Column>
+            <Column id="id_Tracking_No_Colm" hAlign="Center" demandPopin="true" minScreenWidth="Phone" popinDisplay="Inline">
+                <Label text="{i18n>TRACKING_NUM_500}" tooltip="{i18n>TRACKING_NUM_500}" />
+            </Column>
+            <!-- <Column id="id_Track_Link_Colm" hAlign="Center" demandPopin="true" minScreenWidth="Phone" popinDisplay="Inline">
+                <Label text="{i18n>TRACK_LINK_500}" tooltip="{i18n>TRACK_LINK_500}" />
+            </Column> -->
+            <Column id="id_Deduction_Amount_Colm" hAlign="Center" demandPopin="true" minScreenWidth="Phone" popinDisplay="Inline">
+                <Label text="{i18n>DEDUCTION_AMT_500}" tooltip="{i18n>DEDUCTION_AMT_500}" />
+            </Column>
+            <Column id="id_Returns">
+                <Label></Label>
+            </Column>
+        </columns>
+    </Table>
+</core:FragmentDefinition>

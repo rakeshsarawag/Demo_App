@@ -1,0 +1,204 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form">
+    <!-- <l:HorizontalLayout BackgroundDesign="Transparent" class="sapUiContentPadding equalColumns" width="100%">
+        <l:content>
+            <FlexBox class="columns" alignItems="Stretch" BackgroundDesign="Solid">
+                <items>
+                    <StandardListItem title="CAMEO DIV OF CHF IND" description="1002303" />
+                    <HBox>
+                        <Image src="./sap.cdp.demo.demoApplication5/images/c2fo.png" activeSrc="https://c2fo.com/not-right-contact?portal=6827" densityAware="false" decorative="false">
+                        </Image>
+                        <Text width="25%" class="column1" text="Interested in early payment?
+Click or call to learn more about Collaborative Cash Flow Optimization (C2FO). Special Order kiosk vendors are not eligible for this program.">
+                        </Text>
+                </HBox>
+                <VBox>
+                    <Text text="What is Vendor Accounting Portal?"></Text>
+                    <Link text="Learn more"></Link>
+                </VBox>
+                </items>
+            </FlexBox>
+        </l:content>
+    </l:HorizontalLayout> -->
+    <f:Form id="id_Address_Form" editable="false" width="auto">
+        <f:layout>
+            <f:ResponsiveGridLayout columnsL="2" columnsM="2" />
+        </f:layout>
+        <f:formContainers>
+            <f:FormContainer title="{i18n>GRP_CORRESP}">
+                <f:formElements>
+                    <!-- <VBox> -->
+                    <!-- <f:FormElement>
+                        <core:Icon src="sap-icon://person-placeholder" class="size1" color="#031E48">
+                        </core:Icon>                                                
+                    </f:FormElement> -->
+                    <f:FormElement>
+                        <f:label>
+                            <Label text="{i18n>NAME}" />
+                        </f:label>
+                        <f:fields>
+                            <Text text="{aboutYou>/ContactName}"></Text>
+                        </f:fields>
+                    </f:FormElement>
+                    <!-- </VBox> -->
+                    <f:FormElement>
+                        <f:label>
+                            <Label text="{i18n>PHONE}" />
+                        </f:label>
+                        <f:fields>
+                            <Text text="{aboutYou>/ContactPhone}"></Text>
+                        </f:fields>
+                    </f:FormElement>
+                <!-- </f:formElements>
+            </f:FormContainer>
+            <f:FormContainer title=" ">
+                <f:formElements> -->
+                    <f:FormElement>
+                        <f:label>
+                            <Label text="{i18n>LBL_CORR_ADDR}" />
+                        </f:label>
+                        <f:fields>
+                            <Text text="{parts: [
+                        {path: 'aboutYou>/AddressLine1'},
+                        {path: 'aboutYou>/AddressLine2'},
+                        {path: 'aboutYou>/City'},
+                        {path: 'aboutYou>/State'},
+                        {path: 'aboutYou>/PostalCode'},
+                        {path: 'aboutYou>/Country'}
+                    ],
+                    formatter: '.formatter.addrFormatter'
+                }" />
+                        </f:fields>
+                    </f:FormElement>
+                </f:formElements>
+            </f:FormContainer>
+            <f:FormContainer title="{i18n>GRP_INFO}">
+                <f:formElements>
+                    <f:FormElement>
+                        <f:label>
+                            <Label text="{i18n>INFO_ADMIN}" />
+                        </f:label>
+                        <f:fields>
+                            <Text text="{
+                    parts: [
+                        {path: 'aboutYou>/AdminFname'},
+                        {path: 'aboutYou>/AdminLname'}
+                    ],
+                    formatter: '.formatter.addInfoAdmin'}"></Text>
+                        </f:fields>
+                    </f:FormElement>
+                    <f:FormElement>
+                        <f:label>
+                            <Label text="{i18n>INFO_LINK}" />
+                        </f:label>
+                        <f:fields>
+                            <Link text="{aboutYou>/AdminContact}" />
+                        </f:fields>
+                    </f:FormElement>
+                <!-- </f:formElements>
+            </f:FormContainer>
+            <f:FormContainer title=" ">
+                <f:formElements> -->
+                    <f:FormElement>
+                        <f:label>
+                            <Label text="{i18n>USER_ID}" />
+                        </f:label>
+                        <f:fields>
+                            <Text text="{aboutYou>/AdminContact}" />
+                        </f:fields>
+                    </f:FormElement>
+                </f:formElements>
+            </f:FormContainer>
+        </f:formContainers>
+    </f:Form>
+    <!-- </HBox> -->
+    <!-- <HBox> -->
+    <f:Form id="id_Remmitance_Form" editable="false" width="auto">
+        <f:layout>
+            <f:ResponsiveGridLayout columnsL="2" columnsM="2" />
+        </f:layout>
+        <f:formContainers>
+            <f:FormContainer title="{i18n>GRP_REMIT}">
+                <f:formElements>
+                    <f:FormElement>
+                        <f:label>
+                            <Label text="{i18n>ADDRESS}" />
+                        </f:label>
+                        <f:fields>
+                            <Text text="{
+                    parts: [
+                        {path: 'aboutYou>/RemittanceAddressline1'},
+                        {path: 'aboutYou>/RemittanceAddressline2'},
+                        {path: 'aboutYou>/RemittanceCity'},
+                        {path: 'aboutYou>/RemittanceState'},
+                        {path: 'aboutYou>/RemPostalCode'},
+                        {path: 'aboutYou>/RemittanceCountry'}
+                    ],
+                    formatter: '.formatter.addrFormatter'
+                }" />
+                        </f:fields>
+                    </f:FormElement>
+                <!-- </f:formElements>
+            </f:FormContainer>
+            <f:FormContainer title=" ">
+                <f:formElements> -->
+                    <f:FormElement>
+                        <f:label>
+                            <Label text="{i18n>DEFAULT_PAYMENT_TYPE}" />
+                        </f:label>
+                        <f:fields>
+                            <Text text="{aboutYou>/PaymentType}" />
+                        </f:fields>
+                    </f:FormElement>
+                </f:formElements>
+            </f:FormContainer>
+            <f:FormContainer title="{i18n>GRP_ADDINFO}">
+                <f:formElements>
+                    <f:FormElement>
+                        <f:label>
+                            <Label text="{i18n>COMP_EDI}" />
+                        </f:label>
+                        <f:fields>
+                            <Text text="{aboutYou>/Edi}" />
+                        </f:fields>
+                    </f:FormElement>
+                    <f:FormElement>
+                        <f:label>
+                            <Label text="{i18n>COMP_ONHOLD}" />
+                        </f:label>
+                        <f:fields>
+                            <Text text="{aboutYou>/OnHold}" />
+                        </f:fields>
+                    </f:FormElement>
+                    <f:FormElement>
+                        <f:label>
+                            <Label text="{i18n>COMP_FUNDS}" />
+                        </f:label>
+                        <f:fields>
+                            <Text text="{aboutYou>/Funds}" />
+                        </f:fields>
+                    </f:FormElement>
+                <!-- </f:formElements>
+            </f:FormContainer>
+            <f:FormContainer title=" ">
+                <f:formElements> -->
+                    <f:FormElement>
+                        <f:label>
+                            <Label text="{i18n>COMP_QSTID}" />
+                        </f:label>
+                        <f:fields>
+                            <Text text="{aboutYou>/QstId}" />
+                        </f:fields>
+                    </f:FormElement>
+                    <f:FormElement>
+                        <f:label>
+                            <Label text="{i18n>COMP_GSTID}" />
+                        </f:label>
+                        <f:fields>
+                            <Text text="{aboutYou>/GstId}" />
+                        </f:fields>
+                    </f:FormElement>
+                </f:formElements>
+            </f:FormContainer>
+        </f:formContainers>
+    </f:Form>
+</core:FragmentDefinition>

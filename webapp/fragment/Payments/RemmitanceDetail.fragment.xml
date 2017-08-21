@@ -1,0 +1,76 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form">
+    <fb:FilterBar id="idRemmitDetailFilter" search="onRemmitanceFilterPress" clear="onFilterClear" showClearOnFB="true" showClearButton="true" filterBarExpanded="true" filterContainerWidth="20rem" showFilterConfiguration="true" xmlns:fb="sap.ui.comp.filterbar">
+        <fb:filterItems>
+            <fb:FilterItem id="idRemitAddType" name="AddType" label="{i18n>DATE_FILER}" visible="{viewData>/RemmitanceTab/DateFilterVisible}">
+                <fb:control>
+                    <Select ariaLabelledBy="id_Payment_type" change="onRemmitanceTypeChange" selectedKey="{filterData>/RemmitanceTab/DateFilterSelectedKey}">
+                        <core:Item text="{i18n>FILTER_BAR_DATEP_90DAYS}" key="90-d" />
+                        <core:Item text="{i18n>FILTER_BAR_DATEP_12MONTHS}" key="12-m" />
+                        <core:Item text="{i18n>FILTER_BAR_DATEP_CUSTOM}" key="-cd" />
+                    </Select>
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem id="idSubRemitTypes" name="RemitType" label="{i18n>PAYMENT_METHOD_330}" visible="{viewData>/RemmitanceTab/PaymentTypesVisible}">
+                <fb:control>
+                    <Select ariaLabelledBy="id_Payment_type" change="onPaymentTypeChange" selectedKey="{filterData>/RemmitanceTab/PaymentTypeSelectedKey}">
+                        <core:Item text="{i18n>REMIT_TYPE_ALL}" key="All" />
+                        <core:Item text="{i18n>REMIT_TYPE_CHECK}" key="C`" />
+                        <core:Item text="{i18n>REMIT_TYPE_EFT}" key="E" />
+                        <core:Item text="{i18n>REMIT_TYPE_WIRE}" key="W" />
+                    </Select>
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem id="id_Remit_Filter_Search" name="FilterSearch" label="{i18n>FILTER_SEARCH}">
+                <fb:control>
+                    <Select ariaLabelledBy="id_Payment_type" change="onRemmitanceSearchChange" selectedKey="{filterData>/RemmitanceTab/FilterSearchKey}">
+                        <core:Item text="{i18n>FILTER_SEARCH_PAYMENTNO_DESC}" key="PaymentNumber" />
+                        <core:Item text="{i18n>FILTER_SEARCH_PAYMENTAMT_DESC}" key="PaymentAmount" />
+                    </Select>
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem id="id_Remit_Filter_Payment_Number" name="PO" label="{i18n>FILTER_SEARCH_PAYMENTNO_DESC}" visible="{viewData>/RemmitanceTab/PaymentNumberVisible}">
+                <fb:control>
+                    <Input id="idPaymentNumberInp" type="Text" liveChange="onRemmitanceFilterSearchChange" value="{filterData>/RemmitanceTab/PaymentNumber}"/>
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem id="id_Remit_Filter_Amount" name="Invoice" label="{i18n>FILTER_SEARCH_PAYMENTAMT_DESC}" visible="{viewData>/RemmitanceTab/PaymentAmountVisible}">
+                <fb:control>
+                    <Input type="Text" ariaLabelledBy="idPoBox" liveChange="onRemmitanceFilterSearchChange" value="{filterData>/RemmitanceTab/PaymentAmount}"/>
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem id="id_Remit_From_Date" name="FromDate" label="{i18n>FROM_DATE}" visible="{viewData>/RemmitanceTab/DateVisible}" width="50%">
+                <fb:control>
+                    <DatePicker width="50%" value="{filterData>/RemmitanceTab/FromDate}" valueState="{viewData>/RemmitanceTab/FromDateValueState}" valueStateText="{viewData>/RemmitanceTab/FromDateValueStateText}" change="onRemmitanceDatePickerChange"></DatePicker>
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem id="id_Remit_To_Date" name="ToDate" label="{i18n>TO_DATE}" visible="{viewData>/RemmitanceTab/DateVisible}" width="50%">
+                <fb:control>
+                    <DatePicker width="50%" value="{filterData>/RemmitanceTab/ToDate}" valueState="{viewData>/RemmitanceTab/EndDateValueState}" valueStateText="{viewData>/RemmitanceTab/EndDateValueStateText}" change="onRemmitanceDatePickerChange"></DatePicker>
+                </fb:control>
+            </fb:FilterItem>
+        </fb:filterItems>
+    </fb:FilterBar>
+    <Table id="idRemmitDetailTable" noDataText="{i18n>TABLE_NODATA_TITLE}" growing="true" updateFinished="onRemmitanceDetailUpdateFinished" growingTriggerText="{i18n>SHOW_MORE_DOC}" growingThreshold="20">
+        <headerToolbar>
+            <Toolbar id="idToolbarRemmit" design="Transparent">
+                <Title text="{ parts : [{path:'i18n>REMMI_DETAIL_SUBTAB_TABLE_TITLE'}, {path:'commonData>/RemmitanceItems'}], formatter : 'jQuery.sap.formatMessage' }" tooltip="{ parts : [{path:'i18n>REMMI_DETAIL_SUBTAB_TABLE_TITLE'}, {path:'commonData>/RemmitanceItems'}], formatter : 'jQuery.sap.formatMessage' }" level="H2" />
+                <ToolbarSpacer/>
+                <Button id="idPaymentExportButton" icon="sap-icon://excel-attachment" press="onSupplierExportExcel"  type="Transparent" />
+            </Toolbar>
+        </headerToolbar>
+        <columns>
+            <Column>
+                <Label text="{i18n>PAYMENT_AMOUNT_330}" />
+            </Column>
+            <Column>
+                <Label text="{i18n>PAYMENT_DATE_330}" />
+            </Column>
+            <Column demandPopin="true" minScreenWidth="Phone" popinDisplay="Inline">
+                <Label text="{i18n>PAYMENT_METHOD_330}" />
+            </Column>
+            <Column demandPopin="true" minScreenWidth="Phone" popinDisplay="Inline">
+                <Label text="{i18n>PAYMENT_NUM_330}" />
+            </Column>
+        </columns>
+    </Table>
+</core:FragmentDefinition>

@@ -1,0 +1,10 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<ViewSettingsDialog confirm="onSortConfirm" class="sapUiSizeCompact">
+		<sortItems>
+			<ViewSettingsItem text="{i18n>CLAIM_DATE_600}" key="ClaimsTab-ClaimDate" selected="true"/>
+			<ViewSettingsItem text="{i18n>CLAIM_TYPE_600}" key="ClaimsTab-ClaimType" />
+			<ViewSettingsItem text="{i18n>CLAIM_AMT_600}" key="ClaimsTab-ClaimCount" />
+			<ViewSettingsItem text="{i18n>CLAIM_REASON_600}" key="ClaimsTab-DispositionAmount" />
+		</sortItems>
+	</ViewSettingsDialog>
+</core:FragmentDefinition>

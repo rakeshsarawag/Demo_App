@@ -1,0 +1,1199 @@
+{
+    "globals": {
+        "opaTest": false,
+        "tl": false,
+        "com": true,
+        "test": false,
+        "slo": false,
+        "uxcc": false,
+        "travel": true,
+        "oData": false,
+        "nw": true,
+        "mytravelandexpense": false,
+        "expect": false,
+        "fm": true,
+        "d3": false,
+        "fs": true,
+        "ok": false,
+        "notEqual": false,
+        "s2p": false,
+        "equals": false,
+        "publicservices": true,
+        "$": false,
+        "throws": false,
+        "gltrade": false,
+        "ssuite": false,
+        "i2d": true,
+        "hpa": false,
+        "sap": true,
+        "notDeepEqual": false,
+        "jQuery": false,
+        "ehs": false,
+        "mdm": false,
+        "webide": false,
+        "notStrictEqual": false,
+        "util": true,
+        "retail": false,
+        "cross": true,
+        "QUnit": false,
+        "stop": false,
+        "hcm": false,
+        "fin": true,
+        "oil": true,
+        "srm": false,
+        "drilldown": true,
+        "ux": true,
+        "deepEqual": false,
+        "strictEqual": false,
+        "sakp": false,
+        "cec": false,
+        "URI": false,
+        "ui": true,
+        "module": false,
+        "equal": false,
+        "asyncTest": false,
+        "fscm": false,
+        "fcg": true,
+        "sinon": false,
+        "ai": false,
+        "Promise": false,
+        "cordova": false,
+        "cus": false,
+        "cloud": true,
+        "assert": false
+    },
+    "additionalRuleMetadata": {
+        "no-new": {
+            "help": "http://eslint.org/docs/rules/no-new",
+            "category": "BestPractice",
+            "priority": "major",
+            "severity": "w"
+        },
+        "no-octal": {
+            "help": "http://eslint.org/docs/rules/no-octal",
+            "category": "BestPractice",
+            "priority": "minor",
+            "severity": "w"
+        },
+        "sap-no-sessionstorage": {
+            "help": "https://wiki.wdf.sap.corp/wiki/display/fiorisuite/sap-no-sessionstorage",
+            "category": "PossibleError",
+            "priority": "major",
+            "severity": "w"
+        },
+        "no-extra-parens": {
+            "help": "http://eslint.org/docs/rules/no-extra-parens",
+            "category": "BestPractice",
+            "priority": "minor",
+            "severity": "w"
+        },
+        "guard-for-in": {
+            "help": "http://eslint.org/docs/rules/guard-for-in",
+            "category": "BestPractice",
+            "severity": "i"
+        },
+        "no-fallthrough": {
+            "help": "http://eslint.org/docs/rules/no-fallthrough",
+            "category": "BestPractice",
+            "priority": "major",
+            "severity": "w"
+        },
+        "no-console": {
+            "help": "http://eslint.org/docs/rules/no-console",
+            "category": "PossibleError",
+            "priority": "critical",
+            "severity": "e"
+        },
+        "default-case": {
+            "help": "http://eslint.org/docs/rules/default-case",
+            "category": "BestPractice",
+            "priority": "minor",
+            "severity": "w"
+        },
+        "max-nested-callbacks": {
+            "help": "http://eslint.org/docs/rules/max-nested-callbacks",
+            "category": "StylisticIssue",
+            "severity": "i"
+        },
+        "no-mixed-spaces-and-tabs": {
+            "help": "http://eslint.org/docs/rules/no-mixed-spaces-and-tabs",
+            "category": "StylisticIssue",
+            "severity": "i"
+        },
+        "no-else-return": {
+            "help": "http://eslint.org/docs/rules/no-else-return",
+            "category": "BestPractice",
+            "priority": "minor",
+            "severity": "w"
+        },
+        "curly": {
+            "help": "http://eslint.org/docs/rules/curly",
+            "category": "BestPractice",
+            "severity": "i"
+        },
+        "no-native-reassign": {
+            "help": "http://eslint.org/docs/rules/no-native-reassign",
+            "category": "BestPractice",
+            "priority": "critical",
+            "severity": "e"
+        },
+        "sap-no-hardcoded-url": {
+            "help": "https://wiki.wdf.sap.corp/wiki/display/fiorisuite/sap-no-hardcoded-url",
+            "category": "PossibleError",
+            "priority": "major",
+            "severity": "w"
+        },
+        "yoda": {
+            "help": "http://eslint.org/docs/rules/yoda",
+            "category": "BestPractice",
+            "priority": "minor",
+            "severity": "w"
+        },
+        "no-warning-comments": {
+            "help": "http://eslint.org/docs/rules/no-warning-comments",
+            "category": "BestPractice",
+            "priority": "minor",
+            "severity": "w"
+        },
+        "no-bitwise": {
+            "help": "http://eslint.org/docs/rules/no-bitwise",
+            "category": "BestPractice",
+            "priority": "minor",
+            "severity": "w"
+        },
+        "no-unused-expressions": {
+            "help": "http://eslint.org/docs/rules/no-unused-expressions",
+            "category": "BestPractice",
+            "priority": "critical",
+            "severity": "e"
+        },
+        "no-path-concat": {
+            "help": "http://eslint.org/docs/rules/no-path-concat",
+            "category": "Node.js",
+            "priority": "minor",
+            "severity": "w"
+        },
+        "sap-no-event-prop": {
+            "help": "https://wiki.wdf.sap.corp/wiki/display/fiorisuite/sap-no-event-prop",
+            "category": "PossibleError",
+            "priority": "major",
+            "severity": "w"
+        },
+        "comma-style": {
+            "help": "http://eslint.org/docs/rules/comma-style",
+            "category": "StylisticIssue",
+            "severity": ""
+        },
+        "no-irregular-whitespace": {
+            "help": "http://eslint.org/docs/rules/no-irregular-whitespace",
+            "category": "PossibleError",
+            "priority": "major",
+            "severity": "w"
+        },
+        "sap-no-jquery-device-api": {
+            "help": "https://wiki.wdf.sap.corp/wiki/display/fiorisuite/sap-no-jquery-device-api",
+            "category": "PossibleError",
+            "priority": "major",
+            "severity": "w"
+        },
+        "new-cap": {
+            "help": "http://eslint.org/docs/rules/new-cap",
+            "category": "StylisticIssue",
+            "severity": "i"
+        },
+        "sap-no-override-rendering": {
+            "help": "https://wiki.wdf.sap.corp/wiki/display/fiorisuite/sap-no-override-rendering",
+            "category": "PossibleError",
+            "priority": "major",
+            "severity": "w"
+        },
+        "no-new-wrappers": {
+            "help": "http://eslint.org/docs/rules/no-new-wrappers",
+            "category": "BestPractice",
+            "priority": "major",
+            "severity": "w"
+        },
+        "wrap-regex": {
+            "help": "http://eslint.org/docs/rules/wrap-regex",
+            "category": "StylisticIssue",
+            "severity": "i"
+        },
+        "space-infix-ops": {
+            "help": "http://eslint.org/docs/rules/space-infix-ops",
+            "category": "StylisticIssue",
+            "severity": "i"
+        },
+        "no-sync": {
+            "help": "http://eslint.org/docs/rules/no-sync",
+            "category": "Node.js",
+            "priority": "minor",
+            "severity": "w"
+        },
+        "no-labels": {
+            "help": "http://eslint.org/docs/rules/no-labels",
+            "category": "BestPractice",
+            "priority": "minor",
+            "severity": "w"
+        },
+        "sap-no-global-variable": {
+            "help": "https://wiki.wdf.sap.corp/wiki/display/fiorisuite/sap-no-global-variable",
+            "category": "PossibleError",
+            "priority": "major",
+            "severity": "w"
+        },
+        "sap-browser-api-warning": {
+            "help": "https://wiki.wdf.sap.corp/wiki/display/fiorisuite/sap-browser-api-warning",
+            "category": "PossibleError",
+            "priority": "major",
+            "severity": "w"
+        },
+        "new-parens": {
+            "help": "http://eslint.org/docs/rules/new-parens",
+            "category": "StylisticIssue",
+            "priority": "major",
+            "severity": "w"
+        },
+        "no-process-exit": {
+            "help": "http://eslint.org/docs/rules/no-process-exit",
+            "category": "Node.js",
+            "priority": "minor",
+            "severity": "w"
+        },
+        "sap-no-hardcoded-color": {
+            "help": "https://wiki.wdf.sap.corp/wiki/display/fiorisuite/sap-no-hardcoded-color",
+            "category": "PossibleError",
+            "priority": "major",
+            "severity": "w"
+        },
+        "eol-last": {
+            "help": "http://eslint.org/docs/rules/eol-last",
+            "category": "StylisticIssue",
+            "severity": "i"
+        },
+        "strict": {
+            "help": "http://eslint.org/docs/rules/strict",
+            "category": "StrictMode",
+            "priority": "major",
+            "severity": "w"
+        },
+        "no-control-regex": {
+            "help": "http://eslint.org/docs/rules/no-control-regex",
+            "category": "PossibleError",
+            "priority": "critical",
+            "severity": "e"
+        },
+        "block-scoped-var": {
+            "help": "http://eslint.org/docs/rules/block-scoped-var",
+            "category": "BestPractice",
+            "priority": "minor",
+            "severity": "w"
+        },
+        "no-new-object": {
+            "help": "http://eslint.org/docs/rules/no-new-object",
+            "category": "StylisticIssue",
+            "severity": "i"
+        },
+        "comma-spacing": {
+            "help": "http://eslint.org/docs/rules/comma-spacing",
+            "category": "StylisticIssue",
+            "severity": "i"
+        },
+        "complexity": {
+            "help": "http://eslint.org/docs/rules/complexity",
+            "category": "BestPractice",
+            "priority": "major",
+            "severity": "w"
+        },
+        "no-inner-declarations": {
+            "help": "http://eslint.org/docs/rules/no-inner-declarations",
+            "category": "PossibleError",
+            "priority": "critical",
+            "severity": "e"
+        },
+        "no-implied-eval": {
+            "help": "http://eslint.org/docs/rules/no-implied-eval",
+            "category": "BestPractice",
+            "priority": "major",
+            "severity": "w"
+        },
+        "no-undef-init": {
+            "help": "http://eslint.org/docs/rules/no-undef-init",
+            "category": "Variable",
+            "priority": "minor",
+            "severity": "w"
+        },
+        "no-plusplus": {
+            "help": "http://eslint.org/docs/rules/no-plusplus",
+            "category": "BestPractice",
+            "priority": "minor",
+            "severity": "w"
+        },
+        "no-array-constructor": {
+            "help": "http://eslint.org/docs/rules/no-array-constructor",
+            "category": "StylisticIssue",
+            "severity": "i"
+        },
+        "key-spacing": {
+            "help": "http://eslint.org/docs/rules/key-spacing",
+            "category": "StylisticIssue",
+            "severity": ""
+        },
+        "no-floating-decimal": {
+            "help": "http://eslint.org/docs/rules/no-floating-decimal",
+            "category": "BestPractice",
+            "priority": "minor",
+            "severity": "w"
+        },
+        "no-label-var": {
+            "help": "http://eslint.org/docs/rules/no-label-var",
+            "category": "Variable",
+            "priority": "major",
+            "severity": "w"
+        },
+        "no-with": {
+            "help": "http://eslint.org/docs/rules/no-with",
+            "category": "BestPractice",
+            "priority": "critical",
+            "severity": "e"
+        },
+        "no-alert": {
+            "help": "http://eslint.org/docs/rules/no-alert",
+            "category": "BestPractice",
+            "priority": "major",
+            "severity": "w"
+        },
+        "max-params": {
+            "help": "http://eslint.org/docs/rules/max-params",
+            "category": "BestPractice",
+            "severity": "i"
+        },
+        "sap-no-ui5base-prop": {
+            "help": "https://wiki.wdf.sap.corp/wiki/display/fiorisuite/sap-no-ui5base-prop",
+            "category": "PossibleError",
+            "priority": "critical",
+            "severity": "e"
+        },
+        "sap-no-ui5odatamodel-prop": {
+            "help": "https://wiki.wdf.sap.corp/wiki/display/fiorisuite/sap-no-ui5odatamodel-prop",
+            "category": "PossibleError",
+            "severity": "i"
+        },
+        "quote-props": {
+            "help": "http://eslint.org/docs/rules/quote-props",
+            "category": "StylisticIssue",
+            "severity": "i"
+        },
+        "no-proto": {
+            "help": "http://eslint.org/docs/rules/no-proto",
+            "category": "BestPractice",
+            "priority": "major",
+            "severity": "w"
+        },
+        "vars-on-top": {
+            "help": "http://eslint.org/docs/rules/vars-on-top",
+            "category": "BestPractice",
+            "severity": ""
+        },
+        "no-use-before-define": {
+            "help": "http://eslint.org/docs/rules/no-use-before-define",
+            "category": "Variable",
+            "priority": "major",
+            "severity": "w"
+        },
+        "line-endings": {
+            "help": "https://wiki.wdf.sap.corp/wiki/display/fiorisuite/line-endings",
+            "category": "PossibleError",
+            "priority": "critical",
+            "severity": "e"
+        },
+        "no-redeclare": {
+            "help": "http://eslint.org/docs/rules/no-redeclare",
+            "category": "BestPractice",
+            "priority": "major",
+            "severity": "w"
+        },
+        "camelcase": {
+            "help": "http://eslint.org/docs/rules/camelcase",
+            "category": "StylisticIssue",
+            "severity": "i"
+        },
+        "no-eq-null": {
+            "help": "http://eslint.org/docs/rules/no-eq-null",
+            "category": "BestPractice",
+            "priority": "major",
+            "severity": "w"
+        },
+        "consistent-return": {
+            "help": "http://eslint.org/docs/rules/consistent-return",
+            "category": "BestPractice",
+            "priority": "minor",
+            "severity": "w"
+        },
+        "no-mixed-requires": {
+            "help": "http://eslint.org/docs/rules/no-mixed-requires",
+            "category": "Node.js",
+            "priority": "minor",
+            "severity": "w"
+        },
+        "semi": {
+            "help": "http://eslint.org/docs/rules/semi",
+            "category": "PossibleError",
+            "priority": "critical",
+            "severity": "e"
+        },
+        "no-empty-label": {
+            "help": "http://eslint.org/docs/rules/no-empty-label",
+            "category": "BestPractice",
+            "priority": "major",
+            "severity": "w"
+        },
+        "no-caller": {
+            "help": "http://eslint.org/docs/rules/no-caller",
+            "category": "BestPractice",
+            "priority": "critical",
+            "severity": "e"
+        },
+        "sap-no-override-storage-prototype": {
+            "help": "https://wiki.wdf.sap.corp/wiki/display/fiorisuite/sap-no-override-storage-prototype",
+            "category": "PossibleError",
+            "priority": "major",
+            "severity": "w"
+        },
+        "no-spaced-func": {
+            "help": "http://eslint.org/docs/rules/no-spaced-func",
+            "category": "StylisticIssue",
+            "severity": "i"
+        },
+        "max-depth": {
+            "help": "http://eslint.org/docs/rules/max-depth",
+            "category": "BestPractice",
+            "severity": "i"
+        },
+        "no-extra-semi": {
+            "help": "http://eslint.org/docs/rules/no-extra-semi",
+            "category": "BestPractice",
+            "priority": "major",
+            "severity": "w"
+        },
+        "space-in-brackets": {
+            "help": "http://eslint.org/docs/rules/space-in-brackets",
+            "category": "StylisticIssue",
+            "severity": "i"
+        },
+        "no-empty": {
+            "help": "http://eslint.org/docs/rules/no-empty",
+            "category": "BestPractice",
+            "priority": "major",
+            "severity": "w"
+        },
+        "no-lonely-if": {
+            "help": "http://eslint.org/docs/rules/no-lonely-if",
+            "category": "BestPractice",
+            "priority": "minor",
+            "severity": "w"
+        },
+        "no-regex-spaces": {
+            "help": "http://eslint.org/docs/rules/no-regex-spaces",
+            "category": "PossibleError",
+            "priority": "critical",
+            "severity": "e"
+        },
+        "space-return-throw-case": {
+            "help": "http://eslint.org/docs/rules/space-return-throw-case",
+            "category": "StylisticIssue",
+            "severity": "i"
+        },
+        "no-multi-spaces": {
+            "help": "http://eslint.org/docs/rules/no-multi-spaces",
+            "category": "StylisticIssue",
+            "severity": "i"
+        },
+        "max-statements": {
+            "help": "http://eslint.org/docs/rules/max-statements",
+            "category": "BestPractice",
+            "severity": "i"
+        },
+        "no-func-assign": {
+            "help": "http://eslint.org/docs/rules/no-func-assign",
+            "category": "PossibleError",
+            "priority": "critical",
+            "severity": "e"
+        },
+        "no-extra-boolean-cast": {
+            "help": "http://eslint.org/docs/rules/no-extra-boolean-cast",
+            "category": "PossibleError",
+            "priority": "major",
+            "severity": "w"
+        },
+        "no-sparse-arrays": {
+            "help": "http://eslint.org/docs/rules/no-sparse-arrays",
+            "category": "PossibleError",
+            "priority": "critical",
+            "severity": "e"
+        },
+        "func-names": {
+            "help": "http://eslint.org/docs/rules/func-names",
+            "category": "StylisticIssue",
+            "severity": "i"
+        },
+        "no-reserved-keys": {
+            "help": "http://eslint.org/docs/rules/no-reserved-keys",
+            "category": "PossibleError",
+            "priority": "major",
+            "severity": "w"
+        },
+        "no-loop-func": {
+            "help": "http://eslint.org/docs/rules/no-loop-func",
+            "category": "BestPractice",
+            "priority": "major",
+            "severity": "w"
+        },
+        "no-constant-condition": {
+            "help": "http://eslint.org/docs/rules/no-constant-condition",
+            "category": "PossibleError",
+            "priority": "critical",
+            "severity": "e"
+        },
+        "no-nested-ternary": {
+            "help": "http://eslint.org/docs/rules/no-nested-ternary",
+            "category": "StylisticIssue",
+            "severity": "i"
+        },
+        "no-ternary": {
+            "help": "http://eslint.org/docs/rules/no-ternary",
+            "category": "StylisticIssue",
+            "severity": "i"
+        },
+        "no-extend-native": {
+            "help": "http://eslint.org/docs/rules/no-extend-native",
+            "category": "BestPractice",
+            "priority": "major",
+            "severity": "w"
+        },
+        "no-sequences": {
+            "help": "http://eslint.org/docs/rules/no-sequences",
+            "category": "BestPractice",
+            "priority": "major",
+            "severity": "w"
+        },
+        "space-unary-word-ops": {
+            "help": "http://eslint.org/docs/rules/space-unary-word-ops",
+            "category": "StylisticIssue",
+            "severity": "i"
+        },
+        "no-iterator": {
+            "help": "http://eslint.org/docs/rules/no-iterator",
+            "category": "BestPractice",
+            "priority": "major",
+            "severity": "w"
+        },
+        "sort-vars": {
+            "help": "http://eslint.org/docs/rules/sort-vars",
+            "category": "StylisticIssue",
+            "severity": "i"
+        },
+        "valid-typeof": {
+            "help": "http://eslint.org/docs/rules/valid-typeof",
+            "category": "PossibleError",
+            "priority": "critical",
+            "severity": "e"
+        },
+        "global-strict": {
+            "help": "http://eslint.org/docs/rules/global-strict",
+            "category": "StrictMode",
+            "priority": "minor",
+            "severity": "w"
+        },
+        "no-multi-str": {
+            "help": "http://eslint.org/docs/rules/no-multi-str",
+            "category": "BestPractice",
+            "priority": "minor",
+            "severity": "w"
+        },
+        "no-ex-assign": {
+            "help": "http://eslint.org/docs/rules/no-ex-assign",
+            "category": "PossibleError",
+            "priority": "critical",
+            "severity": "e"
+        },
+        "no-eval": {
+            "help": "http://eslint.org/docs/rules/no-eval",
+            "category": "BestPractice",
+            "priority": "critical",
+            "severity": "e"
+        },
+        "no-shadow-restricted-names": {
+            "help": "http://eslint.org/docs/rules/no-shadow-restricted-names",
+            "category": "Variable",
+            "priority": "major",
+            "severity": "w"
+        },
+        "no-empty-class": {
+            "help": "http://eslint.org/docs/rules/no-empty-class",
+            "category": "PossibleError",
+            "priority": "critical",
+            "severity": "e"
+        },
+        "no-self-compare": {
+            "help": "http://eslint.org/docs/rules/no-self-compare",
+            "category": "BestPractice",
+            "priority": "major",
+            "severity": "w"
+        },
+        "no-shadow": {
+            "help": "http://eslint.org/docs/rules/no-shadow",
+            "category": "Variable",
+            "priority": "major",
+            "severity": "w"
+        },
+        "valid-jsdoc": {
+            "help": "http://eslint.org/docs/rules/valid-jsdoc",
+            "category": "PossibleError",
+            "severity": "i"
+        },
+        "no-extra-bind": {
+            "help": "http://eslint.org/docs/rules/no-extra-bind",
+            "category": "BestPractice",
+            "severity": "i"
+        },
+        "eqeqeq": {
+            "help": "http://eslint.org/docs/rules/eqeqeq",
+            "category": "BestPractice",
+            "priority": "major",
+            "severity": "w"
+        },
+        "no-invalid-regexp": {
+            "help": "http://eslint.org/docs/rules/no-invalid-regexp",
+            "category": "PossibleError",
+            "priority": "critical",
+            "severity": "e"
+        },
+        "no-cond-assign": {
+            "help": "http://eslint.org/docs/rules/no-cond-assign",
+            "category": "PossibleError",
+            "priority": "critical",
+            "severity": "e"
+        },
+        "brace-style": {
+            "help": "http://eslint.org/docs/rules/brace-style",
+            "category": "StylisticIssue",
+            "severity": "i"
+        },
+        "no-new-require": {
+            "help": "http://eslint.org/docs/rules/no-new-require",
+            "category": "Node.js",
+            "priority": "major",
+            "severity": "w"
+        },
+        "use-isnan": {
+            "help": "http://eslint.org/docs/rules/use-isnan",
+            "category": "PossibleError",
+            "priority": "critical",
+            "severity": "e"
+        },
+        "no-unreachable": {
+            "help": "http://eslint.org/docs/rules/no-unreachable",
+            "category": "PossibleError",
+            "priority": "major",
+            "severity": "w"
+        },
+        "no-delete-var": {
+            "help": "http://eslint.org/docs/rules/no-delete-var",
+            "category": "Variable",
+            "priority": "minor",
+            "severity": "w"
+        },
+        "sap-no-localstorage": {
+            "help": "https://wiki.wdf.sap.corp/wiki/display/fiorisuite/sap-no-localstorage",
+            "category": "PossibleError",
+            "priority": "major",
+            "severity": "w"
+        },
+        "sap-no-window-alert": {
+            "help": "https://wiki.wdf.sap.corp/wiki/display/fiorisuite/sap-no-window-alert",
+            "category": "PossibleError",
+            "priority": "major",
+            "severity": "w"
+        },
+        "no-restricted-modules": {
+            "help": "http://eslint.org/docs/rules/no-restricted-modules",
+            "category": "Node.js",
+            "priority": "major",
+            "severity": "w"
+        },
+        "no-catch-shadow": {
+            "help": "http://eslint.org/docs/rules/no-catch-shadow",
+            "category": "Variable",
+            "priority": "major",
+            "severity": "w"
+        },
+        "no-obj-calls": {
+            "help": "http://eslint.org/docs/rules/no-obj-calls",
+            "category": "PossibleError",
+            "priority": "critical",
+            "severity": "e"
+        },
+        "no-return-assign": {
+            "help": "http://eslint.org/docs/rules/no-return-assign",
+            "category": "BestPractice",
+            "priority": "major",
+            "severity": "w"
+        },
+        "no-octal-escape": {
+            "help": "http://eslint.org/docs/rules/no-octal-escape",
+            "category": "BestPractice",
+            "priority": "major",
+            "severity": "w"
+        },
+        "no-void": {
+            "help": "http://eslint.org/docs/rules/no-void",
+            "category": "BestPractice",
+            "severity": ""
+        },
+        "no-undef": {
+            "help": "http://eslint.org/docs/rules/no-undef",
+            "category": "Variable",
+            "priority": "critical",
+            "severity": "e"
+        },
+        "handle-callback-err": {
+            "help": "http://eslint.org/docs/rules/handle-callback-err",
+            "category": "Node.js",
+            "priority": "minor",
+            "severity": "w"
+        },
+        "no-multiple-empty-lines": {
+            "help": "http://eslint.org/docs/rules/no-multiple-empty-lines",
+            "category": "StylisticIssue",
+            "severity": ""
+        },
+        "space-after-keywords": {
+            "help": "http://eslint.org/docs/rules/space-after-keywords",
+            "category": "StylisticIssue",
+            "severity": "i"
+        },
+        "max-len": {
+            "help": "http://eslint.org/docs/rules/max-len",
+            "category": "BestPractice",
+            "severity": "i"
+        },
+        "no-wrap-func": {
+            "help": "http://eslint.org/docs/rules/no-wrap-func",
+            "category": "StylisticIssue",
+            "severity": "i"
+        },
+        "no-undefined": {
+            "help": "http://eslint.org/docs/rules/no-undefined",
+            "category": "Variable",
+            "priority": "minor",
+            "severity": "w"
+        },
+        "sap-no-ui5eventprovider-prop": {
+            "help": "https://wiki.wdf.sap.corp/wiki/display/fiorisuite/sap-no-ui5eventprovider-prop",
+            "category": "PossibleError",
+            "priority": "major",
+            "severity": "w"
+        },
+        "padded-blocks": {
+            "help": "http://eslint.org/docs/rules/padded-blocks",
+            "category": "StylisticIssue",
+            "severity": ""
+        },
+        "no-process-env": {
+            "help": "http://eslint.org/docs/rules/no-process-env",
+            "category": "Node.js",
+            "severity": ""
+        },
+        "one-var": {
+            "help": "http://eslint.org/docs/rules/one-var",
+            "category": "StylisticIssue",
+            "severity": "i"
+        },
+        "no-extra-strict": {
+            "help": "http://eslint.org/docs/rules/no-extra-strict",
+            "category": "StrictMode",
+            "priority": "minor",
+            "severity": "w"
+        },
+        "no-script-url": {
+            "help": "http://eslint.org/docs/rules/no-script-url",
+            "category": "BestPractice",
+            "priority": "major",
+            "severity": "w"
+        },
+        "no-comma-dangle": {
+            "help": "http://eslint.org/docs/rules/no-comma-dangle",
+            "category": "PossibleError",
+            "priority": "major",
+            "severity": "w"
+        },
+        "no-trailing-spaces": {
+            "help": "http://eslint.org/docs/rules/no-trailing-spaces",
+            "category": "StylisticIssue",
+            "severity": "i"
+        },
+        "space-in-parens": {
+            "help": "http://eslint.org/docs/rules/space-in-parens",
+            "category": "StylisticIssue",
+            "severity": ""
+        },
+        "dot-notation": {
+            "help": "http://eslint.org/docs/rules/dot-notation",
+            "category": "BestPractice",
+            "severity": "i"
+        },
+        "spaced-line-comment": {
+            "help": "http://eslint.org/docs/rules/spaced-line-comment",
+            "category": "StylisticIssue",
+            "severity": ""
+        },
+        "no-new-func": {
+            "help": "http://eslint.org/docs/rules/no-new-func",
+            "category": "BestPractice",
+            "priority": "critical",
+            "severity": "e"
+        },
+        "no-negated-in-lhs": {
+            "help": "http://eslint.org/docs/rules/no-negated-in-lhs",
+            "category": "PossibleError",
+            "priority": "critical",
+            "severity": "e"
+        },
+        "no-div-regex": {
+            "help": "http://eslint.org/docs/rules/no-div-regex",
+            "category": "BestPractice",
+            "priority": "minor",
+            "severity": "w"
+        },
+        "no-underscore-dangle": {
+            "help": "http://eslint.org/docs/rules/no-underscore-dangle",
+            "category": "StylisticIssue",
+            "severity": "i"
+        },
+        "no-unused-vars": {
+            "help": "http://eslint.org/docs/rules/no-unused-vars",
+            "category": "Variable",
+            "priority": "major",
+            "severity": "w"
+        },
+        "no-space-before-semi": {
+            "help": "http://eslint.org/docs/rules/no-space-before-semi",
+            "category": "StylisticIssue",
+            "severity": "i"
+        },
+        "quotes": {
+            "help": "http://eslint.org/docs/rules/quotes",
+            "category": "StylisticIssue",
+            "severity": "i"
+        },
+        "sap-browser-api-error": {
+            "help": "https://wiki.wdf.sap.corp/wiki/display/fiorisuite/sap-browser-api-error",
+            "category": "PossibleError",
+            "priority": "major",
+            "severity": "w"
+        },
+        "space-before-blocks": {
+            "help": "http://eslint.org/docs/rules/space-before-blocks",
+            "category": "StylisticIssue",
+            "severity": ""
+        },
+        "radix": {
+            "help": "http://eslint.org/docs/rules/radix",
+            "category": "BestPractice",
+            "priority": "major",
+            "severity": "w"
+        },
+        "wrap-iife": {
+            "help": "http://eslint.org/docs/rules/wrap-iife",
+            "category": "BestPractice",
+            "priority": "minor",
+            "severity": "w"
+        },
+        "no-dupe-keys": {
+            "help": "http://eslint.org/docs/rules/no-dupe-keys",
+            "category": "PossibleError",
+            "priority": "critical",
+            "severity": "e"
+        },
+        "consistent-this": {
+            "help": "http://eslint.org/docs/rules/consistent-this",
+            "category": "StylisticIssue",
+            "severity": "i"
+        },
+        "no-lone-blocks": {
+            "help": "http://eslint.org/docs/rules/no-lone-blocks",
+            "category": "BestPractice",
+            "priority": "minor",
+            "severity": "w"
+        },
+        "func-style": {
+            "help": "http://eslint.org/docs/rules/func-style",
+            "category": "StylisticIssue",
+            "severity": "i"
+        },
+        "no-debugger": {
+            "help": "http://eslint.org/docs/rules/no-debugger",
+            "category": "PossibleError",
+            "priority": "critical",
+            "severity": "e"
+        }
+    },
+    "env": {
+        "mocha": true,
+        "node": false,
+        "jasmine": false,
+        "amd": true,
+        "browser": true
+    },
+    "rules": {
+        "no-new": 1,
+        "no-octal": 1,
+        "sap-no-sessionstorage": 1,
+        "no-extra-parens": 0,
+        "guard-for-in": 1,
+        "no-fallthrough": 1,
+        "no-console": 2,
+        "default-case": 0,
+        "max-nested-callbacks": [
+            0,
+            2
+        ],
+        "no-mixed-spaces-and-tabs": [
+            0,
+            false
+        ],
+        "no-else-return": 0,
+        "curly": [
+            1,
+            "all"
+        ],
+        "no-native-reassign": 2,
+        "sap-no-hardcoded-url": 1,
+        "yoda": [
+            1,
+            "never"
+        ],
+        "no-warning-comments": [
+            1,
+            {
+                "location": "start",
+                "terms": [
+                    "todo",
+                    "fixme",
+                    "xxx"
+                ]
+            }
+        ],
+        "no-bitwise": 0,
+        "no-unused-expressions": 2,
+        "no-path-concat": 0,
+        "sap-no-event-prop": 1,
+        "comma-style": 0,
+        "no-irregular-whitespace": 1,
+        "sap-no-jquery-device-api": 1,
+        "new-cap": [
+            1,
+            {"capIsNew": false}
+        ],
+        "sap-no-override-rendering": 1,
+        "no-new-wrappers": 1,
+        "wrap-regex": 0,
+        "space-infix-ops": 1,
+        "no-sync": 0,
+        "no-labels": 1,
+        "sap-no-global-variable": 1,
+        "sap-browser-api-warning": 1,
+        "new-parens": 1,
+        "no-process-exit": 0,
+        "sap-no-hardcoded-color": 1,
+        "eol-last": 0,
+        "strict": 0,
+        "no-control-regex": 2,
+        "block-scoped-var": 0,
+        "no-new-object": 1,
+        "comma-spacing": 0,
+        "complexity": [
+            1,
+            15
+        ],
+        "no-inner-declarations": [
+            2,
+            "functions"
+        ],
+        "no-implied-eval": 1,
+        "no-undef-init": 1,
+        "no-plusplus": 0,
+        "no-array-constructor": 1,
+        "key-spacing": [
+            0,
+            {
+                "afterColon": true,
+                "beforeColon": false
+            }
+        ],
+        "no-floating-decimal": 0,
+        "no-label-var": 1,
+        "no-with": 2,
+        "no-alert": 1,
+        "max-params": [
+            1,
+            4
+        ],
+        "sap-no-ui5base-prop": 2,
+        "sap-no-ui5odatamodel-prop": 1,
+        "quote-props": 0,
+        "no-proto": 1,
+        "vars-on-top": 0,
+        "no-use-before-define": 1,
+        "line-endings": 2,
+        "no-redeclare": 1,
+        "camelcase": 1,
+        "no-eq-null": 1,
+        "consistent-return": 1,
+        "no-mixed-requires": [
+            0,
+            false
+        ],
+        "semi": 2,
+        "no-empty-label": 1,
+        "no-caller": 2,
+        "sap-no-override-storage-prototype": 1,
+        "no-spaced-func": 1,
+        "max-depth": [
+            1,
+            4
+        ],
+        "no-extra-semi": 1,
+        "space-in-brackets": [
+            0,
+            "never"
+        ],
+        "no-empty": 1,
+        "no-lonely-if": 0,
+        "no-regex-spaces": 2,
+        "space-return-throw-case": 1,
+        "no-multi-spaces": 1,
+        "max-statements": [
+            1,
+            40
+        ],
+        "no-func-assign": 2,
+        "no-extra-boolean-cast": 1,
+        "no-sparse-arrays": 2,
+        "func-names": 0,
+        "no-reserved-keys": 0,
+        "no-loop-func": 1,
+        "no-constant-condition": 2,
+        "no-nested-ternary": 1,
+        "no-ternary": 0,
+        "no-extend-native": 1,
+        "no-sequences": 1,
+        "space-unary-word-ops": 0,
+        "no-iterator": 1,
+        "sort-vars": 0,
+        "valid-typeof": 2,
+        "global-strict": [
+            1,
+            "never"
+        ],
+        "no-multi-str": 1,
+        "no-ex-assign": 2,
+        "no-eval": 2,
+        "no-shadow-restricted-names": 1,
+        "no-empty-class": 2,
+        "no-self-compare": 1,
+        "no-shadow": 1,
+        "valid-jsdoc": [
+            1,
+            {"requireReturn": false}
+        ],
+        "no-extra-bind": 1,
+        "eqeqeq": 1,
+        "no-invalid-regexp": 2,
+        "no-cond-assign": 2,
+        "brace-style": [
+            0,
+            "1tbs"
+        ],
+        "no-new-require": 0,
+        "use-isnan": 2,
+        "no-unreachable": 1,
+        "no-delete-var": 1,
+        "sap-no-localstorage": 1,
+        "sap-no-window-alert": 1,
+        "no-restricted-modules": 0,
+        "no-catch-shadow": 1,
+        "no-obj-calls": 2,
+        "no-return-assign": 1,
+        "no-octal-escape": 1,
+        "no-void": 0,
+        "no-undef": 2,
+        "handle-callback-err": 0,
+        "no-multiple-empty-lines": [
+            0,
+            {"max": 2}
+        ],
+        "space-after-keywords": [
+            0,
+            "always"
+        ],
+        "max-len": [
+            1,
+            200
+        ],
+        "no-wrap-func": 1,
+        "no-undefined": 0,
+        "sap-no-ui5eventprovider-prop": 1,
+        "padded-blocks": 0,
+        "no-process-env": 0,
+        "one-var": 0,
+        "no-extra-strict": 0,
+        "no-script-url": 1,
+        "no-comma-dangle": 1,
+        "no-trailing-spaces": 0,
+        "space-in-parens": [
+            0,
+            "never"
+        ],
+        "dot-notation": 1,
+        "spaced-line-comment": [
+            0,
+            "always"
+        ],
+        "no-new-func": 2,
+        "no-negated-in-lhs": 2,
+        "no-div-regex": 0,
+        "no-underscore-dangle": 0,
+        "no-unused-vars": [
+            1,
+            {
+                "vars": "all",
+                "args": "none"
+            }
+        ],
+        "no-space-before-semi": 1,
+        "quotes": [
+            1,
+            "double",
+            "avoid-escape"
+        ],
+        "sap-browser-api-error": 1,
+        "space-before-blocks": [
+            0,
+            "always"
+        ],
+        "radix": 1,
+        "wrap-iife": 1,
+        "no-dupe-keys": 2,
+        "consistent-this": [
+            1,
+            "that"
+        ],
+        "no-lone-blocks": 1,
+        "func-style": [
+            0,
+            "declaration"
+        ],
+        "no-debugger": 2
+    }
+}

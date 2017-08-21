@@ -1,0 +1,16 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form">
+    <ColumnListItem >
+            <cells>
+                <Text text="{path:'InvoiceNumber'}" />
+                <Text text="{parts : [{path : 'InvoiceDate'}], formatter : '.formatter.getDateInDDMMYYYY'}" />
+                <Text text="{InvoiceTotal}" />
+                <Text text="{DiscountAmount}" />
+                <Text text="{NetAmount}" />
+                <Text text="{parts : [{path : 'DueDate'}], formatter : '.formatter.getDateInDDMMYYYY'}" />
+                <Text text="{PoNumber}" />
+                <Text text="{AgreementNumber}" />
+                <Text text="{PaymentBlockCode}" />
+                <Button icon="sap-icon://show" type="Transparent" press="onPdfViewPress"/>
+            </cells>
+        </ColumnListItem>
+</core:FragmentDefinition>

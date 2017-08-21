@@ -1,0 +1,69 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form">
+    <fb:FilterBar id="idUnpaidItemsFilter" search="onUnPaidFilterPress" clear="onFilterClear" showClearOnFB="true" showClearButton="true" filterBarExpanded="true" filterContainerWidth="20rem" showFilterConfiguration="true" xmlns:fb="sap.ui.comp.filterbar">
+        <fb:filterItems>
+            <fb:FilterItem id="id_Unpaid_Items_Filter_Search" name="FilterSearch" label="{i18n>FILTER_SEARCH}">
+                <fb:control>
+                    <Select ariaLabelledBy="id_Payment_type" change="onUnPaidItemsSearchChange">
+                        <core:Item text="{i18n>FILTER_SEARCH_PO_DESC}" key="po" />
+                        <core:Item text="{i18n>FILTER_SEARCH_INVOICE_DESC}" key="invoice" />
+                    </Select>
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem id="id_Unpaid_Items_Filter_Po" name="PO" label="{i18n>FILTER_SEARCH_PO_DESC}" visible="{viewData>/UnPaidItemsTab/PoVisible}">
+                <fb:control>
+                    <Input id="idUnpaidItemsStrAdrInp" value="{filterData>/UnPaidItemsTab/PurchaseOrder}" />
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem id="id_Unpaid_Items_Filter_Invoice" name="Invoice" label="{i18n>FILTER_SEARCH_INVOICE_DESC}" visible="{viewData>/UnPaidItemsTab/InvoiceVisible}">
+                <fb:control>
+                    <Input type="Text" ariaLabelledBy="idPoBox" value="{filterData>/UnPaidItemsTab/InvoiceNumber}" />
+                </fb:control>
+            </fb:FilterItem>
+        </fb:filterItems>
+    </fb:FilterBar>
+    <Table id="idUnpaidItemsTable" noDataText="{i18n>TABLE_NODATA_TITLE}" growing="true" updateFinished="onUnpaidItemsUpdateFinished" growingTriggerText="{i18n>SHOW_MORE_DOC}" growingThreshold="20">
+        <headerToolbar>
+            <Toolbar id="idToolbarUnpaidItems" design="Transparent">
+                <Title text="{ parts : [{path:'i18n>UNPAID_TABLE_TITLE'}, {path:'commonData>/UnpaidItems'}], formatter : 'jQuery.sap.formatMessage' }" tooltip="{ parts : [{path:'i18n>UNPAID_TABLE_TITLE'}, {path:'commonData>/UnpaidItems'}], formatter : 'jQuery.sap.formatMessage' }" level="H2" />
+                <ToolbarSpacer/>
+                <Button id="idBtnUnpaidPers" icon="sap-icon://action-settings" press="onPersonalizeUnpaidItems" tooltip="{i18n>PERS_SUPPLIERS_TOOL}" type="Transparent" />
+                <Button id="idUnpaidItemsExportBtn" icon="sap-icon://excel-attachment" press="onSupplierExportExcel" tooltip="{i18n>EXPORT_EXCEL_TOOL}" type="Transparent" />
+            </Toolbar>
+        </headerToolbar>
+        <columns>
+            <Column id="id_Invoice_No_Colm">
+                <Label text="{i18n>INVOICE_NUM_450}" tooltip="{i18n>INVOICE_NUM_450}" />
+            </Column>
+            <Column id="id_Invoice_Date_Colm">
+                <Label text="{i18n>INVOICE_DATE_450}" tooltip="{i18n>INVOICE_DATE_450}" />
+            </Column>
+            <Column id="id_Invoice_Total_Colm" demandPopin="true" minScreenWidth="Phone" popinDisplay="Inline">
+                <Label text="{i18n>INVOICE_TOTAL_450}" tooltip="{i18n>INVOICE_TOTAL_450}" />
+            </Column>
+            <Column id="id_Invoice_Discount_Colm" demandPopin="true" minScreenWidth="Phone" popinDisplay="Inline">
+                <Label text="{i18n>INVOICE_DISCOUNT_450}" tooltip="{i18n>INVOICE_DISCOUNT_450}" />
+            </Column>
+            <Column id="id_Net_Amount_Colm" demandPopin="true" minScreenWidth="Phone" popinDisplay="Inline">
+                <Label text="{i18n>NET_AMOUNT_450}" tooltip="{i18n>NET_AMOUNT_450}" />
+            </Column>
+            <Column id="id_Due_Date_Colm" demandPopin="true" minScreenWidth="Phone" popinDisplay="Inline">
+                <Label text="{i18n>DUE_DATE_450}" tooltip="{i18n>DUE_DATE_450}" />
+            </Column>
+            <!-- <Column id="id_Payment_Date_Colm" hAlign="Center" demandPopin="true" minScreenWidth="Phone" popinDisplay="Inline">
+                <Label text="{i18n>PAYMENT_DATE_320}" tooltip="{i18n>PAYMENT_DATE_320}" />
+            </Column> -->
+            <Column id="id_Po_No_Colm" hAlign="Center" demandPopin="true" minScreenWidth="Phone" popinDisplay="Inline">
+                <Label text="{i18n>PO_NUM_450}" tooltip="{i18n>PO_NUM_450}" />
+            </Column>
+            <Column id="id_Agreement_No_Colm" hAlign="Center" demandPopin="true" minScreenWidth="Phone" popinDisplay="Inline">
+                <Label text="{i18n>AGREEMENT_NUM_450}" tooltip="{i18n>AGREEMENT_NUM_450}" />
+            </Column>
+            <Column id="id_Payment_Block_Colm" hAlign="Center" demandPopin="true" minScreenWidth="Phone" popinDisplay="Inline">
+                <Label text="{i18n>PAYMENT_BLOCK_CODE_450}" tooltip="{i18n>PAYMENT_BLOCK_CODE_450}" />
+            </Column>
+            <Column id="id_PdfView">
+                <Label></Label>
+            </Column>
+        </columns>
+    </Table>
+</core:FragmentDefinition>

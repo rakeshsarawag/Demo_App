@@ -1,0 +1,117 @@
+<mvc:View controllerName="sap.cdp.demo.demoApplication5.controller.ViewClaim" xmlns:l="sap.ui.layout" xmlns:fb="sap.ui.comp.filterbar" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:ux="sap.uxap">
+    <Page id="idHomePage" title="{commonData>/HeaderTitle}" showHeader="true">
+        <content>
+            <f:Form id="idSmplFormAccInfo" editable="true" title="{commonData>/ClaimNoTitle}" class="sapUiResponsiveContentPadding">
+                <f:layout>
+                    <f:ResponsiveGridLayout labelSpanL="3" labelSpanM="3" emptySpanL="5" emptySpanM="5" columnsL="2" columnsM="2" /> </f:layout>
+                <f:formContainers>
+                    <f:FormContainer>
+                        <f:formElements>
+                            <f:FormElement>
+                                <f:label>
+                                    <Label id="idLabelPoNo" text="{i18n>PO_NUM_601}" /> </f:label>
+                                <f:fields>
+                                    <Text text="{PoNumber}"/>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement>
+                                <f:label>
+                                    <Label id="idLabelClaimAmt" text="{i18n>CLAIM_AMOUNT_601}" />
+                                </f:label>
+                                <f:fields>
+                                    <Text text="{ClaimAmount}"/> </f:fields>
+                            </f:FormElement>
+                            <f:FormElement>
+                                <f:label>
+                                    <Label id="idLabelDisposAmt" text="{i18n>DISP_AMOUNT_601}" /> </f:label>
+                                <f:fields>
+                                    <Text text="{DispositionAmount}"></Text>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement>
+                                <f:label>
+                                    <Label id="idLabelClaimCount" text="{i18n>CLAIM_COUNT_601}" />
+                                </f:label>
+                                <f:fields>
+                                    <Text text="{ClaimCount}"></Text>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement>
+                                <f:label>
+                                    <Label id="idLabelDateClosed" text="{i18n>DATE_CLOSED_601}" /> </f:label>
+                                <f:fields>
+                                    <Text text="{ClosedDate}"></Text>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement>
+                                <f:label>
+                                    <Label id="idLabelExplanation" text="{i18n>EXPLANATION_601}" />
+                                </f:label>
+                                <f:fields>
+                                    <Text text="{commonData>/NotesText}"> </Text>
+                                </f:fields>
+                            </f:FormElement>
+                        </f:formElements>
+                    </f:FormContainer>
+                    <f:FormContainer>
+                        <f:formElements>
+                            <f:FormElement>
+                                <f:label>
+                                    <Label id="idLabelInvoiceNo" text="{i18n>INV_NUM_601}" />
+                                </f:label>
+                                <f:fields>
+                                    <Text text="{InvoiceNumber}"> </Text>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement>
+                                <f:label>
+                                    <Label id="idLabelClaimType" text="{i18n>CLAIM_TYPE_601}" />
+                                </f:label>
+                                <f:fields>
+                                    <Text text="{ClaimDescription}" /> </f:fields>
+                            </f:FormElement>
+                            <f:FormElement>
+                                <f:label>
+                                    <Label id="idLabelStatus" text="{i18n>STATUS_601}" /> </f:label>
+                                <f:fields>
+                                    <Text text="{ClaimStatusDesc}" />
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement>
+                                <f:label>
+                                    <Label id="idLabelFname" text="{i18n>FIRST_NAME_601}" />
+                                </f:label>
+                                <f:fields>
+                                    <Text text="{FirstName}"></Text>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement>
+                                <f:label>
+                                    <Label id="idLabelLname" text="{i18n>LAST_NAME_601}" /> </f:label>
+                                <f:fields>
+                                    <Text text="{LastName}"></Text>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement>
+                                <f:label>
+                                    <Label id="idLabelEmail" text="{i18n>EMAIL_601}" />
+                                </f:label>
+                                <f:fields>
+                                    <Text text="{Email}"></Text>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement>
+                                <f:label>
+                                    <Label id="idLabelPhone" text="{i18n>PHONE_601}" />
+                                </f:label>
+                                <f:fields>
+                                    <Text text="{Phone}"></Text>
+                                </f:fields>
+                            </f:FormElement>
+                        </f:formElements>
+                    </f:FormContainer>
+                </f:formContainers>
+            </f:Form>
+        </content>
+    </Page>
+</mvc:View>

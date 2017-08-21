@@ -1,0 +1,3 @@
+<mvc:View controllerName="sap.cdp.demo.demoApplication5.controller.App" displayBlock="true" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+    <App busy="{appView>/busy}" busyIndicatorDelay="{appView>/delay}" class="sapUiSizeCompact sapcdpDoeApplicationName" id="sapcdpDoeApplicationName" />
+</mvc:View>

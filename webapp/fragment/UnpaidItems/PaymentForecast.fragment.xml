@@ -1,0 +1,19 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form">
+    <Table id="idPaymentForecastTable" noDataText="{i18n>TABLE_NODATA_TITLE}" growing="true" updateFinished="onPaymentForecastUpdateFinished" growingTriggerText="{i18n>SHOW_MORE_DOC}" growingThreshold="20">
+        <headerToolbar>
+            <Toolbar id="idToolbarPaymentForecast" design="Transparent">
+                <Title text="{ parts : [{path:'i18n>NAV_TITLE_451_TABLE_TITLE'}, {path:'filterData>/PaymentForeCastItems'}], formatter : 'jQuery.sap.formatMessage' }" tooltip="{ parts : [{path:'i18n>NAV_TITLE_451_TABLE_TITLE'}, {path:'filterData>/PaymentForeCastItems'}], formatter : 'jQuery.sap.formatMessage' }" level="H2" />
+                <ToolbarSpacer/>
+                <Button id="idPaymentForecastExportButton" icon="sap-icon://excel-attachment" press="onSupplierExportExcel" tooltip="{i18n>EXPORT_EXCEL_TOOL}" type="Transparent" />
+            </Toolbar>
+        </headerToolbar>
+        <columns>
+            <Column>
+                <Label text="{i18n>PAY_DATE_451}" tooltip="{i18n>PAY_DATE_451}" />
+            </Column>
+            <Column>
+                <Label text="{i18n>PAY_AMOUNT_451}" tooltip="{i18n>PAY_AMOUNT_451}" />
+            </Column>
+            </columns>
+    </Table>
+</core:FragmentDefinition>

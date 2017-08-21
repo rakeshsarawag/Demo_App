@@ -1,0 +1,26 @@
+[
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/RemittanceDetailsItemsSet('RaNumber10')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/RemittanceDetailsItemsSet('RaNumber10')",
+			"type": "payer_direct_srv.RemittanceDetailsItems"
+		},
+		"Company": "any1",
+		"VendorNo": "1234",
+		"RefNumber": "RefNumber10",
+		"PaymentNumber": "PaymentNumber10",
+		"InvoiceNumber": "InvoiceNumber10",
+		"InvoiceDate": "/Date(1412924400000)/",
+		"DueDate": "/Date(1412924400000)/",
+		"PoNumber": "PoNumber10",
+		"RaNumber": "RaNumber10",
+		"InvoiceAmount": "10.00000000000",
+		"DiscountAmount": "2",
+		"Currency": "ncy10",
+		"RemittanceDetailsItemsSet": {
+			"__deferred": {
+				"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/RemittanceDetailsItemsSet('RaNumber10')/RemittanceDetailsItemsSet"
+			}
+		}
+	}
+]

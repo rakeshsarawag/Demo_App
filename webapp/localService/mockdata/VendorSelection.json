@@ -1,0 +1,81 @@
+{
+	"d": {
+		"__count": "5",
+		"results": [{
+			"__metadata": {
+				"id": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='100000801',Company='001')",
+				"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='100000801',Company='001')",
+				"type": "/COSTPD/PAYER_DIRECT_SRV.VendorSelection"
+			},
+			"VendorNo": "100000801",
+			"VendorName": "GRANDOE CORP C/O ROSENTHAL & ROSENT",
+			"Company": "001",
+			"Inactive": false,
+			"AboutYou": {
+				"__deferred": {
+					"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='100000801',Company='001')/AboutYou"
+				}
+			}
+		}, {
+			"__metadata": {
+				"id": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='100001237',Company='004')",
+				"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='100001237',Company='004')",
+				"type": "/COSTPD/PAYER_DIRECT_SRV.VendorSelection"
+			},
+			"VendorNo": "100001237",
+			"VendorName": "**FRONTERA PRODUCE LTD**",
+			"Company": "004",
+			"Inactive": false,
+			"AboutYou": {
+				"__deferred": {
+					"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='100001237',Company='004')/AboutYou"
+				}
+			}
+		}, {
+			"__metadata": {
+				"id": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='10000001',Company='001')",
+				"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='10000001',Company='001')",
+				"type": "/COSTPD/PAYER_DIRECT_SRV.VendorSelection"
+			},
+			"VendorNo": "10000001",
+			"VendorName": "BRUNSWICK BOWLING AND BILLIARDS",
+			"Company": "001",
+			"Inactive": false,
+			"AboutYou": {
+				"__deferred": {
+					"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='10000001',Company='001')/AboutYou"
+				}
+			}
+		}, {
+			"__metadata": {
+				"id": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='3059800',Company='001')",
+				"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='3059800',Company='001')",
+				"type": "/COSTPD/PAYER_DIRECT_SRV.VendorSelection"
+			},
+			"VendorNo": "3059800",
+			"VendorName": "HANDY SEAFOOD INC ATTN: CREDIT DEPA",
+			"Company": "001",
+			"Inactive": false,
+			"AboutYou": {
+				"__deferred": {
+					"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='3059800',Company='001')/AboutYou"
+				}
+			}
+		}, {
+			"__metadata": {
+				"id": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='42800',Company='001')",
+				"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='42800',Company='001')",
+				"type": "/COSTPD/PAYER_DIRECT_SRV.VendorSelection"
+			},
+			"VendorNo": "42800",
+			"VendorName": "GEORGIA PAC CONSUMER PROD DIXIE CON",
+			"Company": "001",
+			"Inactive": false,
+			"AboutYou": {
+				"__deferred": {
+					"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/VendorSelectionSet(VendorNo='42800',Company='001')/AboutYou"
+				}
+			}
+		}]
+	}
+}

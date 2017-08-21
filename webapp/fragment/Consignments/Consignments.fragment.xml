@@ -1,0 +1,55 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form">
+    <fb:FilterBar id="idConsignmentsFilter" search="onConsignmentsFilterPress" clear="onFilterClear" showClearOnFB="true" showClearButton="true" filterBarExpanded="true" filterContainerWidth="20rem" showFilterConfiguration="true" xmlns:fb="sap.ui.comp.filterbar">
+        <fb:filterItems>
+            <fb:FilterItem id="id_Consignments_From_Date" name="FromDate" label="{i18n>FROM_DATE}">
+                <fb:control>
+                    <DatePicker width="50%" value="{filterData>/ConsignmentsTab/FromDate}" valueState="{viewData>/ConsignmentsTab/FromDateValueState}" valueStateText="{viewData>/ConsignmentsTab/FromDateValueStateText}" change="onConsignmentDatePickerChange" ></DatePicker>
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem id="id_Consignments_To_Date" name="ToDate" label="{i18n>TO_DATE}">
+                <fb:control>
+                    <DatePicker width="50%" value="{filterData>/ConsignmentsTab/ToDate}" valueState="{viewData>/ConsignmentsTab/EndDateValueState}" valueStateText="{viewData>/ConsignmentsTab/EndDateValueStateText}" change="onConsignmentDatePickerChange" ></DatePicker>
+                </fb:control>
+            </fb:FilterItem>
+            </fb:filterItems>
+    </fb:FilterBar>
+    <Table id="idConsignmentsTable" noDataText="{i18n>TABLE_NODATA_TITLE}" growing="true" updateFinished="onConsignmentsUpdateFinished" growingTriggerText="{i18n>SHOW_MORE_DOC}" growingThreshold="20">
+        <headerToolbar>
+            <Toolbar id="idToolbarConsignments" design="Transparent">
+                <Title text="{ parts : [{path:'i18n>NAV_TITLE_700_TABLE_TITLE'}, {path:'commonData>/ConsignmentItems'}], formatter : 'jQuery.sap.formatMessage' }" tooltip="{ parts : [{path:'i18n>NAV_TITLE_700_TABLE_TITLE'}, {path:'commonData>/ConsignmentItems'}], formatter : 'jQuery.sap.formatMessage' }" level="H2" />
+                <ToolbarSpacer/>
+                <Button id="idBtnConsignmentsPers" icon="sap-icon://action-settings" press="onPersonalizeConsignments" tooltip="{i18n>PERS_SUPPLIERS_TOOL}" type="Transparent" />
+                <Button id="idConsignmentsExportButton" icon="sap-icon://excel-attachment" press="onSupplierExportExcel" tooltip="{i18n>EXPORT_EXCEL_TOOL}" type="Transparent" />
+            </Toolbar>
+        </headerToolbar>
+        <columns>
+            <Column id="id_Warehouse_Colm">
+                <Label text="{i18n>WAREHOUSE_700}" tooltip="{i18n>WAREHOUSE_700}" />
+            </Column>
+            <Column id="id_Sales_Date_Colm">
+                <Label text="{i18n>SALES_DATE_700}" tooltip="{i18n>SALES_DATE_700}" />
+            </Column>
+            <Column id="id_Po_Num_Colm">
+                <Label text="{i18n>PO_NUM_700}" tooltip="{i18n>PO_NUM_700}" />
+            </Column>
+            <Column id="id_Invoice_No_Colm" demandPopin="true" minScreenWidth="Phone" popinDisplay="Inline">
+                <Label text="{i18n>INVOICE_NUM_700}" tooltip="{i18n>INVOICE_NUM_700}" />
+            </Column>
+            <Column id="id_Item_No_Colm">
+                <Label text="{i18n>ITEM_NUM_700}" tooltip="{i18n>ITEM_NUM_700}" />
+            </Column>
+            <Column id="id_Item_Desc_Colm">
+                <Label text="{i18n>ITEM_DESC_700}" tooltip="{i18n>ITEM_DESC_700}" />
+            </Column>
+            <Column id="id_Item_Quantity_Colm">
+                <Label text="{i18n>ITEM_QUANT_700}" tooltip="{i18n>ITEM_QUANT_700}" />
+            </Column>
+            <Column id="id_Unit_Cost_Colm">
+                <Label text="{i18n>UNIT_COST_700}" tooltip="{i18n>UNIT_COST_700}" />
+            </Column>
+            <Column id="id_Ext_Cost_Colm">
+                <Label text="{i18n>EXT_COST_700}" tooltip="{i18n>EXT_COST_700}" />
+            </Column>
+            </columns>
+    </Table>
+</core:FragmentDefinition>
