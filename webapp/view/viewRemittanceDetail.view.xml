@@ -1,0 +1,72 @@
+<mvc:View controllerName="sap.cdp.demo.demoApplication5.controller.ViewRemittanceDetail" xmlns:l="sap.ui.layout" xmlns:fb="sap.ui.comp.filterbar" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:ux="sap.uxap">
+    <Page id="idHomePage" title="{commonData>/HeaderTitle}" showHeader="true">
+        <content>
+            <f:Form id="id_Address_Form" editable="false" width="auto">
+        <f:layout>
+            <f:ResponsiveGridLayout labelSpanL="5" labelSpanM="5" emptySpanL="1" emptySpanM="1" columnsL="4" columnsM="2" />
+        </f:layout>
+        <f:formContainers>
+            <f:FormContainer >
+                <f:formElements>
+                    <f:FormElement>
+                        <f:label>
+                            <Label text="{i18n>CHECK_AMOUNT_331}" />
+                        </f:label>
+                        <f:fields>
+                            <Text text="{aboutYou>/ContactName}"></Text>
+                        </f:fields>
+                    </f:FormElement>
+                </f:formElements>
+            </f:FormContainer>
+            <f:FormContainer >
+                <f:formElements>
+                    <f:FormElement>
+                        <f:label>
+                            <Label text="{i18n>CHECK_DATE_331}" />
+                        </f:label>
+                        <f:fields>
+                            <Text text="{aboutYou>/ContactName}"></Text>
+                        </f:fields>
+                    </f:FormElement>
+                </f:formElements>
+            </f:FormContainer>
+        </f:formContainers>
+    </f:Form>
+            <Table id="idViewRemitDetailTable" noDataText="{i18n>TABLE_NODATA_TITLE}" growing="true" updateFinished="onRemitDetailUpdateFinished" growingTriggerText="{i18n>SHOW_MORE_DOC}" growingThreshold="20">
+                <headerToolbar>
+                    <Toolbar id="idToolbarRemitDetail" design="Transparent">
+                        <Title text="{ parts : [{path:'i18n>REMMI_DETAIL_SUBTAB_TABLE_TITLE'}, {path:'commonData>/RemitDetailItems'}], formatter : 'jQuery.sap.formatMessage' }" tooltip="{ parts : [{path:'i18n>REMMI_DETAIL_SUBTAB_TABLE_TITLE'}, {path:'commonData>/RemitDetailItems'}], formatter : 'jQuery.sap.formatMessage' }" level="H2" />
+                        <ToolbarSpacer/>
+                        <Button id="idRemitDetailExportBtn" icon="sap-icon://excel-attachment" press="onSupplierExportExcel" tooltip="{i18n>EXPORT_EXCEL_TOOL}" type="Transparent" />
+                    </Toolbar>
+                </headerToolbar>
+                <columns>
+                    <Column id="id_Invoice_No">
+                        <Label text="{i18n>INVOICE_NUM_320}" tooltip="{i18n>INVOICE_NUM_320}" />
+                    </Column>
+                    <Column id="id_Invoice_Date">
+                        <Label text="{i18n>INVOICE_DATE_320}" tooltip="{i18n>INVOICE_DATE_320}" />
+                    </Column>
+                    <Column id="id_Invoice_Total" demandPopin="true" minScreenWidth="Phone" popinDisplay="Inline">
+                        <Label text="{i18n>INVOICE_TOTAL_320}" tooltip="{i18n>INVOICE_TOTAL_320}" />
+                    </Column>
+                    <Column id="id_Discount" demandPopin="true" minScreenWidth="Phone" popinDisplay="Inline">
+                        <Label text="{i18n>DISCOUNT_320}" tooltip="{i18n>DISCOUNT_320}" />
+                    </Column>
+                    <Column id="id_Payment_Amt" hAlign="Center" demandPopin="true" minScreenWidth="Phone" popinDisplay="Inline">
+                        <Label text="{i18n>NET_AMOUNT_320}" tooltip="{i18n>PAYMENT_AMOUNT_320}" />
+                    </Column>
+                    <Column id="id_Due_Date" demandPopin="true" minScreenWidth="Phone" popinDisplay="Inline">
+                        <Label text="{i18n>DUE_DATE_450}" tooltip="{i18n>DUE_DATE_450}" />
+                    </Column>
+                    <Column id="id_Po_No" hAlign="Center" demandPopin="true" minScreenWidth="Phone" popinDisplay="Inline">
+                        <Label text="{i18n>PO_NUM_320}" tooltip="{i18n>PO_NUM_320}" />
+                    </Column>
+                    <Column id="id_Ra_No" hAlign="Center" demandPopin="true" minScreenWidth="Phone" popinDisplay="Inline">
+                        <Label text="{i18n>RA_NUM_320}" tooltip="{i18n>RA_NUM_320}" />
+                    </Column>
+                </columns>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,149 @@
+[
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/UnpaidItemsSet('InvoiceNumber10')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/UnpaidItemsSet('InvoiceNumber10')",
+			"type": "payer_direct_srv.UnpaidItems"
+		},
+		"AgreementNumber": "AGREE_NO_10",
+		"Company": "any1",
+		"Currency": "USD",
+		"DiscountAmount": "1000.00000000000",
+		"DueDate": "/Date(1267430400000)/",
+		"InvoiceDate": "/Date(1308726000000)/",
+		"InvoiceNumber": "INV_1",
+		"InvoiceTotal": "200.00000000000",
+		"NetAmount": "30.00000000000",
+		"PaymentBlockCode": "A100",
+		"PaymentBlockCodeText": "A100 Description Text",
+		"PoNumber": "PoNumber10",
+		"VendorNo": "1234",
+		"ViewKey": "ViewKey10"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/UnpaidItemsSet('InvoiceNumber10')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/UnpaidItemsSet('InvoiceNumber10')",
+			"type": "payer_direct_srv.UnpaidItems"
+		},
+		"AgreementNumber": "AGREE_NO_10",
+		"Company": "any1",
+		"Currency": "USD",
+		"DiscountAmount": "2000.00000000000",
+		"DueDate": "/Date(1267430400000)/",
+		"InvoiceDate": "/Date(1308726000000)/",
+		"InvoiceNumber": "INV_2",
+		"InvoiceTotal": "300.00000000000",
+		"NetAmount": "40.00000000000",
+		"PaymentBlockCode": "B100",
+		"PaymentBlockCodeText": "B100 Description Text",
+		"PoNumber": "PoNumber10",
+		"VendorNo": "1234",
+		"ViewKey": "ViewKey10"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/UnpaidItemsSet('InvoiceNumber10')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/UnpaidItemsSet('InvoiceNumber10')",
+			"type": "payer_direct_srv.UnpaidItems"
+		},
+		"AgreementNumber": "AGREE_NO_10",
+		"Company": "any1",
+		"Currency": "USD",
+		"DiscountAmount": "34.56000000000",
+		"DueDate": "/Date(1267430400000)/",
+		"InvoiceDate": "/Date(1308726000000)/",
+		"InvoiceNumber": "INV_3",
+		"InvoiceTotal": "67.00000000000",
+		"NetAmount": "98.00000000000",
+		"PaymentBlockCode": "B200",
+		"PaymentBlockCodeText": "B200 Description Text",
+		"PoNumber": "PoNumber10",
+		"VendorNo": "1234",
+		"ViewKey": "ViewKey10"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/UnpaidItemsSet('InvoiceNumber10')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/UnpaidItemsSet('InvoiceNumber10')",
+			"type": "payer_direct_srv.UnpaidItems"
+		},
+		"AgreementNumber": "AGREE_NO_10",
+		"Company": "any1",
+		"Currency": "USD",
+		"DiscountAmount": "12.456780000",
+		"DueDate": "/Date(1267430400000)/",
+		"InvoiceDate": "/Date(1308726000000)/",
+		"InvoiceNumber": "INV_4",
+		"InvoiceTotal": "123.00000000000",
+		"NetAmount": "1432.00000000000",
+		"PaymentBlockCode": "A100",
+		"PaymentBlockCodeText": "A100 Description Text",
+		"PoNumber": "PoNumber10",
+		"VendorNo": "1234",
+		"ViewKey": "ViewKey10"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/UnpaidItemsSet('InvoiceNumber10')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/UnpaidItemsSet('InvoiceNumber10')",
+			"type": "payer_direct_srv.UnpaidItems"
+		},
+		"AgreementNumber": "AGREE_NO_10",
+		"Company": "any1",
+		"Currency": "USD",
+		"DiscountAmount": "123145.00000000000",
+		"DueDate": "/Date(1267430400000)/",
+		"InvoiceDate": "/Date(1308726000000)/",
+		"InvoiceNumber": "INV_5",
+		"InvoiceTotal": "12.34560000000",
+		"NetAmount": "564.123000000000",
+		"PaymentBlockCode": "A100",
+		"PaymentBlockCodeText": "A100 Description Text",
+		"PoNumber": "PoNumber10",
+		"VendorNo": "1234",
+		"ViewKey": "ViewKey10"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/UnpaidItemsSet('InvoiceNumber10')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/UnpaidItemsSet('InvoiceNumber10')",
+			"type": "payer_direct_srv.UnpaidItems"
+		},
+		"AgreementNumber": "AGREE_NO_10",
+		"Company": "any1",
+		"Currency": "USD",
+		"DiscountAmount": "654664.654000000000",
+		"DueDate": "/Date(1267430400000)/",
+		"InvoiceDate": "/Date(1308726000000)/",
+		"InvoiceNumber": "INV_6",
+		"InvoiceTotal": "123265.00000000000",
+		"NetAmount": "6987.321465400000",
+		"PaymentBlockCode": "B100",
+		"PaymentBlockCodeText": "B100 Description Text",
+		"PoNumber": "PoNumber10",
+		"VendorNo": "1234",
+		"ViewKey": "ViewKey10"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/UnpaidItemsSet('InvoiceNumber10')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/UnpaidItemsSet('InvoiceNumber10')",
+			"type": "payer_direct_srv.UnpaidItems"
+		},
+		"AgreementNumber": "AGREE_NO_10",
+		"Company": "any1",
+		"Currency": "USD",
+		"DiscountAmount": "100.00000000000",
+		"DueDate": "/Date(1267430400000)/",
+		"InvoiceDate": "/Date(1308726000000)/",
+		"InvoiceNumber": "INV_7",
+		"InvoiceTotal": "65465.2312000000000",
+		"NetAmount": "54.145684000000",
+		"PaymentBlockCode": "B100",
+		"PaymentBlockCodeText": "B100 Description Text",
+		"PoNumber": "PoNumber10",
+		"VendorNo": "1234",
+		"ViewKey": "ViewKey10"
+	}
+]

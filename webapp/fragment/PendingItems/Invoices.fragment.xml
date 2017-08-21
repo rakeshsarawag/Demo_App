@@ -1,0 +1,45 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form">
+    <fb:FilterBar id="idInvoicesFilter" search="onPendingItemsFilterPress" clear="onFilterClear" showClearOnFB="true" showClearButton="true" filterBarExpanded="true" filterContainerWidth="20rem" showFilterConfiguration="true" xmlns:fb="sap.ui.comp.filterbar">
+        <fb:filterItems>
+            <fb:FilterItem id="id_Invoices_Filter_Search" name="FilterSearch" label="{i18n>FILTER_SEARCH}">
+                <fb:control>
+                    <Select ariaLabelledBy="id_Payment_type" change="onPendingItemsSearchChange">
+                        <core:Item text="{i18n>FILTER_SEARCH_PO_DESC}" key="po" />
+                        <core:Item text="{i18n>FILTER_SEARCH_INVOICE_DESC}" key="invoice" />
+                    </Select>
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem id="id_Invoices_Filter_Po" name="PO" label="{i18n>FILTER_SEARCH_PO_DESC}" visible="{viewData>/InvoicesTab/PoVisible}">
+                <fb:control>
+                    <Input id="idInvoicesStrAdrInp" type="Text" liveChange="onSearchInputChange" value="{filterData>/InvoicesTab/PurchaseOrder}"/>
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem id="id_Invoices_Filter_Invoice" name="Invoice" label="{i18n>FILTER_SEARCH_INVOICE_DESC}" visible="{viewData>/InvoicesTab/InvoiceVisible}">
+                <fb:control>
+                    <Input type="Text" ariaLabelledBy="idPoBox" liveChange="onSearchInputChange" value="{filterData>/InvoicesTab/InvoiceNumber}"/>
+                </fb:control>
+            </fb:FilterItem>
+            </fb:filterItems>
+    </fb:FilterBar>
+    <Table id="idInvoicesTable" noDataText="{i18n>TABLE_NODATA_TITLE}" growing="true" updateFinished="onInvoicesUpdateFinished" growingTriggerText="{i18n>SHOW_MORE_DOC}" growingThreshold="20">
+        <headerToolbar>
+            <Toolbar id="idToolbarInvoices" design="Transparent">
+                <Title text="{ parts : [{path:'i18n>NAV_TITLE_410_TABLE_TITLE'}, {path:'commonData>/InvoiceItems'}], formatter : 'jQuery.sap.formatMessage' }" tooltip="{ parts : [{path:'i18n>NAV_TITLE_410_TABLE_TITLE'}, {path:'commonData>/InvoiceItems'}], formatter : 'jQuery.sap.formatMessage' }" level="H2" />
+                <ToolbarSpacer/>
+                <Button icon="sap-icon://sort" press="onSortInProcess" tooltip="{i18n>SORT_SUPPLIERS_TOOL}" type="Transparent" />
+                <Button id="idInvoicesExportButton" icon="sap-icon://excel-attachment" press="onSupplierExportExcel" tooltip="{i18n>EXPORT_EXCEL_TOOL}" type="Transparent" />
+            </Toolbar>
+        </headerToolbar>
+        <columns>
+            <Column>
+                <Label text="{i18n>INVOICE_NUM_320}" tooltip="{i18n>INVOICE_NUM_320}" />
+            </Column>
+            <Column>
+                <Label text="{i18n>INVOICE_DATE_320}" tooltip="{i18n>INVOICE_DATE_320}" />
+            </Column>
+            <Column demandPopin="true" minScreenWidth="Phone" popinDisplay="Inline">
+                <Label text="{i18n>PO_NUM_320}" tooltip="{i18n>PO_NUM_320}" />
+            </Column>
+            </columns>
+    </Table>
+</core:FragmentDefinition>

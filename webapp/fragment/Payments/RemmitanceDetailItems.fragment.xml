@@ -1,0 +1,10 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form">
+    <ColumnListItem >
+            <cells>
+                <Link text="{PaymentAmount}" press="onViewRemittanceDetailPress" />
+                <Text text="{parts : [{path : 'PaymentDate'}], formatter : '.formatter.getDateInDDMMYYYY'}" />
+                <Text text="{PaymentMethod}" />
+                <Text text="{PaymentNumber}" />
+                </cells>
+        </ColumnListItem>
+</core:FragmentDefinition>

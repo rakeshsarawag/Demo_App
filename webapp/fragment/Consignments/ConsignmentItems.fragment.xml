@@ -1,0 +1,15 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form">
+    <ColumnListItem >
+            <cells>
+                <Text text="{Warehouse}" />
+                <Text text="{parts : [{path : 'SalesDate'}], formatter : '.formatter.getDateInDDMMYYYY'}" />
+                <Text text="{PoNumber}" />
+                <Text text="{InvoiceNumber}" />
+                <Text text="{InvoiceItemNumber}" />
+                <Text text="{ItemDescription}" />
+                <Text text="{Quantity}" />
+                <Text text="{UnitCost}" />
+                <Text text="{ExtendedCost}" />
+                </cells>
+        </ColumnListItem>
+</core:FragmentDefinition>

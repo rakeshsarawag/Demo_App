@@ -1,0 +1,156 @@
+[
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/InprogressSet('InvoiceNumber1')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/InprogressSet('InvoiceNumber1')",
+			"type": "payer_direct_srv.Inprogress"
+		},
+		"Company": "any1",
+		"Currency": "ency1",
+		"InvoiceDate": "/Date(1353312000000)/",
+		"InvoiceTotal": "0.00000000000",
+		"InvoiceNumber": "InvoiceNumber0",
+		"PoNumber": "PoNumber0",
+		"VendorNo": "1234"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/InprogressSet('InvoiceNumber1')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/InprogressSet('InvoiceNumber1')",
+			"type": "payer_direct_srv.Inprogress"
+		},
+		"Company": "any1",
+		"Currency": "ency1",
+		"InvoiceDate": "/Date(1453312000000)/",
+		"InvoiceTotal": "1.11111111111",
+		"InvoiceNumber": "InvoiceNumber1",
+		"PoNumber": "PoNumber1",
+		"VendorNo": "1234"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/InprogressSet('InvoiceNumber1')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/InprogressSet('InvoiceNumber1')",
+			"type": "payer_direct_srv.Inprogress"
+		},
+		"Company": "any1",
+		"Currency": "ency1",
+		"InvoiceDate": "/Date(1253312000000)/",
+		"InvoiceTotal": "2.22222222222",
+		"InvoiceNumber": "InvoiceNumber2",
+		"PoNumber": "PoNumber2",
+		"VendorNo": "1234"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/InprogressSet('InvoiceNumber1')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/InprogressSet('InvoiceNumber1')",
+			"type": "payer_direct_srv.Inprogress"
+		},
+		"Company": "any1",
+		"Currency": "ency1",
+		"InvoiceDate": "/Date(1553312000000)/",
+		"InvoiceTotal": "3.33333333333",
+		"InvoiceNumber": "InvoiceNumber3",
+		"PoNumber": "PoNumber3",
+		"VendorNo": "1234"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/InprogressSet('InvoiceNumber1')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/InprogressSet('InvoiceNumber1')",
+			"type": "payer_direct_srv.Inprogress"
+		},
+		"Company": "any1",
+		"Currency": "ency1",
+		"InvoiceDate": "/Date(1153312000000)/",
+		"InvoiceTotal": "4.44444444444",
+		"InvoiceNumber": "InvoiceNumber4",
+		"PoNumber": "PoNumber4",
+		"VendorNo": "1234"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/InprogressSet('InvoiceNumber1')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/InprogressSet('InvoiceNumber1')",
+			"type": "payer_direct_srv.Inprogress"
+		},
+		"Company": "any1",
+		"Currency": "ency1",
+		"InvoiceDate": "/Date(1653312000000)/",
+		"InvoiceTotal": "5.55555555555",
+		"InvoiceNumber": "InvoiceNumber5",
+		"PoNumber": "PoNumber5",
+		"VendorNo": "1234"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/InprogressSet('InvoiceNumber1')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/InprogressSet('InvoiceNumber1')",
+			"type": "payer_direct_srv.Inprogress"
+		},
+		"Company": "any1",
+		"Currency": "ency1",
+		"InvoiceDate": "/Date(1053312000000)/",
+		"InvoiceTotal": "6.66666666666",
+		"InvoiceNumber": "InvoiceNumber6",
+		"PoNumber": "PoNumber6",
+		"VendorNo": "1234"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/InprogressSet('InvoiceNumber1')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/InprogressSet('InvoiceNumber1')",
+			"type": "payer_direct_srv.Inprogress"
+		},
+		"Company": "any1",
+		"Currency": "ency1",
+		"InvoiceDate": "/Date(1753312000000)/",
+		"InvoiceTotal": "7.77777777777",
+		"InvoiceNumber": "InvoiceNumber7",
+		"PoNumber": "PoNumber7",
+		"VendorNo": "1234"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/InprogressSet('InvoiceNumber1')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/InprogressSet('InvoiceNumber1')",
+			"type": "payer_direct_srv.Inprogress"
+		},
+		"Company": "any1",
+		"Currency": "ency1",
+		"InvoiceDate": "/Date(2053312000000)/",
+		"InvoiceTotal": "8.88888888888",
+		"InvoiceNumber": "InvoiceNumber8",
+		"PoNumber": "PoNumber8",
+		"VendorNo": "1234"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/InprogressSet('InvoiceNumber1')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/InprogressSet('InvoiceNumber1')",
+			"type": "payer_direct_srv.Inprogress"
+		},
+		"Company": "any1",
+		"Currency": "ency1",
+		"InvoiceDate": "/Date(1853312000000)/",
+		"InvoiceTotal": "9.99999999999",
+		"InvoiceNumber": "InvoiceNumber9",
+		"PoNumber": "PoNumber9",
+		"VendorNo": "1234"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/InprogressSet('InvoiceNumber1')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/InprogressSet('InvoiceNumber1')",
+			"type": "payer_direct_srv.Inprogress"
+		},
+		"Company": "any1",
+		"Currency": "ency1",
+		"InvoiceDate": "/Date(2153312000000)/",
+		"InvoiceTotal": "10.10101010101",
+		"InvoiceNumber": "InvoiceNumber10",
+		"PoNumber": "PoNumber10",
+		"VendorNo": "1234"
+	}
+]

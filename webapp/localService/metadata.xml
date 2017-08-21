@@ -1,0 +1,629 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+<edmx:DataServices m:DataServiceVersion="2.0">
+<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="/COSTPD/PAYER_DIRECT_SRV" xml:lang="en" sap:schema-version="1">
+<EntityType Name="ViewPdf" m:HasStream="true" sap:content-version="1">
+<Key>
+<PropertyRef Name="ViewKey"/>
+</Key>
+<Property Name="VendorNo" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Vendor Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="Company" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Company Information" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="ViewKey" Type="Edm.String" Nullable="false" sap:label="PDF Identifier" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+</EntityType>
+<EntityType Name="PaymentMethod" sap:content-version="1">
+<Key>
+<PropertyRef Name="Company"/>
+<PropertyRef Name="PaymentMethodCode"/>
+</Key>
+<Property Name="Company" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Company Information" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="PaymentMethodCode" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Payment Method Code" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="PaymentMethodDesc" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Payment Method" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+</EntityType>
+<EntityType Name="ClaimSubmit" sap:content-version="1">
+<Key>
+<PropertyRef Name="VendorNo"/>
+<PropertyRef Name="Company"/>
+<PropertyRef Name="ClaimGuid"/>
+</Key>
+<Property Name="VendorNo" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Vendor Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Company" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Company Information" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ClaimType" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Claim Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ClaimTypeVersion" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Claim Type Version" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ClaimNo" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Claim Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ClaimGuid" Type="Edm.String" Nullable="false" MaxLength="32" sap:label="Claim GUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="PoNumber" Type="Edm.String" Nullable="false" MaxLength="18" sap:label="PO Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="InvoiceNumber" Type="Edm.String" Nullable="false" MaxLength="16" sap:label="Invoice Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ClaimCount" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Claim Count" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ClaimAmount" Type="Edm.Decimal" Nullable="false" Precision="6" Scale="2" sap:unit="ClaimCurrency" sap:label="Claim Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ClaimCurrency" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Claim Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+<Property Name="FirstName" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="First Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="LastName" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Last Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Phone" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Phone" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Email" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Email" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ClaimNotes" Type="Edm.String" Nullable="false" sap:label="Claim Notes" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<NavigationProperty Name="FormSubmit" Relationship="/COSTPD/PAYER_DIRECT_SRV.FormSubmit" FromRole="FromRole_FormSubmit" ToRole="ToRole_FormSubmit"/>
+</EntityType>
+<EntityType Name="ClaimFormSubmit" m:HasStream="true" sap:content-version="1">
+<Key>
+<PropertyRef Name="ClaimGuid"/>
+<PropertyRef Name="VendorNo"/>
+<PropertyRef Name="Company"/>
+</Key>
+<Property Name="ClaimGuid" Type="Edm.String" Nullable="false" MaxLength="32" sap:label="Claim GUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="VendorNo" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Vendor Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Company" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Company Information" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="FileName" Type="Edm.String" Nullable="false" MaxLength="100" sap:label="File Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="MimeType" Type="Edm.String" Nullable="false" sap:label="Content Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+</EntityType>
+<EntityType Name="PaymentForecast" sap:content-version="1">
+<Key>
+<PropertyRef Name="Refnumber"/>
+</Key>
+<Property Name="Refnumber" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Reference Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="VendorNo" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Vendor Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="Company" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Company Information" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="Paymentduedate" Type="Edm.DateTime" Nullable="false" Precision="7" sap:label="Est. Pay. Due Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Paymentamount" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="3" sap:unit="Paymentcurrency" sap:label="Est. Payment Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Paymentcurrency" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+</EntityType>
+<EntityType Name="ClaimsConfig" sap:content-version="1">
+<Key>
+<PropertyRef Name="ClaimType"/>
+<PropertyRef Name="ClaimTypeVersion"/>
+</Key>
+<Property Name="ClaimType" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Claim Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ClaimTypeVersion" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Claim Type Version" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ClaimDescription" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Claim Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="InvoiceNumber" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Invoice Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="InvoiceNumberHolder" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Invoice Number Place" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="PoNumber" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="PO Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="PoNumberHolder" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="PO Number Place Hold" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ClaimAmount" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Claim Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ClaimAmountHolder" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Claim Amount Place H" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="FirstName" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="First Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="FisrtNameHolder" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="First Name Place Hol" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="LastName" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Last Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="LastNameHolder" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Last Name Place Hold" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Email" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Email" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="EmailHolder" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Email Place Holder" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Phone" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Phone" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="PhoneHolder" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Phone Place Holder" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ClaimNotes" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Explanation" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ClaimNotesHolder" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Text Place Holder" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="File1" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="File 1" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="File1Label" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="File 1 Label" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="File2" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="File 2" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="File2Label" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="File 2 Label" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="File3" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="File 3" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="File3Label" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="File 3 Label" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="FileOthers" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Other Files" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="FileOthersHolder" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Addtional Uploads La" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="FilesRequired" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Files Required ?" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ExpTitle" Type="Edm.String" Nullable="false" sap:label="Explanation Title" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ExpContent" Type="Edm.String" Nullable="false" sap:label="Explanation Content" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ExpNote" Type="Edm.String" Nullable="false" sap:label="Explanation Note" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+</EntityType>
+<EntityType Name="Consignments" sap:content-version="1">
+<Key>
+<PropertyRef Name="RefNumber"/>
+</Key>
+<Property Name="VendorNo" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Vendor Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="Company" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Company Information" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="Warehouse" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Warehouse Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="SalesDate" Type="Edm.DateTime" Precision="0" sap:label="Sales Date" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="PoNumber" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="PO Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="InvoiceNumber" Type="Edm.String" Nullable="false" MaxLength="16" sap:label="Invoice Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="InvoiceItemNumber" Type="Edm.String" Nullable="false" MaxLength="18" sap:label="Invoice Item Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ItemDescription" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Item Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Quantity" Type="Edm.Decimal" Nullable="false" Precision="7" Scale="3" sap:unit="QuantityUom" sap:label="Quantity" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="QuantityUom" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Quantity UOM" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="unit-of-measure"/>
+<Property Name="UnitCost" Type="Edm.Decimal" Nullable="false" Precision="8" Scale="2" sap:unit="Currency" sap:label="Unit Cost" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ExtendedCost" Type="Edm.Decimal" Nullable="false" Precision="8" Scale="2" sap:unit="Currency" sap:label="Extended Cost" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Currency" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+<Property Name="Gst" Type="Edm.Decimal" Nullable="false" Precision="8" Scale="2" sap:unit="TaxCurrency" sap:label="GST Tax" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Hst" Type="Edm.Decimal" Nullable="false" Precision="8" Scale="2" sap:unit="TaxCurrency" sap:label="HST Tax" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Qst" Type="Edm.Decimal" Nullable="false" Precision="8" Scale="2" sap:unit="TaxCurrency" sap:label="QST Tax" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="TaxCurrency" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Tax Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+<Property Name="RefNumber" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Reference Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+</EntityType>
+<EntityType Name="UnpaidItems" sap:content-version="1">
+<Key>
+<PropertyRef Name="RefNumber"/>
+</Key>
+<Property Name="VendorNo" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Vendor Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="Company" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Company Information" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="InvoiceNumber" Type="Edm.String" Nullable="false" MaxLength="16" sap:label="Invoice Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="InvoiceDate" Type="Edm.DateTime" Precision="0" sap:label="Invoice Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="InvoiceTotal" Type="Edm.Decimal" Nullable="false" Precision="8" Scale="2" sap:unit="Currency" sap:label="Invoice Total" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DiscountAmount" Type="Edm.Decimal" Nullable="false" Precision="8" Scale="2" sap:unit="Currency" sap:label="Discount Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="NetAmount" Type="Edm.Decimal" Nullable="false" Precision="8" Scale="2" sap:unit="Currency" sap:label="Net Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DueDate" Type="Edm.DateTime" Precision="0" sap:label="Due Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="PoNumber" Type="Edm.String" Nullable="false" MaxLength="18" sap:label="PO Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="AgreementNumber" Type="Edm.String" Nullable="false" MaxLength="18" sap:label="Agreement Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="PaymentBlockCode" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Payment Block Code" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Currency" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+<Property Name="PaymentBlockCodeText" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Pay. Blk. Code Text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="RemoveTotalAndForecast" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Rem.Tot.Forecast" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="RefNumber" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Reference Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ViewKey" Type="Edm.String" Nullable="false" sap:label="PDF ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+</EntityType>
+<EntityType Name="Receivings" sap:content-version="1">
+<Key>
+<PropertyRef Name="RefNumber"/>
+</Key>
+<Property Name="VendorNo" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Vendor Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="Company" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Company Information" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="PoNumber" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="PO Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="ReceiveDate" Type="Edm.DateTime" Precision="0" sap:label="Receive Date" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+<Property Name="WarehouseName" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Warehouse Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="WarehouseState" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Warehouse State" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="RefNumber" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Reference Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+</EntityType>
+<EntityType Name="Incomings" sap:content-version="1">
+<Key>
+<PropertyRef Name="RefNumber"/>
+</Key>
+<Property Name="VendorNo" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Vendor Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="Company" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Company Information" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="RefNumber" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Reference Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="InvoiceNumber" Type="Edm.String" Nullable="false" MaxLength="16" sap:label="Invoice Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="InvoiceDate" Type="Edm.DateTime" Precision="0" sap:label="Invoice Date" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+<Property Name="PoNumber" Type="Edm.String" Nullable="false" MaxLength="18" sap:label="PO Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+</EntityType>
+<EntityType Name="Inprogress" sap:content-version="1">
+<Key>
+<PropertyRef Name="RefNumber"/>
+</Key>
+<Property Name="VendorNo" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Vendor Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="Company" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Company Information" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="InvoiceNumber" Type="Edm.String" Nullable="false" MaxLength="16" sap:label="Invoice Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="InvoiceDate" Type="Edm.DateTime" Precision="0" sap:label="Invoice Date" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+<Property Name="PoNumber" Type="Edm.String" Nullable="false" MaxLength="18" sap:label="PO Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="InvoiceTotal" Type="Edm.Decimal" Nullable="false" Precision="8" Scale="2" sap:unit="Currency" sap:label="Invoice Total" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Currency" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+<Property Name="RefNumber" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Reference Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+</EntityType>
+<EntityType Name="Rejections" sap:content-version="1">
+<Key>
+<PropertyRef Name="InvoiceNumber"/>
+</Key>
+<Property Name="VendorNo" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Vendor Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="Company" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Company Information" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="InvoiceNumber" Type="Edm.String" Nullable="false" MaxLength="16" sap:label="Invoice Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="PoNumber" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="PO Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="ProcessDate" Type="Edm.DateTime" Precision="0" sap:label="Process Date" sap:creatable="false" sap:updatable="false"/>
+<Property Name="MessageText" Type="Edm.String" Nullable="false" sap:label="Message Text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<NavigationProperty Name="RejectionsItemsSet" Relationship="/COSTPD/PAYER_DIRECT_SRV.Rejections_To_RejectionsItems" FromRole="FromRole_Rejections_To_RejectionsItems" ToRole="ToRole_Rejections_To_RejectionsItems"/>
+</EntityType>
+<EntityType Name="ClaimsHistory" sap:content-version="1">
+<Key>
+<PropertyRef Name="Guid"/>
+</Key>
+<Property Name="VendorNo" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Vendor Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="Company" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Company Information" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="ClaimType" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Claim Type" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="ClaimDescription" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Claim Description" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+<Property Name="ClaimNo" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Claim Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Guid" Type="Edm.String" Nullable="false" MaxLength="32" sap:label="Claim GUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="PoNumber" Type="Edm.String" Nullable="false" MaxLength="18" sap:label="PO Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="InvoiceNumber" Type="Edm.String" Nullable="false" MaxLength="16" sap:label="Invoice Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="ClaimCount" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Claim Count" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ClaimAmount" Type="Edm.Decimal" Nullable="false" Precision="6" Scale="2" sap:unit="ClaimCurrency" sap:label="Claim Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ClaimCurrency" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Claim Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+<Property Name="DispositionAmount" Type="Edm.Decimal" Nullable="false" Precision="6" Scale="2" sap:unit="ClaimCurrency" sap:label="Disposition Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DispositionCurrency" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Disposition Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+<Property Name="FirstName" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="First Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="LastName" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Last Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Phone" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Phone" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Email" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Email" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ClaimDate" Type="Edm.DateTime" Precision="0" sap:label="Claim Date" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="ClosedDate" Type="Edm.DateTime" Precision="0" sap:label="Claim Closed Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DispositionDesc" Type="Edm.String" Nullable="false" MaxLength="102" sap:label="Disposition Descript" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ClaimStatusCode" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Claim Status Code" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="ClaimStatusDesc" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+</EntityType>
+<EntityType Name="ClaimNotes" sap:content-version="1">
+<Key>
+<PropertyRef Name="Guid"/>
+</Key>
+<Property Name="Guid" Type="Edm.String" Nullable="false" MaxLength="32" sap:label="Claim GUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="VendorNo" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Vendor Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="Company" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Company Information" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="Notes" Type="Edm.String" Nullable="false" sap:label="Claim Notes" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+</EntityType>
+<EntityType Name="VendorSelection" sap:content-version="1">
+<Key>
+<PropertyRef Name="VendorNo"/>
+<PropertyRef Name="Company"/>
+</Key>
+<Property Name="VendorNo" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Vendor Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="VendorName" Type="Edm.String" MaxLength="80" sap:label="Vendor Name" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="Company" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Company Information" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Inactive" Type="Edm.Boolean" sap:label="Inactive ?" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<NavigationProperty Name="AboutYou" Relationship="/COSTPD/PAYER_DIRECT_SRV.VendorSelection_To_AboutYou" FromRole="FromRole_VendorSelection_To_AboutYou" ToRole="ToRole_VendorSelection_To_AboutYou"/>
+</EntityType>
+<EntityType Name="AboutYou" sap:content-version="1">
+<Key>
+<PropertyRef Name="VendorNo"/>
+<PropertyRef Name="Company"/>
+</Key>
+<Property Name="VendorNo" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Vendor Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Company" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Company Information" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="VendorName" Type="Edm.String" Nullable="false" MaxLength="80" sap:label="Vendor Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="AddressLine1" Type="Edm.String" Nullable="false" MaxLength="35" sap:label="Vendor Address 1" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="AddressLine2" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Vendor Address 2" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="City" Type="Edm.String" Nullable="false" MaxLength="35" sap:label="City" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="State" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="State" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="PostalCode" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Postal Code" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Country" Type="Edm.String" Nullable="false" MaxLength="15" sap:label="Country" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ContactName" Type="Edm.String" Nullable="false" MaxLength="35" sap:label="Contact Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ContactPhone" Type="Edm.String" Nullable="false" MaxLength="16" sap:label="Contact Phone" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="RemittanceAddressline1" Type="Edm.String" Nullable="false" MaxLength="35" sap:label="Remittance Address 1" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="RemittanceAddressline2" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Remittance Address 2" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="RemittanceCity" Type="Edm.String" Nullable="false" MaxLength="35" sap:label="Remittance City" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="RemittanceState" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Remittance State" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="RemPostalCode" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Remittance Postal Co" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="RemittanceCountry" Type="Edm.String" Nullable="false" MaxLength="15" sap:label="Remittance Country" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Edi" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="EDI Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="OnHold" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="On Hold" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Funds" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Funds" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+<Property Name="GstId" Type="Edm.String" Nullable="false" MaxLength="9" sap:label="GST Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="QstId" Type="Edm.String" Nullable="false" MaxLength="14" sap:label="QST Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="PaymentType" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Payment Method" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ShowTaxes" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Show Taxes" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="AdminFname" Type="Edm.String" Nullable="false" MaxLength="35" sap:label="Admin First Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="AdminLname" Type="Edm.String" Nullable="false" MaxLength="35" sap:label="Admin Last Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="AdminContact" Type="Edm.String" Nullable="false" MaxLength="241" sap:label="Admin Contact" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Cancreateclaims" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Can Create Claims ?" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<NavigationProperty Name="ConsignmentsSet" Relationship="/COSTPD/PAYER_DIRECT_SRV.AboutYou_To_Consignments" FromRole="FromRole_AboutYou_To_Consignments" ToRole="ToRole_AboutYou_To_Consignments"/>
+<NavigationProperty Name="ReceivingsSet" Relationship="/COSTPD/PAYER_DIRECT_SRV.AboutYou_To_Receivings" FromRole="FromRole_AboutYou_To_Receivings" ToRole="ToRole_AboutYou_To_Receivings"/>
+<NavigationProperty Name="IncomingsSet" Relationship="/COSTPD/PAYER_DIRECT_SRV.AboutYou_To_Incomings" FromRole="FromRole_AboutYou_To_Incomings" ToRole="ToRole_AboutYou_To_Incomings"/>
+<NavigationProperty Name="InprogressSet" Relationship="/COSTPD/PAYER_DIRECT_SRV.AboutYou_To_Inprogress" FromRole="FromRole_AboutYou_To_Inprogress" ToRole="ToRole_AboutYou_To_Inprogress"/>
+<NavigationProperty Name="RejectionsSet" Relationship="/COSTPD/PAYER_DIRECT_SRV.AboutYou_To_Rejections" FromRole="FromRole_AboutYou_To_Rejections" ToRole="ToRole_AboutYou_To_Rejections"/>
+<NavigationProperty Name="AboutYou_To_Returns" Relationship="/COSTPD/PAYER_DIRECT_SRV.AboutYou_To_Returns" FromRole="FromRole_AboutYou_To_Returns" ToRole="ToRole_AboutYou_To_Returns"/>
+<NavigationProperty Name="RemittanceDetailsSet" Relationship="/COSTPD/PAYER_DIRECT_SRV.AboutYou_To_RemittanceDetails" FromRole="FromRole_AboutYou_To_RemittanceDetails" ToRole="ToRole_AboutYou_To_RemittanceDetails"/>
+<NavigationProperty Name="PaymentHistorySet" Relationship="/COSTPD/PAYER_DIRECT_SRV.AboutYou_To_PaymentHistory" FromRole="FromRole_AboutYou_To_PaymentHistory" ToRole="ToRole_AboutYou_To_PaymentHistory"/>
+</EntityType>
+<EntityType Name="Returns" sap:content-version="1">
+<Key>
+<PropertyRef Name="ViewKey"/>
+</Key>
+<Property Name="VendorNo" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Vendor Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="Company" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Company Information" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="DeductionNumber" Type="Edm.String" MaxLength="300" sap:label="Deduction Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="ReturnAuthorizationNumber" Type="Edm.String" MaxLength="10" sap:label="RA Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="DateShipped" Type="Edm.DateTime" Precision="0" sap:label="Date Shipped" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="ShippingLocation" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Shipping Location" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="CarrierName" Type="Edm.String" Nullable="false" MaxLength="25" sap:label="Carrier Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="TrackingNumber" Type="Edm.String" Nullable="false" MaxLength="18" sap:label="Tracking Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="TotalDeductionAmount" Type="Edm.Decimal" Nullable="false" Precision="7" Scale="2" sap:unit="Currency" sap:label="Total Ded. Amt." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Currency" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+<Property Name="ViewKey" Type="Edm.String" Nullable="false" sap:label="PDF ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+</EntityType>
+<EntityType Name="RejectionsItems" sap:content-version="1">
+<Key>
+<PropertyRef Name="InvoiceNumber"/>
+<PropertyRef Name="ItemNumber"/>
+</Key>
+<Property Name="InvoiceNumber" Type="Edm.String" Nullable="false" MaxLength="16" sap:label="Invoice Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ItemNumber" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Item Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="MessageText" Type="Edm.String" Nullable="false" sap:label="Message Text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+</EntityType>
+<EntityType Name="PaymentHistory" sap:content-version="1">
+<Key>
+<PropertyRef Name="RefNumber"/>
+</Key>
+<Property Name="VendorNo" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Vendor Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="Company" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Company Information" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="InvoiceNumber" Type="Edm.String" Nullable="false" MaxLength="16" sap:label="Invoice Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="InvoiceDate" Type="Edm.DateTime" Precision="0" sap:label="Invoice Date" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="InvoiceTotal" Type="Edm.Decimal" Nullable="false" Precision="8" Scale="2" sap:unit="Currency" sap:label="Invoice Total" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DiscountAmount" Type="Edm.Decimal" Nullable="false" Precision="8" Scale="2" sap:unit="Currency" sap:label="Discount Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="NetAmount" Type="Edm.Decimal" Nullable="false" Precision="8" Scale="2" sap:unit="Currency" sap:label="Net Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="PaymentNumber" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Payment Reference No" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="PaymentDate" Type="Edm.DateTime" Precision="0" sap:label="Payment Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="PoNumber" Type="Edm.String" Nullable="false" MaxLength="18" sap:label="Assignement Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="RaNumber" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="RA Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Currency" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+<Property Name="RefNumber" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Reference Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ViewKey" Type="Edm.String" Nullable="false" sap:label="PDF ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+</EntityType>
+<EntityType Name="RemittanceDetails" sap:content-version="1">
+<Key>
+<PropertyRef Name="RefNumber"/>
+</Key>
+<Property Name="VendorNo" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Vendor Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="Company" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Company Information" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="PaymentMethodCode" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Payment Method Code" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="PaymentMethod" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Payment Method" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="PaymentNumber" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Payment Reference No" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="RefNumber" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Reference Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="PaymentDate" Type="Edm.DateTime" Precision="0" sap:label="Payment Date" sap:creatable="false" sap:updatable="false"/>
+<Property Name="PaymentAmount" Type="Edm.Decimal" Nullable="false" Precision="8" Scale="2" sap:unit="Currency" sap:label="Est. Payment Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="Currency" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+<NavigationProperty Name="RemittanceDetailsItemsSet" Relationship="/COSTPD/PAYER_DIRECT_SRV.RemittanceHdr_To_RemittanceItem" FromRole="FromRole_RemittanceHdr_To_RemittanceItem" ToRole="ToRole_RemittanceHdr_To_RemittanceItem"/>
+</EntityType>
+<EntityType Name="RemittanceDetailsItems" sap:content-version="1">
+<Key>
+<PropertyRef Name="RefNumber"/>
+</Key>
+<Property Name="PaymentNumber" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Payment Reference No" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="RefNumber" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Reference Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="VendorNo" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Vendor Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="Company" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Company Information" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="InvoiceNumber" Type="Edm.String" Nullable="false" MaxLength="16" sap:label="Invoice Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="InvoiceDate" Type="Edm.DateTime" Precision="0" sap:label="Invoice Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DueDate" Type="Edm.DateTime" Precision="0" sap:label="Due Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="PoNumber" Type="Edm.String" Nullable="false" MaxLength="18" sap:label="PO Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="RaNumber" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="RA Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="InvoiceAmount" Type="Edm.Decimal" Nullable="false" Precision="8" Scale="2" sap:unit="Currency" sap:label="Invoice Total" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DiscountAmount" Type="Edm.Decimal" Nullable="false" Precision="8" Scale="2" sap:unit="Currency" sap:label="Discount Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="NetAmount" Type="Edm.Decimal" Nullable="false" Precision="8" Scale="2" sap:unit="Currency" sap:label="Est. Payment Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Currency" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+</EntityType>
+<EntityType Name="DownloadContent" m:HasStream="true" sap:content-version="1">
+<Key>
+<PropertyRef Name="DownloadView"/>
+<PropertyRef Name="DownloadType"/>
+</Key>
+<Property Name="VendorNo" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Vendor Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="Company" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Company Information" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="DownloadView" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Download View" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DownloadType" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Download Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DownloadTypeExt" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Download F Val" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="PoNumber" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="PO Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="InvoiceNumber" Type="Edm.String" Nullable="false" MaxLength="16" sap:label="Invoice Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="ProcessDate" Type="Edm.DateTime" Nullable="false" Precision="0" sap:label="Process Date" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="PaymentMethodCode" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Payment Method Code" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="PaymentNumber" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Payment Reference No" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="PaymentAmount" Type="Edm.Decimal" Nullable="false" Precision="8" Scale="2" sap:unit="Currency" sap:label="Est. Payment Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="DeductionNumber" Type="Edm.String" Nullable="false" MaxLength="300" sap:label="Deduction Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="ReturnAuthorizationNumber" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="RA Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="RefNumber" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Reference Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="Currency" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+<Property Name="Sort" Type="Edm.String" Nullable="false" sap:label="Sort Fields" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="RemoveTotalAndForecast" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Rem.Tot.Forecast" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="MimeType" Type="Edm.String" Nullable="false" sap:label="Content Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+</EntityType>
+<Association Name="FormSubmit" sap:content-version="1">
+<End Type="/COSTPD/PAYER_DIRECT_SRV.ClaimSubmit" Multiplicity="1" Role="FromRole_FormSubmit"/>
+<End Type="/COSTPD/PAYER_DIRECT_SRV.ClaimFormSubmit" Multiplicity="*" Role="ToRole_FormSubmit"/>
+<ReferentialConstraint>
+<Principal Role="FromRole_FormSubmit">
+<PropertyRef Name="ClaimGuid"/>
+<PropertyRef Name="Company"/>
+<PropertyRef Name="VendorNo"/>
+</Principal>
+<Dependent Role="ToRole_FormSubmit">
+<PropertyRef Name="ClaimGuid"/>
+<PropertyRef Name="Company"/>
+<PropertyRef Name="VendorNo"/>
+</Dependent>
+</ReferentialConstraint>
+</Association>
+<Association Name="VendorSelection_To_AboutYou" sap:content-version="1">
+<End Type="/COSTPD/PAYER_DIRECT_SRV.VendorSelection" Multiplicity="*" Role="FromRole_VendorSelection_To_AboutYou"/>
+<End Type="/COSTPD/PAYER_DIRECT_SRV.AboutYou" Multiplicity="1" Role="ToRole_VendorSelection_To_AboutYou"/>
+<ReferentialConstraint>
+<Principal Role="FromRole_VendorSelection_To_AboutYou">
+<PropertyRef Name="VendorNo"/>
+<PropertyRef Name="Company"/>
+</Principal>
+<Dependent Role="ToRole_VendorSelection_To_AboutYou">
+<PropertyRef Name="VendorNo"/>
+<PropertyRef Name="Company"/>
+</Dependent>
+</ReferentialConstraint>
+</Association>
+<Association Name="RemittanceHdr_To_RemittanceItem" sap:content-version="1">
+<End Type="/COSTPD/PAYER_DIRECT_SRV.RemittanceDetails" Multiplicity="1" Role="FromRole_RemittanceHdr_To_RemittanceItem"/>
+<End Type="/COSTPD/PAYER_DIRECT_SRV.RemittanceDetailsItems" Multiplicity="*" Role="ToRole_RemittanceHdr_To_RemittanceItem"/>
+<ReferentialConstraint>
+<Principal Role="FromRole_RemittanceHdr_To_RemittanceItem">
+<PropertyRef Name="RefNumber"/>
+</Principal>
+<Dependent Role="ToRole_RemittanceHdr_To_RemittanceItem">
+<PropertyRef Name="RefNumber"/>
+</Dependent>
+</ReferentialConstraint>
+</Association>
+<Association Name="AboutYou_To_Consignments" sap:content-version="1">
+<End Type="/COSTPD/PAYER_DIRECT_SRV.AboutYou" Multiplicity="1" Role="FromRole_AboutYou_To_Consignments"/>
+<End Type="/COSTPD/PAYER_DIRECT_SRV.Consignments" Multiplicity="*" Role="ToRole_AboutYou_To_Consignments"/>
+<ReferentialConstraint>
+<Principal Role="FromRole_AboutYou_To_Consignments">
+<PropertyRef Name="VendorNo"/>
+<PropertyRef Name="Company"/>
+</Principal>
+<Dependent Role="ToRole_AboutYou_To_Consignments">
+<PropertyRef Name="VendorNo"/>
+<PropertyRef Name="Company"/>
+</Dependent>
+</ReferentialConstraint>
+</Association>
+<Association Name="AboutYou_To_Receivings" sap:content-version="1">
+<End Type="/COSTPD/PAYER_DIRECT_SRV.AboutYou" Multiplicity="1" Role="FromRole_AboutYou_To_Receivings"/>
+<End Type="/COSTPD/PAYER_DIRECT_SRV.Receivings" Multiplicity="*" Role="ToRole_AboutYou_To_Receivings"/>
+<ReferentialConstraint>
+<Principal Role="FromRole_AboutYou_To_Receivings">
+<PropertyRef Name="VendorNo"/>
+<PropertyRef Name="Company"/>
+</Principal>
+<Dependent Role="ToRole_AboutYou_To_Receivings">
+<PropertyRef Name="VendorNo"/>
+<PropertyRef Name="Company"/>
+</Dependent>
+</ReferentialConstraint>
+</Association>
+<Association Name="AboutYou_To_Incomings" sap:content-version="1">
+<End Type="/COSTPD/PAYER_DIRECT_SRV.AboutYou" Multiplicity="1" Role="FromRole_AboutYou_To_Incomings"/>
+<End Type="/COSTPD/PAYER_DIRECT_SRV.Incomings" Multiplicity="*" Role="ToRole_AboutYou_To_Incomings"/>
+<ReferentialConstraint>
+<Principal Role="FromRole_AboutYou_To_Incomings">
+<PropertyRef Name="VendorNo"/>
+<PropertyRef Name="Company"/>
+</Principal>
+<Dependent Role="ToRole_AboutYou_To_Incomings">
+<PropertyRef Name="VendorNo"/>
+<PropertyRef Name="Company"/>
+</Dependent>
+</ReferentialConstraint>
+</Association>
+<Association Name="AboutYou_To_Inprogress" sap:content-version="1">
+<End Type="/COSTPD/PAYER_DIRECT_SRV.AboutYou" Multiplicity="1" Role="FromRole_AboutYou_To_Inprogress"/>
+<End Type="/COSTPD/PAYER_DIRECT_SRV.Inprogress" Multiplicity="*" Role="ToRole_AboutYou_To_Inprogress"/>
+<ReferentialConstraint>
+<Principal Role="FromRole_AboutYou_To_Inprogress">
+<PropertyRef Name="Company"/>
+<PropertyRef Name="VendorNo"/>
+</Principal>
+<Dependent Role="ToRole_AboutYou_To_Inprogress">
+<PropertyRef Name="Company"/>
+<PropertyRef Name="VendorNo"/>
+</Dependent>
+</ReferentialConstraint>
+</Association>
+<Association Name="AboutYou_To_Rejections" sap:content-version="1">
+<End Type="/COSTPD/PAYER_DIRECT_SRV.AboutYou" Multiplicity="1" Role="FromRole_AboutYou_To_Rejections"/>
+<End Type="/COSTPD/PAYER_DIRECT_SRV.Rejections" Multiplicity="*" Role="ToRole_AboutYou_To_Rejections"/>
+<ReferentialConstraint>
+<Principal Role="FromRole_AboutYou_To_Rejections">
+<PropertyRef Name="VendorNo"/>
+<PropertyRef Name="Company"/>
+</Principal>
+<Dependent Role="ToRole_AboutYou_To_Rejections">
+<PropertyRef Name="VendorNo"/>
+<PropertyRef Name="Company"/>
+</Dependent>
+</ReferentialConstraint>
+</Association>
+<Association Name="AboutYou_To_Returns" sap:content-version="1">
+<End Type="/COSTPD/PAYER_DIRECT_SRV.AboutYou" Multiplicity="1" Role="FromRole_AboutYou_To_Returns"/>
+<End Type="/COSTPD/PAYER_DIRECT_SRV.Returns" Multiplicity="*" Role="ToRole_AboutYou_To_Returns"/>
+<ReferentialConstraint>
+<Principal Role="FromRole_AboutYou_To_Returns">
+<PropertyRef Name="VendorNo"/>
+<PropertyRef Name="Company"/>
+</Principal>
+<Dependent Role="ToRole_AboutYou_To_Returns">
+<PropertyRef Name="VendorNo"/>
+<PropertyRef Name="Company"/>
+</Dependent>
+</ReferentialConstraint>
+</Association>
+<Association Name="AboutYou_To_RemittanceDetails" sap:content-version="1">
+<End Type="/COSTPD/PAYER_DIRECT_SRV.AboutYou" Multiplicity="1" Role="FromRole_AboutYou_To_RemittanceDetails"/>
+<End Type="/COSTPD/PAYER_DIRECT_SRV.RemittanceDetails" Multiplicity="*" Role="ToRole_AboutYou_To_RemittanceDetails"/>
+<ReferentialConstraint>
+<Principal Role="FromRole_AboutYou_To_RemittanceDetails">
+<PropertyRef Name="Company"/>
+<PropertyRef Name="VendorNo"/>
+</Principal>
+<Dependent Role="ToRole_AboutYou_To_RemittanceDetails">
+<PropertyRef Name="Company"/>
+<PropertyRef Name="VendorNo"/>
+</Dependent>
+</ReferentialConstraint>
+</Association>
+<Association Name="AboutYou_To_PaymentHistory" sap:content-version="1">
+<End Type="/COSTPD/PAYER_DIRECT_SRV.AboutYou" Multiplicity="1" Role="FromRole_AboutYou_To_PaymentHistory"/>
+<End Type="/COSTPD/PAYER_DIRECT_SRV.PaymentHistory" Multiplicity="*" Role="ToRole_AboutYou_To_PaymentHistory"/>
+<ReferentialConstraint>
+<Principal Role="FromRole_AboutYou_To_PaymentHistory">
+<PropertyRef Name="VendorNo"/>
+<PropertyRef Name="Company"/>
+</Principal>
+<Dependent Role="ToRole_AboutYou_To_PaymentHistory">
+<PropertyRef Name="VendorNo"/>
+<PropertyRef Name="Company"/>
+</Dependent>
+</ReferentialConstraint>
+</Association>
+<Association Name="Rejections_To_RejectionsItems" sap:content-version="1">
+<End Type="/COSTPD/PAYER_DIRECT_SRV.Rejections" Multiplicity="1" Role="FromRole_Rejections_To_RejectionsItems"/>
+<End Type="/COSTPD/PAYER_DIRECT_SRV.RejectionsItems" Multiplicity="*" Role="ToRole_Rejections_To_RejectionsItems"/>
+<ReferentialConstraint>
+<Principal Role="FromRole_Rejections_To_RejectionsItems">
+<PropertyRef Name="InvoiceNumber"/>
+</Principal>
+<Dependent Role="ToRole_Rejections_To_RejectionsItems">
+<PropertyRef Name="InvoiceNumber"/>
+</Dependent>
+</ReferentialConstraint>
+</Association>
+<EntityContainer Name="/COSTPD/PAYER_DIRECT_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+<EntitySet Name="ViewPdfSet" EntityType="/COSTPD/PAYER_DIRECT_SRV.ViewPdf" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:requires-filter="true" sap:content-version="1"/>
+<EntitySet Name="PaymentMethodSet" EntityType="/COSTPD/PAYER_DIRECT_SRV.PaymentMethod" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:requires-filter="true" sap:content-version="1"/>
+<EntitySet Name="ClaimSubmitSet" EntityType="/COSTPD/PAYER_DIRECT_SRV.ClaimSubmit" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:requires-filter="true" sap:content-version="1"/>
+<EntitySet Name="ClaimFormSubmitSet" EntityType="/COSTPD/PAYER_DIRECT_SRV.ClaimFormSubmit" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:requires-filter="true" sap:content-version="1"/>
+<EntitySet Name="PaymentForecastSet" EntityType="/COSTPD/PAYER_DIRECT_SRV.PaymentForecast" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:requires-filter="true" sap:content-version="1"/>
+<EntitySet Name="ClaimsConfigSet" EntityType="/COSTPD/PAYER_DIRECT_SRV.ClaimsConfig" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:requires-filter="true" sap:content-version="1"/>
+<EntitySet Name="ConsignmentsSet" EntityType="/COSTPD/PAYER_DIRECT_SRV.Consignments" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:requires-filter="true" sap:content-version="1"/>
+<EntitySet Name="UnpaidItemsSet" EntityType="/COSTPD/PAYER_DIRECT_SRV.UnpaidItems" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:requires-filter="true" sap:content-version="1"/>
+<EntitySet Name="ReceivingsSet" EntityType="/COSTPD/PAYER_DIRECT_SRV.Receivings" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:requires-filter="true" sap:content-version="1"/>
+<EntitySet Name="IncomingsSet" EntityType="/COSTPD/PAYER_DIRECT_SRV.Incomings" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:requires-filter="true" sap:content-version="1"/>
+<EntitySet Name="InprogressSet" EntityType="/COSTPD/PAYER_DIRECT_SRV.Inprogress" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:requires-filter="true" sap:content-version="1"/>
+<EntitySet Name="RejectionsSet" EntityType="/COSTPD/PAYER_DIRECT_SRV.Rejections" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:requires-filter="true" sap:content-version="1"/>
+<EntitySet Name="ClaimsHistorySet" EntityType="/COSTPD/PAYER_DIRECT_SRV.ClaimsHistory" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:requires-filter="true" sap:content-version="1"/>
+<EntitySet Name="ClaimNotesSet" EntityType="/COSTPD/PAYER_DIRECT_SRV.ClaimNotes" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:requires-filter="true" sap:content-version="1"/>
+<EntitySet Name="VendorSelectionSet" EntityType="/COSTPD/PAYER_DIRECT_SRV.VendorSelection" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+<EntitySet Name="AboutYouSet" EntityType="/COSTPD/PAYER_DIRECT_SRV.AboutYou" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:requires-filter="true" sap:content-version="1"/>
+<EntitySet Name="ReturnsSet" EntityType="/COSTPD/PAYER_DIRECT_SRV.Returns" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:requires-filter="true" sap:content-version="1"/>
+<EntitySet Name="RejectionsItemsSet" EntityType="/COSTPD/PAYER_DIRECT_SRV.RejectionsItems" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+<EntitySet Name="PaymentHistorySet" EntityType="/COSTPD/PAYER_DIRECT_SRV.PaymentHistory" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:requires-filter="true" sap:content-version="1"/>
+<EntitySet Name="RemittanceDetailsSet" EntityType="/COSTPD/PAYER_DIRECT_SRV.RemittanceDetails" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:requires-filter="true" sap:content-version="1"/>
+<EntitySet Name="RemittanceDetailsItemsSet" EntityType="/COSTPD/PAYER_DIRECT_SRV.RemittanceDetailsItems" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:requires-filter="true" sap:content-version="1"/>
+<EntitySet Name="DownloadContentSet" EntityType="/COSTPD/PAYER_DIRECT_SRV.DownloadContent" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:requires-filter="true" sap:content-version="1"/>
+<AssociationSet Name="AboutYou_To_ReturnsSet" Association="/COSTPD/PAYER_DIRECT_SRV.AboutYou_To_Returns" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+<End EntitySet="AboutYouSet" Role="FromRole_AboutYou_To_Returns"/>
+<End EntitySet="ReturnsSet" Role="ToRole_AboutYou_To_Returns"/>
+</AssociationSet>
+<AssociationSet Name="VendorSelection_To_AboutYouSet" Association="/COSTPD/PAYER_DIRECT_SRV.VendorSelection_To_AboutYou" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+<End EntitySet="VendorSelectionSet" Role="FromRole_VendorSelection_To_AboutYou"/>
+<End EntitySet="AboutYouSet" Role="ToRole_VendorSelection_To_AboutYou"/>
+</AssociationSet>
+<AssociationSet Name="AboutYou_To_InprogressSet" Association="/COSTPD/PAYER_DIRECT_SRV.AboutYou_To_Inprogress" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+<End EntitySet="AboutYouSet" Role="FromRole_AboutYou_To_Inprogress"/>
+<End EntitySet="InprogressSet" Role="ToRole_AboutYou_To_Inprogress"/>
+</AssociationSet>
+<AssociationSet Name="Rejections_To_RejectionsItemsSet" Association="/COSTPD/PAYER_DIRECT_SRV.Rejections_To_RejectionsItems" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+<End EntitySet="RejectionsSet" Role="FromRole_Rejections_To_RejectionsItems"/>
+<End EntitySet="RejectionsItemsSet" Role="ToRole_Rejections_To_RejectionsItems"/>
+</AssociationSet>
+<AssociationSet Name="AboutYou_To_PaymentHistorySet" Association="/COSTPD/PAYER_DIRECT_SRV.AboutYou_To_PaymentHistory" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+<End EntitySet="AboutYouSet" Role="FromRole_AboutYou_To_PaymentHistory"/>
+<End EntitySet="PaymentHistorySet" Role="ToRole_AboutYou_To_PaymentHistory"/>
+</AssociationSet>
+<AssociationSet Name="AboutYou_To_ReceivingsSet" Association="/COSTPD/PAYER_DIRECT_SRV.AboutYou_To_Receivings" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+<End EntitySet="AboutYouSet" Role="FromRole_AboutYou_To_Receivings"/>
+<End EntitySet="ReceivingsSet" Role="ToRole_AboutYou_To_Receivings"/>
+</AssociationSet>
+<AssociationSet Name="AboutYou_To_IncomingsSet" Association="/COSTPD/PAYER_DIRECT_SRV.AboutYou_To_Incomings" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+<End EntitySet="AboutYouSet" Role="FromRole_AboutYou_To_Incomings"/>
+<End EntitySet="IncomingsSet" Role="ToRole_AboutYou_To_Incomings"/>
+</AssociationSet>
+<AssociationSet Name="AboutYou_To_RejectionsSet" Association="/COSTPD/PAYER_DIRECT_SRV.AboutYou_To_Rejections" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+<End EntitySet="AboutYouSet" Role="FromRole_AboutYou_To_Rejections"/>
+<End EntitySet="RejectionsSet" Role="ToRole_AboutYou_To_Rejections"/>
+</AssociationSet>
+<AssociationSet Name="FormSubmitSet" Association="/COSTPD/PAYER_DIRECT_SRV.FormSubmit" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+<End EntitySet="ClaimSubmitSet" Role="FromRole_FormSubmit"/>
+<End EntitySet="ClaimFormSubmitSet" Role="ToRole_FormSubmit"/>
+</AssociationSet>
+<AssociationSet Name="RemittanceHdr_To_RemittanceItemSet" Association="/COSTPD/PAYER_DIRECT_SRV.RemittanceHdr_To_RemittanceItem" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+<End EntitySet="RemittanceDetailsSet" Role="FromRole_RemittanceHdr_To_RemittanceItem"/>
+<End EntitySet="RemittanceDetailsItemsSet" Role="ToRole_RemittanceHdr_To_RemittanceItem"/>
+</AssociationSet>
+<AssociationSet Name="AboutYou_To_RemittanceDetailsSet" Association="/COSTPD/PAYER_DIRECT_SRV.AboutYou_To_RemittanceDetails" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+<End EntitySet="AboutYouSet" Role="FromRole_AboutYou_To_RemittanceDetails"/>
+<End EntitySet="RemittanceDetailsSet" Role="ToRole_AboutYou_To_RemittanceDetails"/>
+</AssociationSet>
+<AssociationSet Name="AboutYou_To_ConsignmentsSet" Association="/COSTPD/PAYER_DIRECT_SRV.AboutYou_To_Consignments" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+<End EntitySet="AboutYouSet" Role="FromRole_AboutYou_To_Consignments"/>
+<End EntitySet="ConsignmentsSet" Role="ToRole_AboutYou_To_Consignments"/>
+</AssociationSet>
+</EntityContainer>
+<atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="http://apvendorqat2.np.costco.com/sap/opu/odata/costpd/payer_direct_srv/$metadata"/>
+<atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="http://apvendorqat2.np.costco.com/sap/opu/odata/costpd/payer_direct_srv/$metadata"/>
+</Schema>
+</edmx:DataServices>
+</edmx:Edmx>

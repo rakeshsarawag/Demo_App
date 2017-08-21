@@ -1,0 +1,11 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Popover showHeader="false" class="sapUiSizeCompact">
+        <List id="listPopover" mode="SingleSelectMaster" >
+            <items>
+                <StandardListItem title="{i18n>LINK_REBATE_INQUIRY}" />
+                <StandardListItem title="{i18n>INT_OPEN_TEXT}" />
+                <StandardListItem title="{i18n>INT_OPEN_TEXT}" />
+            </items>
+        </List>
+    </Popover>
+</core:FragmentDefinition>

@@ -1,0 +1,151 @@
+<mvc:View controllerName="sap.cdp.demo.demoApplication5.controller.CreateClaim" xmlns:l="sap.ui.layout" xmlns:fb="sap.ui.comp.filterbar" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:ux="sap.uxap">
+    <Page id="idCreateClaimPage" title="{i18n>NAV_TITLE_610}" showHeader="true">
+        <f:Form id="idSmplFormCreateClaim" editable="true">
+            <f:layout>
+                <f:ResponsiveGridLayout labelSpanL="4" labelSpanM="4" emptySpanL="4" emptySpanM="4" columnsL="2" columnsM="2" />
+            </f:layout>
+            <f:formContainers>
+                <f:FormContainer>
+                    <f:formElements>
+                        <f:FormElement>
+                            <f:label>
+                                <Label id="idLabelFirstName" text="{i18n>FIRST_NAME_601}" tooltip="{i18n>FIRST_NAME_601}" />
+                            </f:label>
+                            <f:fields>
+                                <Input ariaLabelledBy="idLabelEntityType" valueState="{claimData>/FirstNameValueStateText}" valueStateText="{claimData>/FirstNameValueState}" value="{claimData>/FirstName}" change="onInputChange"/>
+                            </f:fields>
+                        </f:FormElement>
+                        <f:FormElement>
+                            <f:label>
+                                <Label id="idLabelLastName" text="{i18n>LAST_NAME_601}" required="false" tooltip="{i18n>LAST_NAME_601}" />
+                            </f:label>
+                            <f:fields>
+                                <Input id="idInputLastName" valueState="{claimData>/LastNameValueState}" valueStateText="{claimData>/LastNameValueStateText}" value="{claimData>/LastName}" change="onInputChange" />
+                            </f:fields>
+                        </f:FormElement>
+                        <f:FormElement>
+                            <f:label>
+                                <Label id="idLabelEmail" text="{i18n>EMAIL_601}" required="{path: 'claimTypes>/claimType/Email', formatter : '.formatter.formatFieldsMandatory'}" tooltip="{i18n>EMAIL_601}" />
+                            </f:label>
+                            <f:fields>
+                                <Input change="onEmailChange" valueState="{claimData>/EmailValueState}" valueStateText="{claimData>/EmailValueStateText}" value="{claimData>/Email}">
+                                </Input>
+                            </f:fields>
+                        </f:FormElement>
+                        <!-- </f:formElements>
+                </f:FormContainer>
+                <f:FormContainer>
+                    <f:formElements> -->
+                        <f:FormElement>
+                            <f:label>
+                                <Label id="idLabelPhone" text="{i18n>PHONE_601}" tooltip="{i18n>PHONE_601}" />
+                            </f:label>
+                            <f:fields>
+                                <Input valueState="{claimData>/PhoneValueState}" valueStateText="{claimData>/PhoneValueStateText}" value="{claimData>/Phone}" change="onPhoneNumberChange"/>
+                            </f:fields>
+                        </f:FormElement>
+                        <f:FormElement>
+                            <f:label>
+                                <Label id="idLabelClaimType" text="{i18n>CLAIM_TYPE_601}" required="true" tooltip="{i18n>CLAIM_TYPE_601}" />
+                            </f:label>
+                            <f:fields>
+                                <Select id="idComboBoxClaimType" items="{claimTypes>/claimTypes}" change="onClaimTypeChange" selectedKey="{claimData>/SelectedClaimType}">
+                                    <core:Item key="{claimTypes>ClaimType}" text="{claimTypes>ClaimDescription}" />
+                                </Select>
+                            </f:fields>
+                        </f:FormElement>
+                    </f:formElements>
+                </f:FormContainer>
+            </f:formContainers>
+        </f:Form>
+        <f:Form id="idSmplFormCreateClaimDetail" editable="true">
+            <f:layout>
+                <f:ResponsiveGridLayout labelSpanL="4" labelSpanM="4" emptySpanL="4" emptySpanM="4" columnsL="2" columnsM="2" />
+            </f:layout>
+            <f:formContainers>
+                <f:FormContainer>
+                    <f:formElements>
+                        <f:FormElement visible="{path: 'claimTypes>/claimType/ClaimAmount', formatter : '.formatter.formatFieldVisiblity'}">
+                            <f:label>
+                                <Label id="idLabelClaimAmount" required="{path: 'claimTypes>/claimType/ClaimAmount', formatter : '.formatter.formatFieldsMandatory'}" text="{i18n>CLAIM_AMOUNT_601}" tooltip="{i18n>CLAIM_AMOUNT_601}" />
+                            </f:label>
+                            <f:fields>
+                                <Input id="idInputClaimAmount" change="onClaimAmountChange" valueState="{claimData>/ClaimAmountValueState}" valueStateText="{claimData>/ClaimAmountValueStateText}" value="{claimData>/ClaimAmount}"/>
+                            </f:fields>
+                        </f:FormElement>
+                        <f:FormElement visible="{path: 'claimTypes>/claimType/InvoiceNumber', formatter : '.formatter.formatFieldVisiblity'}">
+                            <f:label>
+                                <Label id="idLabelInvoiceNumber" required="{path: 'claimTypes>/claimType/InvoiceNumber', formatter : '.formatter.formatFieldsMandatory'}" text="{i18n>INV_NUM_601}" tooltip="{i18n>INV_NUM_601}" />
+                            </f:label>
+                            <f:fields>
+                                <Input id="idInputInvoiceNumber" valueState="{claimData>/InvoiceNumberValueState}" valueStateText="{claimData>/InvoiceNumberValueStateText}" value="{claimData>/InvoiceNumber}" change="onInputChange">
+                                </Input>
+                            </f:fields>
+                        </f:FormElement>
+                        <!-- </f:formElements>
+                </f:FormContainer>
+                <f:FormContainer>
+                    <f:formElements> -->
+                        <f:FormElement visible="{path: 'claimTypes>/claimType/PoNumber', formatter : '.formatter.formatFieldVisiblity'}">
+                            <f:label>
+                                <Label id="idPoNumber" required="{path: 'claimTypes>/claimType/PoNumber', formatter : '.formatter.formatFieldsMandatory'}" text="{i18n>PO_NUM_601}" tooltip="{i18n>PO_NUM_601}" />
+                            </f:label>
+                            <f:fields>
+                                <Input id="idInputPoNo" valueState="{claimData>/PoNumberValueState}" valueStateText="{claimData>/PoNumberValueStateText}" value="{claimData>/PoNumber}" change="onInputChange"/>
+                            </f:fields>
+                        </f:FormElement>
+                        <f:FormElement visible="{path: 'claimTypes>/claimType/ClaimNotes', formatter : '.formatter.formatFieldVisiblity'}">
+                            <f:label>
+                                <Label id="idLabelNotes" required="{path: 'claimTypes>/claimType/ClaimNotes', formatter : '.formatter.formatFieldsMandatory'}" text="{i18n>EXPLANATION_601}" tooltip="{i18n>EXPLANATION_601}" />
+                            </f:label>
+                            <f:fields>
+                                <Textarea valueState="{claimData>/ClaimNotesValueState}" valueStateText="{claimData>/ClaimNotesValueStateText}" value="{claimData>/ClaimNotes}" change="onInputChange"></Textarea>
+                            </f:fields>
+                        </f:FormElement>
+                        <f:FormElement visible="{parts:[
+                        	{path: 'claimTypes>/claimType/File1'},
+                        	{path: 'claimTypes>/claimType/File2'},
+                        	{path: 'claimTypes>/claimType/File3'},
+                        	{path: 'claimTypes>/claimType/File3Label'}],
+                        	formatter : '.formatter.formatMsgStripVisiblity'}">
+                            <Title />
+                            <f:fields>
+                                <MessageStrip text="{parts:[
+                        	{path: 'claimTypes>/claimType/File1'},
+                        	{path: 'claimTypes>/claimType/File1Label'},
+                        	{path: 'claimTypes>/claimType/File2'},
+                        	{path: 'claimTypes>/claimType/File2Label'}],
+                        	formatter : '.formatter.formatMessageStripText'}" type="{claimData>/AttachmentMsgState}" showIcon="true" customIcon="sap-icon://attachment" class="sapUiMediumMarginBottom">
+                                </MessageStrip>
+                            </f:fields>
+                        </f:FormElement>
+                        <f:FormElement visible="{parts:[
+                        	{path: 'claimTypes>/claimType/File1'},
+                        	{path: 'claimTypes>/claimType/File2'},
+                        	{path: 'claimTypes>/claimType/File3'},
+                        	{path: 'claimTypes>/claimType/FileOthers'}],
+                        	formatter : '.formatter.formatUploadVisiblity'}">
+                            <Title></Title>
+                            <UploadCollection id="UploadCollection" maximumFilenameLength="{AttachmentClientModel>/fileNameLen}" maximumFileSize="{AttachmentClientModel>/fileSize}" multiple="true" sameFilenameAllowed="false" instantUpload="false" showSeparators="All" change="onFileChange" filenameLengthExceed="onFilenameLengthExceed" fileSizeExceed="onFileSizeExceed" typeMissmatch="onTypeMissmatch" uploadComplete="onUploadComplete" beforeUploadStarts="onBeforeUploadStarts" mode="SingleSelectMaster" fileType="{AttachmentClientModel>/fileType}" items="{path : 'supplier>/Attachments', templateShareable : 'true'}" uploadEnabled="{supplier>/IsAttachmentsEnabled}">
+                                <items>
+                                    <UploadCollectionItem documentId="{supplier>AttachmentId}" mimeType="{supplier>MimeType}" fileName="{supplier>FileName}" enableEdit="true" visibleDelete="true" visibleEdit="false" url="{parts:[{path:'supplier>InstanceId'},{path:'supplier>AttachmentId'}], formatter:'.formatter.createAttachmentUrl'}">
+                                        <attributes>
+                                            <ObjectAttribute title="{i18n>FileSize}" text="{path:'supplier>Filesize', formatter:'.formatter.fileSizeFormatter'}" />
+                                        </attributes>
+                                    </UploadCollectionItem>
+                                </items>
+                            </UploadCollection>
+                        </f:FormElement>
+                    </f:formElements>
+                </f:FormContainer>
+            </f:formContainers>
+        </f:Form>
+        <footer>
+            <OverflowToolbar>
+                <ToolbarSpacer/>
+                <Button text="{i18n>SUBMIT_BUTTON}" type="Emphasized" press="onClaimSubmitPress" />
+                <Button text="{i18n>CANCEL_BTN}" press="onClaimCancelPress" />
+            </OverflowToolbar>
+        </footer>
+    </Page>
+</mvc:View>

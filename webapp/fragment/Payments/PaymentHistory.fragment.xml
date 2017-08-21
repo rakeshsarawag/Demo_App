@@ -1,0 +1,85 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form">
+    <fb:FilterBar id="idPaymentHistoryFilter" search="onPaymentFilterPress" clear="onFilterClear" showClearOnFB="true" showClearButton="true" filterBarExpanded="true" filterContainerWidth="15rem" showFilterConfiguration="true" xmlns:fb="sap.ui.comp.filterbar">
+        <fb:filterItems>
+            <fb:FilterItem id="idPaymentAddType" name="AddType" label="{i18n>DATE_FILER}" visible="{viewData>/PaymentsTab/DateFilterVisible}">
+                <fb:control>
+                    <Select ariaLabelledBy="id_Payment_type" change="onPaymentTypeChange" selectedKey="{filterData>/PaymentsTab/DateFilterSelectedKey}">
+                        <core:Item text="{i18n>FILTER_BAR_DATEP_90DAYS}" key="90-d" />
+                        <core:Item text="{i18n>FILTER_BAR_DATEP_12MONTHS}" key="12-m" />
+                        <core:Item text="{i18n>FILTER_BAR_DATEP_CUSTOM}" key="-cd" />
+                    </Select>
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem id="id_Filter_Search" name="FilterSearch" label="{i18n>FILTER_SEARCH}">
+                <fb:control>
+                    <Select ariaLabelledBy="id_Payment_type" change="onReceivingsItemsSearchChange" selectedKey="{filterData>/PaymentsTab/FilterSearchKey}">
+                        <core:Item text="{i18n>FILTER_SEARCH_PO_DESC}" key="po" />
+                        <core:Item text="{i18n>FILTER_SEARCH_INVOICE_DESC}" key="invoice" />
+                    </Select>
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem id="id_Filter_Po" name="PO" label="{i18n>FILTER_SEARCH_PO_DESC}" visible="{viewData>/PaymentsTab/PoVisible}">
+                <fb:control>
+                    <Input id="idPaymentStrAdrInp" type="Text" liveChange="onPaymentsFilterSearchChange" value="{filterData>/PaymentsTab/PurchaseOrder}" />
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem id="id_Filter_Invoice" name="Invoice" label="{i18n>FILTER_SEARCH_INVOICE_DESC}" visible="{viewData>/PaymentsTab/InvoiceVisible}">
+                <fb:control>
+                    <Input type="Text" ariaLabelledBy="idPoBox" liveChange="onPaymentsFilterSearchChange" value="{filterData>/PaymentsTab/InvoiceNumber}" />
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem id="id_From_Date" name="FromDate" label="{i18n>FROM_DATE}" visible="{viewData>/PaymentsTab/DateVisible}" width="50%">
+                <fb:control>
+                    <DatePicker width="50%" value="{filterData>/PaymentsTab/FromDate}" valueState="{viewData>/PaymentsTab/FromDateValueState}" valueStateText="{viewData>/PaymentsTab/FromDateValueStateText}" change="onPaymentDatePickerChange"></DatePicker>
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem id="id_To_Date" name="ToDate" label="{i18n>TO_DATE}" visible="{viewData>/PaymentsTab/DateVisible}" width="50%">
+                <fb:control>
+                    <DatePicker width="50%" value="{filterData>/PaymentsTab/ToDate}" valueState="{viewData>/PaymentsTab/EndDateValueState}" valueStateText="{viewData>/PaymentsTab/EndDateValueStateText}" change="onPaymentDatePickerChange"></DatePicker>
+                </fb:control>
+            </fb:FilterItem>
+        </fb:filterItems>
+    </fb:FilterBar>
+    <Table id="idPaymentHistoryTable" noDataText="{i18n>TABLE_NODATA_TITLE}" growing="true" updateFinished="onPaymentHistoryUpdateFinished" growingTriggerText="{i18n>SHOW_MORE_DOC}" growingThreshold="20">
+        <headerToolbar>
+            <Toolbar id="idToolbarPayment" design="Transparent">
+                <Title text="{ parts : [{path:'i18n>PAYMENT_HISTORY_TABLE_TITLE'}, {path:'commonData>/PaymentHistoryItems'}], formatter : 'jQuery.sap.formatMessage' }" tooltip="{ parts : [{path:'i18n>PAYMENT_HISTORY_TABLE_TITLE'}, {path:'commonData>/PaymentHistoryItems'}], formatter : 'jQuery.sap.formatMessage' }" level="H2" />
+                <ToolbarSpacer/>
+                <Button id="idBtnPersSupplier" icon="sap-icon://action-settings" press="onPersonalizePayment" tooltip="{i18n>PERS_SUPPLIERS_TOOL}" type="Transparent" />
+                <Button id="idPaymentExportBtn" icon="sap-icon://excel-attachment" press="onSupplierExportExcel" tooltip="{i18n>EXPORT_EXCEL_TOOL}" type="Transparent" />
+            </Toolbar>
+        </headerToolbar>
+        <columns>
+            <Column id="id_Invoice_No">
+                <Label text="{i18n>INVOICE_NUM_320}" tooltip="{i18n>INVOICE_NUM_320}" />
+            </Column>
+            <Column id="id_Invoice_Date">
+                <Label text="{i18n>INVOICE_DATE_320}" tooltip="{i18n>INVOICE_DATE_320}" />
+            </Column>
+            <Column id="id_Invoice_Total" demandPopin="true" minScreenWidth="Phone" popinDisplay="Inline">
+                <Label text="{i18n>INVOICE_TOTAL_320}" tooltip="{i18n>INVOICE_TOTAL_320}" />
+            </Column>
+            <Column id="id_Discount" demandPopin="true" minScreenWidth="Phone" popinDisplay="Inline">
+                <Label text="{i18n>DISCOUNT_320}" tooltip="{i18n>DISCOUNT_320}" />
+            </Column>
+            <Column id="id_Net_Amount" demandPopin="true" minScreenWidth="Phone" popinDisplay="Inline">
+                <Label text="{i18n>NET_AMOUNT_320}" tooltip="{i18n>NET_AMOUNT_320}" />
+            </Column>
+            <Column id="id_Payment_No" demandPopin="true" minScreenWidth="Phone" popinDisplay="Inline">
+                <Label text="{i18n>PAYMENT_NUM_320}" tooltip="{i18n>SUPP_PHONE_NUM}" />
+            </Column>
+            <Column id="id_Payment_Date" hAlign="Center" demandPopin="true" minScreenWidth="Phone" popinDisplay="Inline">
+                <Label text="{i18n>PAYMENT_DATE_320}" tooltip="{i18n>PAYMENT_DATE_320}" />
+            </Column>
+            <Column id="id_Po_No" hAlign="Center" demandPopin="true" minScreenWidth="Phone" popinDisplay="Inline">
+                <Label text="{i18n>PO_NUM_320}" tooltip="{i18n>PO_NUM_320}" />
+            </Column>
+            <Column id="id_Ra_No" hAlign="Center" demandPopin="true" minScreenWidth="Phone" popinDisplay="Inline">
+                <Label text="{i18n>RA_NUM_320}" tooltip="{i18n>RA_NUM_320}" />
+            </Column>
+            <Column id="id_PdfColm">
+                <Label></Label>
+            </Column>
+        </columns>
+    </Table>
+</core:FragmentDefinition>

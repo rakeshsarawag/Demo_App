@@ -1,0 +1,99 @@
+<mvc:View controllerName="sap.cdp.demo.demoApplication5.controller.TaskList" xmlns:l="sap.ui.layout" xmlns:fb="sap.ui.comp.filterbar" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:ux="sap.uxap">
+    <Page id="idHomePage" title="{i18n>HOME_PAGE_TITLE}" showHeader="true">
+            <customHeader>
+                <Bar>
+                    <contentLeft>
+                        <Image src="./sap.cdp.demo.demoApplication5/images/logoTitle.png"></Image>
+                    </contentLeft>
+                    <contentMiddle>
+                        <Title text="{commonData>/HeaderTitle}"></Title>
+                    </contentMiddle>
+                    <contentRight>
+                <Label text="{aboutYou>/VendorNo}" design="Normal" tooltip="{aboutYou>/VendorName}"/>
+                        
+                <Label text="{path: 'aboutYou>/VendorName' , formatter: '.formatter.VendorHeaderFormat'}" tooltip="{aboutYou>/VendorName}" class="sapUiSmallMarginEnd" />
+                <!-- <Button icon="sap-icon://edit" type="Transparent"></Button>
+                <Link text="{i18n>LINK_CHANGE_VENDOR}"></Link> -->
+                    </contentRight>
+                </Bar>
+            </customHeader>
+        <content>
+        <!-- <ObjectHeader icon="./sap.cdp.demo.demoApplication5/images/logoTitle.png" title="{i18n>HEADER_TITLE}" responsive="true" fullScreenOptimized="true">
+        	<attributes>
+        	<ObjectAttribute text=" -" active="true">
+			</ObjectAttribute>
+        	<ObjectAttribute text="Sign Out" active="true" />
+        </attributes>
+            <headerContainer> -->
+                <IconTabBar id="id_Icon_Tab_Bar" upperCase="false" class="sapUiResponsiveContentPadding" select="onIconTabPress" selectedKey="AboutYou">
+                    <items>
+                        <IconTabFilter id="id_AboutYou_Tab" text="{i18n>ABOUT_YOU_BAR}" icon="sap-icon://person-placeholder" key="AboutYou">
+                            <core:Fragment fragmentName="sap.cdp.demo.demoApplication5.fragment.AboutYou.AboutYou" type="XML" />
+                        </IconTabFilter>
+                        <IconTabFilter id="id_Payment_Tab_Filter" text="{i18n>PAYMENTS_BAR}" icon="sap-icon://paid-leave" key="Payments">
+                            <SegmentedButton id="idPaymentSegmentButton" selectedKey="Payment" class="sapUiSmallMarginBottom">
+                                <items>
+                                    <SegmentedButtonItem text="{i18n>PAYMENT_HISTORY_SUBTAB}" key="Payment" press="onPaymentSubTabPress"/>
+                                    <SegmentedButtonItem text="{i18n>REMMI_DETAIL_SUBTAB}" press="onPaymentSubTabPress" key="Remittance"/>
+                                </items>
+                            </SegmentedButton>
+                            <l:VerticalLayout id="id_Vertical_Layout">
+                            	
+                            </l:VerticalLayout>
+                                    <!-- <core:Fragment fragmentName="sap.cdp.demo.demoApplication5.fragment.Payments.PaymentHistory" type="XML" /> -->
+
+                        </IconTabFilter>
+                        <IconTabFilter text="{i18n>PENDING_ITEMS_BAR}" icon="sap-icon://pending" key="PendingItems">
+                        	<SegmentedButton id="idPendingItemsSegmentButton" selectedKey="Invoice" class="sapUiSmallMarginBottom">
+                                <items>
+                                    <SegmentedButtonItem text="{i18n>NAV_TITLE_410}" key="Invoice" press="onUnpaidItemsSubTabPress"/>
+                                    <SegmentedButtonItem text="{i18n>NAV_TITLE_420}" press="onUnpaidItemsSubTabPress" key="Receivings"/>
+                                    <SegmentedButtonItem text="{i18n>NAV_TITLE_430}" press="onUnpaidItemsSubTabPress" key="InProcess"/>
+                                    <SegmentedButtonItem text="{i18n>NAV_TITLE_440}" press="onUnpaidItemsSubTabPress" key="EdiRejections"/>
+                                </items>
+                            </SegmentedButton>
+                            <l:VerticalLayout id="id_Pending_Items_Layout">
+                            	
+                            </l:VerticalLayout>
+                        </IconTabFilter>
+                        <IconTabFilter text="{i18n>UNPAID_ITEMS_BAR}" icon="sap-icon://unpaid-leave" key="UnpaidItems">
+                        	<SegmentedButton id="idUnpaidItemsSegmentButton" selectedKey="UnpaidItems" class="sapUiSmallMarginBottom">
+                                <items>
+                                    <SegmentedButtonItem text="{i18n>NAV_TITLE_450}" press="onPaymentForecastSubTabPress" key="UnpaidItems"/>
+                                    <SegmentedButtonItem text="{i18n>NAV_TITLE_451}" press="onPaymentForecastSubTabPress" key="PaymentForecast"/>
+                                </items>
+                            </SegmentedButton>
+                            <l:VerticalLayout id="id_Unpaid_Items_Layout">
+                            	
+                            </l:VerticalLayout>
+                        </IconTabFilter>
+                        <IconTabFilter text="{i18n>RETURNS_BAR}" icon="sap-icon://repost" key="Returns">
+                        	<core:Fragment fragmentName="sap.cdp.demo.demoApplication5.fragment.Returns.Returns" type="XML" />
+                        </IconTabFilter>
+                        <IconTabFilter text="{i18n>CLAIMS_BAR}" icon="sap-icon://copy" key="Claims">
+                        	<core:Fragment fragmentName="sap.cdp.demo.demoApplication5.fragment.Claims.Claims" type="XML" />
+                        </IconTabFilter>
+                        <IconTabFilter text="{i18n>CONSIGNMENTS_BAR}" icon="sap-icon://instance" key="Consignments">
+                        	<core:Fragment fragmentName="sap.cdp.demo.demoApplication5.fragment.Consignments.Consignments" type="XML" />
+                        </IconTabFilter>
+                        <!-- <IconTabSeparator />
+                        <IconTabFilter text="{i18n>LBL_AR}" icon="sap-icon://drop-down-list" key="AccountsReceivable">
+                        </IconTabFilter> -->
+                    </items>
+                </IconTabBar>
+            <!-- </headerContainer>
+        </ObjectHeader> -->
+    </content>
+    <footer>
+            <OverflowToolbar>
+                <Button text="{i18n>LBL_AR}" press="onAccReceivablePress" />
+                <ToolbarSpacer/>
+                <Button text="{i18n>LINK_USER_SETTINGS}" type="Transparent"/>
+                <Button text="{i18n>LINK_ETHICS_HOTLINE}" type="Transparent"/>
+                <Button text="{i18n>LINK_TERMS}" type="Transparent"/>
+                <ToolbarSpacer/>
+                <Button icon="sap-icon://add" press="onCreateClaimPress" tooltip="{i18n>NAV_TITLE_610}" type="Transparent" />
+            </OverflowToolbar>
+        </footer>
+    </Page>
+</mvc:View>

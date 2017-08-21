@@ -1,0 +1,140 @@
+{
+	"d": {
+		"results": [{
+			"__metadata": {
+				"id": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='001',PaymentMethodCode='C')",
+				"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='001',PaymentMethodCode='C')",
+				"type": "/COSTPD/PAYER_DIRECT_SRV.PaymentMethod"
+			},
+			"Company": "001",
+			"PaymentMethodCode": "C",
+			"PaymentMethodDesc": "Check"
+		}, {
+			"__metadata": {
+				"id": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='001',PaymentMethodCode='C')",
+				"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='001',PaymentMethodCode='C')",
+				"type": "/COSTPD/PAYER_DIRECT_SRV.PaymentMethod"
+			},
+			"Company": "001",
+			"PaymentMethodCode": "C",
+			"PaymentMethodDesc": "Check"
+		}, {
+			"__metadata": {
+				"id": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='001',PaymentMethodCode='C')",
+				"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='001',PaymentMethodCode='C')",
+				"type": "/COSTPD/PAYER_DIRECT_SRV.PaymentMethod"
+			},
+			"Company": "001",
+			"PaymentMethodCode": "C",
+			"PaymentMethodDesc": "Check"
+		}, {
+			"__metadata": {
+				"id": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='001',PaymentMethodCode='C')",
+				"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='001',PaymentMethodCode='C')",
+				"type": "/COSTPD/PAYER_DIRECT_SRV.PaymentMethod"
+			},
+			"Company": "001",
+			"PaymentMethodCode": "C",
+			"PaymentMethodDesc": "Check"
+		}, {
+			"__metadata": {
+				"id": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='001',PaymentMethodCode='E')",
+				"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='001',PaymentMethodCode='E')",
+				"type": "/COSTPD/PAYER_DIRECT_SRV.PaymentMethod"
+			},
+			"Company": "001",
+			"PaymentMethodCode": "E",
+			"PaymentMethodDesc": "Electronic Fund Transfer"
+		}, {
+			"__metadata": {
+				"id": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='001',PaymentMethodCode='E')",
+				"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='001',PaymentMethodCode='E')",
+				"type": "/COSTPD/PAYER_DIRECT_SRV.PaymentMethod"
+			},
+			"Company": "001",
+			"PaymentMethodCode": "E",
+			"PaymentMethodDesc": "Electronic Fund Transfer"
+		}, {
+			"__metadata": {
+				"id": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='001',PaymentMethodCode='E')",
+				"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='001',PaymentMethodCode='E')",
+				"type": "/COSTPD/PAYER_DIRECT_SRV.PaymentMethod"
+			},
+			"Company": "001",
+			"PaymentMethodCode": "E",
+			"PaymentMethodDesc": "Electronic Fund Transfer"
+		}, {
+			"__metadata": {
+				"id": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='001',PaymentMethodCode='E')",
+				"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='001',PaymentMethodCode='E')",
+				"type": "/COSTPD/PAYER_DIRECT_SRV.PaymentMethod"
+			},
+			"Company": "001",
+			"PaymentMethodCode": "E",
+			"PaymentMethodDesc": "Electronic Fund Transfer"
+		}, {
+			"__metadata": {
+				"id": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='001',PaymentMethodCode='E')",
+				"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='001',PaymentMethodCode='E')",
+				"type": "/COSTPD/PAYER_DIRECT_SRV.PaymentMethod"
+			},
+			"Company": "001",
+			"PaymentMethodCode": "E",
+			"PaymentMethodDesc": "Electronic Fund Transfer"
+		}, {
+			"__metadata": {
+				"id": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='001',PaymentMethodCode='E')",
+				"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='001',PaymentMethodCode='E')",
+				"type": "/COSTPD/PAYER_DIRECT_SRV.PaymentMethod"
+			},
+			"Company": "001",
+			"PaymentMethodCode": "E",
+			"PaymentMethodDesc": "Electronic Fund Transfer"
+		}, {
+			"__metadata": {
+				"id": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='001',PaymentMethodCode='E')",
+				"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='001',PaymentMethodCode='E')",
+				"type": "/COSTPD/PAYER_DIRECT_SRV.PaymentMethod"
+			},
+			"Company": "001",
+			"PaymentMethodCode": "E",
+			"PaymentMethodDesc": "Electronic Fund Transfer"
+		}, {
+			"__metadata": {
+				"id": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='001',PaymentMethodCode='W')",
+				"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='001',PaymentMethodCode='W')",
+				"type": "/COSTPD/PAYER_DIRECT_SRV.PaymentMethod"
+			},
+			"Company": "001",
+			"PaymentMethodCode": "W",
+			"PaymentMethodDesc": "Wire"
+		}, {
+			"__metadata": {
+				"id": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='001',PaymentMethodCode='W')",
+				"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='001',PaymentMethodCode='W')",
+				"type": "/COSTPD/PAYER_DIRECT_SRV.PaymentMethod"
+			},
+			"Company": "001",
+			"PaymentMethodCode": "W",
+			"PaymentMethodDesc": "Wire"
+		}, {
+			"__metadata": {
+				"id": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='001',PaymentMethodCode='W')",
+				"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='001',PaymentMethodCode='W')",
+				"type": "/COSTPD/PAYER_DIRECT_SRV.PaymentMethod"
+			},
+			"Company": "001",
+			"PaymentMethodCode": "W",
+			"PaymentMethodDesc": "Wire"
+		}, {
+			"__metadata": {
+				"id": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='001',PaymentMethodCode='W')",
+				"uri": "http://apvendorspt.costco.com/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='001',PaymentMethodCode='W')",
+				"type": "/COSTPD/PAYER_DIRECT_SRV.PaymentMethod"
+			},
+			"Company": "001",
+			"PaymentMethodCode": "W",
+			"PaymentMethodDesc": "Wire"
+		}]
+	}
+}

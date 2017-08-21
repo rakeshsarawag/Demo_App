@@ -1,0 +1,171 @@
+[
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ReceivingsSet('PoNumber1')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ReceivingsSet('PoNumber1')",
+			"type": "payer_direct_srv.Receivings"
+		},
+		"Company": "any1",
+		"PoNumber": "PoNumber1",
+		"ReceiveDate": "/Date(1324972800000)/",
+		"VendorNo": "1234",
+		"WarehouseState": "te1",
+		"WarehouseName": "WarehouseName1"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ReceivingsSet('PoNumber1')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ReceivingsSet('PoNumber1')",
+			"type": "payer_direct_srv.Receivings"
+		},
+		"Company": "any1",
+		"PoNumber": "PoNumber2",
+		"ReceiveDate": "/Date(1424972800000)/",
+		"VendorNo": "1234",
+		"WarehouseState": "te2",
+		"WarehouseName": "WarehouseName2"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ReceivingsSet('PoNumber1')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ReceivingsSet('PoNumber1')",
+			"type": "payer_direct_srv.Receivings"
+		},
+		"Company": "any1",
+		"PoNumber": "PoNumber3",
+		"ReceiveDate": "/Date(1224972800000)/",
+		"VendorNo": "1234",
+		"WarehouseState": "te3",
+		"WarehouseName": "WarehouseName3"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ReceivingsSet('PoNumber1')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ReceivingsSet('PoNumber1')",
+			"type": "payer_direct_srv.Receivings"
+		},
+		"Company": "any1",
+		"PoNumber": "PoNumber4",
+		"ReceiveDate": "/Date(1524972800000)/",
+		"VendorNo": "1234",
+		"WarehouseState": "te4",
+		"WarehouseName": "WarehouseName4"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ReceivingsSet('PoNumber1')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ReceivingsSet('PoNumber1')",
+			"type": "payer_direct_srv.Receivings"
+		},
+		"Company": "any1",
+		"PoNumber": "PoNumber5",
+		"ReceiveDate": "/Date(1624972800000)/",
+		"VendorNo": "1234",
+		"WarehouseState": "te5",
+		"WarehouseName": "WarehouseName5"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ReceivingsSet('PoNumber1')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ReceivingsSet('PoNumber1')",
+			"type": "payer_direct_srv.Receivings"
+		},
+		"Company": "any1",
+		"PoNumber": "PoNumber6",
+		"ReceiveDate": "/Date(1124972800000)/",
+		"VendorNo": "1234",
+		"WarehouseState": "te6",
+		"WarehouseName": "WarehouseName6"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ReceivingsSet('PoNumber1')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ReceivingsSet('PoNumber1')",
+			"type": "payer_direct_srv.Receivings"
+		},
+		"Company": "any1",
+		"PoNumber": "PoNumber7",
+		"ReceiveDate": "/Date(1724972800000)/",
+		"VendorNo": "1234",
+		"WarehouseState": "te7",
+		"WarehouseName": "WarehouseName7"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ReceivingsSet('PoNumber1')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ReceivingsSet('PoNumber1')",
+			"type": "payer_direct_srv.Receivings"
+		},
+		"Company": "any1",
+		"PoNumber": "PoNumber8",
+		"ReceiveDate": "/Date(1024972800000)/",
+		"VendorNo": "1234",
+		"WarehouseState": "te8",
+		"WarehouseName": "WarehouseName8"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ReceivingsSet('PoNumber1')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ReceivingsSet('PoNumber1')",
+			"type": "payer_direct_srv.Receivings"
+		},
+		"Company": "any1",
+		"PoNumber": "PoNumber9",
+		"ReceiveDate": "/Date(1824972800000)/",
+		"VendorNo": "1234",
+		"WarehouseState": "te9",
+		"WarehouseName": "WarehouseName9"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ReceivingsSet('PoNumber1')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ReceivingsSet('PoNumber1')",
+			"type": "payer_direct_srv.Receivings"
+		},
+		"Company": "any1",
+		"PoNumber": "PoNumber10",
+		"ReceiveDate": "/Date(2024972800000)/",
+		"VendorNo": "1234",
+		"WarehouseState": "te10",
+		"WarehouseName": "WarehouseName10"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ReceivingsSet('PoNumber1')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ReceivingsSet('PoNumber1')",
+			"type": "payer_direct_srv.Receivings"
+		},
+		"Company": "any1",
+		"PoNumber": "PoNumber11",
+		"ReceiveDate": "/Date(1924972800000)/",
+		"VendorNo": "1234",
+		"WarehouseState": "te11",
+		"WarehouseName": "WarehouseName11"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ReceivingsSet('PoNumber1')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ReceivingsSet('PoNumber1')",
+			"type": "payer_direct_srv.Receivings"
+		},
+		"Company": "any1",
+		"PoNumber": "PoNumber12",
+		"ReceiveDate": "/Date(2124972800000)/",
+		"VendorNo": "1234",
+		"WarehouseState": "te12",
+		"WarehouseName": "WarehouseName12"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ReceivingsSet('PoNumber1')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ReceivingsSet('PoNumber1')",
+			"type": "payer_direct_srv.Receivings"
+		},
+		"Company": "any1",
+		"PoNumber": "PoNumber13",
+		"ReceiveDate": "/Date(2224972800000)/",
+		"VendorNo": "1234",
+		"WarehouseState": "te13",
+		"WarehouseName": "WarehouseName13"
+	}
+]

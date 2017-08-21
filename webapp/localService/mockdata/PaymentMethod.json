@@ -1,0 +1,42 @@
+[
+	{
+		"__metadata": {
+			"id": "http://sap-vd2ci.adt.np.costco.com:8001/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='any1',PaymentMethodCode='C')",
+			"uri": "http://sap-vd2ci.adt.np.costco.com:8001/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='any1',PaymentMethodCode='C')",
+			"type": "payer_direct_srv.PaymentMethod"
+		},
+		"PaymentMethodDesc": "Check-AP",
+		"Company": "any1",
+		"PaymentMethodCode": "C"
+	},
+	{
+		"__metadata": {
+			"id": "http://sap-vd2ci.adt.np.costco.com:8001/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='any1',PaymentMethodCode='E')",
+			"uri": "http://sap-vd2ci.adt.np.costco.com:8001/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='any1',PaymentMethodCode='E')",
+			"type": "payer_direct_srv.PaymentMethod"
+		},
+		"PaymentMethodDesc": "EFT-A/P",
+		"Company": "any1",
+		"PaymentMethodCode": "E"
+	},
+	{
+		"__metadata": {
+			"id": "http://sap-vd2ci.adt.np.costco.com:8001/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='any1',PaymentMethodCode='U')",
+			"uri": "http://sap-vd2ci.adt.np.costco.com:8001/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='any1',PaymentMethodCode='U')",
+			"type": "payer_direct_srv.PaymentMethod"
+		},
+		"PaymentMethodDesc": "RBCE USD Funds Checks",
+		"Company": "any1",
+		"PaymentMethodCode": "U"
+	},
+	{
+		"__metadata": {
+			"id": "http://sap-vd2ci.adt.np.costco.com:8001/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='any1',PaymentMethodCode='W')",
+			"uri": "http://sap-vd2ci.adt.np.costco.com:8001/sap/opu/odata/costpd/payer_direct_srv/PaymentMethodSet(Company='any1',PaymentMethodCode='W')",
+			"type": "payer_direct_srv.PaymentMethod"
+		},
+		"PaymentMethodDesc": "Wire Transfer",
+		"Company": "any1",
+		"PaymentMethodCode": "W"
+	}
+]

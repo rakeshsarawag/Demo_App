@@ -1,0 +1,92 @@
+[
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ReturnsSet('0001')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ReturnsSet('0001')",
+			"type": "payer_direct_srv.Returns"
+		},
+		"ViewKey": "0001",
+		"Currency": "CAD",
+		"TotalDeductionAmount": "60.0",
+		"TrackingNumber": "",
+		"CarrierName": "BIG TRUCK",
+		"ShippingLocation": "Burnaby,BC",
+		"DateShipped": "/Date(1419667200000)/",
+		"ReturnAuthorizationNumber": "",
+		"DeductionNumber": "0001",
+		"Company": "any1",
+		"VendorNo": "1234"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ReturnsSet('0002')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ReturnsSet('0002')",
+			"type": "payer_direct_srv.Returns"
+		},
+		"ViewKey": "0002",
+		"Currency": "CAD",
+		"TotalDeductionAmount": "60.0",
+		"TrackingNumber": "65484313",
+		"CarrierName": "DELIVERY MAN",
+		"ShippingLocation": "Burnaby,BC",
+		"DateShipped": "/Date(1419667200000)/",
+		"ReturnAuthorizationNumber": "",
+		"DeductionNumber": "0002",
+		"Company": "any1",
+		"VendorNo": "1234"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ReturnsSet('0003')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ReturnsSet('0003')",
+			"type": "payer_direct_srv.Returns"
+		},
+		"ViewKey": "0003",
+		"Currency": "CAD",
+		"TotalDeductionAmount": "60.0",
+		"TrackingNumber": "1Z6548431310484025",
+		"CarrierName": "UPS",
+		"ShippingLocation": "Burnaby,BC",
+		"DateShipped": "/Date(1419667200000)/",
+		"ReturnAuthorizationNumber": "",
+		"DeductionNumber": "0003",
+		"Company": "any1",
+		"VendorNo": "1234"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ReturnsSet('0004')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ReturnsSet('0004')",
+			"type": "payer_direct_srv.Returns"
+		},
+		"ViewKey": "0004",
+		"Currency": "CAD",
+		"TotalDeductionAmount": "60.0",
+		"TrackingNumber": "1ZWWWWWWWWWWWWWWWW",
+		"CarrierName": "UPS",
+		"ShippingLocation": "Burnaby,BC",
+		"DateShipped": "/Date(1419667200000)/",
+		"ReturnAuthorizationNumber": "",
+		"DeductionNumber": "0004",
+		"Company": "any1",
+		"VendorNo": "1234"
+	},
+	{
+		"__metadata": {
+			"id": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ReturnsSet('0005')",
+			"uri": "http://nspad257.pal.sap.corp:8080/com.sap.odata.dynamic.service.provider/odata/costco_03/ReturnsSet('0005')",
+			"type": "payer_direct_srv.Returns"
+		},
+		"ViewKey": "0005",
+		"Currency": "CAD",
+		"TotalDeductionAmount": "60.0",
+		"TrackingNumber": "1ZWWWWWWWWWWWWWWWW",
+		"CarrierName": "UPS",
+		"ShippingLocation": "Burnaby,BC",
+		"DateShipped": "/Date(1391241600000)/",
+		"ReturnAuthorizationNumber": "",
+		"DeductionNumber": "0005",
+		"Company": "any1",
+		"VendorNo": "1234"
+	}
+]

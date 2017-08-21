@@ -1,0 +1,161 @@
+{
+    "_version": "1.2.0",
+    "sap.app": {
+        "_version": "1.2.0",
+        "id": "sap.cdp.demo.demoApplication5",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "title": "{{APP_TITLE}}",
+        "description": "{{APP_DESCRIPTION}}",
+        "applicationVersion": {
+            "version": "1.1.0-SNAPSHOT"
+        },
+        "ach": "XX",
+        "dataSources": {
+            "mainService": {
+                "uri": "/sap/opu/odata/costpd/payer_direct_srv/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0",
+                    "localUri": "localService/metadata.xml"
+                }
+            }
+        },
+        "sourceTemplate": {
+            "id": "sap.ui.ui5-template-plugin.1worklist",
+            "version": "1.36.2"
+        }
+    },
+    "sap.fiori": {
+        "_version": "1.1.0",
+        "registrationIds": ["F1000"],
+        "archeType": "transactional"
+    },
+    "sap.ui": {
+        "_version": "1.2.0",
+        "technology": "UI5",
+        "icons": {
+            "icon": "sap-icon://task",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": false
+        },
+        "supportedThemes": ["sap_hcb", "sap_bluecrystal"]
+    },
+    "sap.ui5": {
+        "_version": "1.2.0",
+        "rootView": {
+            "viewName": "sap.cdp.demo.demoApplication5.view.App",
+            "type": "XML",
+            "id": "sapcdpDoeApplicationName"
+        },
+        "dependencies": {
+            "minUI5Version": "1.38.0",
+            "libs": {
+                "sap.ui.core": {
+                    "minVersion": "1.38.0"
+                },
+                "sap.m": {
+                    "minVersion": "1.38.0"
+                },
+                "sap.ushell": {
+                    "minVersion": "1.38.0"
+                },
+                "sap.ui.comp": {
+                    "minVersion": "1.38.0"
+                }
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "sap.cdp.demo.demoApplication5.i18n.i18n"
+                }
+            },
+            "": {
+                "dataSource": "mainService",
+                "settings": {
+                    "metadataUrlParams": {
+                        "sap-documentation": "heading"
+                    }
+                }
+            }
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "viewPath": "",
+                "controlId": "sapcdpDoeApplicationName",
+                "controlAggregation": "pages",
+                "bypassed": {
+                    "target": ["notFound"]
+                },
+                "async": true
+            },
+            "routes": [{
+                "pattern": "",
+                "name": "taskList",
+                "target": ["taskList"]
+            }, {
+                "name": "createClaim",
+                "pattern": "{VendorNo}/{Company}",
+                "target": ["createClaim"]
+            }, {
+                "name": "viewClaim",
+                "pattern": "ViewClaim/{VendorNo}/{Company}/{ClaimNo}/{Guid}",
+                "target": ["viewClaim"]
+            }, {
+                "name": "viewRemittanceDetail",
+                "pattern": "{VendorNo}/{Company}/{RefNumber}/{PaymentNumber}",
+                "target": ["viewRemittanceDetail"]
+            }],
+            "targets": {
+                "notFound": {
+                    "viewName": "NotFound",
+                    "viewId": "notFound"
+                },
+                "taskList": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearAggregation": true,
+                    "viewName": "sap.cdp.demo.demoApplication5.view.TaskList",
+                    "viewLevel": 1
+                },
+                "createClaim": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearAggregation": true,
+                    "viewName": "sap.cdp.demo.demoApplication5.view.CreateClaim",
+                    "viewLevel": 2
+                },
+                "viewRemittanceDetail": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearAggregation": true,
+                    "viewName": "sap.cdp.demo.demoApplication5.view.ViewRemittanceDetail",
+                    "viewLevel": 2
+                },
+                "viewClaim": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearAggregation": true,
+                    "viewName": "sap.cdp.demo.demoApplication5.view.ViewClaim",
+                    "viewLevel": 2
+                }
+            }
+        }
+    }
+}

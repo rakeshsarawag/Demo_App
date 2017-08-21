@@ -1,0 +1,7 @@
+<mvc:View controllerName="sap.cdp.demo.demoApplication5.controller.NotFound" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<MessagePage description="" icon="{sap-icon://document}" id="page" text="{i18n>PAGE_NOT_FOUND_TEXT}" title="{i18n>PAGE_NOT_FOUND_TITLE}">
+		<customDescription>
+			<Link id="link" press="onLinkPressed" text="{i18n>BACK_TO_TASK_LIST}"/>
+		</customDescription>
+	</MessagePage>
+</mvc:View>

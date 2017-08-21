@@ -1,0 +1,47 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form">
+    <fb:FilterBar id="idRecievingsFilter" search="onReceivingFilterPress" clear="onFilterClear" showClearOnFB="true" showClearButton="true" filterBarExpanded="true" filterContainerWidth="20rem" showFilterConfiguration="true" xmlns:fb="sap.ui.comp.filterbar">
+        <fb:filterItems>
+            <fb:FilterItem id="id_Recievings_Filter_Search" name="FilterSearch" label="{i18n>FILTER_SEARCH}">
+                <fb:control>
+                    <Select ariaLabelledBy="id_Payment_type" change="onReceivingsItemsSearchChange">
+                        <core:Item text="{i18n>FILTER_SEARCH_PO_DESC}" key="po" />
+                    </Select>
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem id="id_Recievings_Filter_Po" name="PO" label="{i18n>FILTER_SEARCH_PO_DESC}" visible="{viewData>/ReceivingsTab/PoVisible}">
+                <fb:control>
+                    <Input id="idReceivingsStrAdrInp" type="Text" value="{filterData>/ReceivingsTab/PurchaseOrder}"/>
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem id="id_Recievings_Filter_Invoice" name="Invoice" label="{i18n>FILTER_SEARCH_INVOICE_DESC}" visible="{viewData>/ReceivingsTab/InvoiceVisible}">
+                <fb:control>
+                    <Input type="Text" ariaLabelledBy="idPoBox" value="{filterData>/ReceivingsTab/InvoiceNumber}"/>
+                </fb:control>
+            </fb:FilterItem>
+            </fb:filterItems>
+    </fb:FilterBar>
+    <Table id="idRecievingsTable" noDataText="{i18n>TABLE_NODATA_TITLE}" growing="true" updateFinished="onReceivingsUpdateFinished" growingTriggerText="{i18n>SHOW_MORE_DOC}" growingThreshold="20">
+        <headerToolbar>
+            <Toolbar id="idToolbarRecievings" design="Transparent">
+                <Title text="{ parts : [{path:'i18n>NAV_TITLE_420_TABLE_TITLE'}, {path:'commonData>/ReceivingItems'}], formatter : 'jQuery.sap.formatMessage' }" tooltip="{ parts : [{path:'i18n>NAV_TITLE_420_TABLE_TITLE'}, {path:'commonData>/ReceivingItems'}], formatter : 'jQuery.sap.formatMessage' }" level="H2" />
+                <ToolbarSpacer/>
+                <Button icon="sap-icon://sort" press="onSortReceivings" tooltip="{i18n>SORT_SUPPLIERS_TOOL}" type="Transparent" />
+                <Button id="idRecievingsExportButton" icon="sap-icon://excel-attachment" press="onSupplierExportExcel" tooltip="{i18n>EXPORT_EXCEL_TOOL}" type="Transparent" />
+            </Toolbar>
+        </headerToolbar>
+        <columns>
+            <Column>
+                <Label text="{i18n>PO_NUM_420}" tooltip="{i18n>PO_NUM_420}" />
+            </Column>
+            <Column>
+                <Label text="{i18n>RECEIVE_DATE_420}" tooltip="{i18n>RECEIVE_DATE_420}" />
+            </Column>
+            <Column demandPopin="true" minScreenWidth="Phone" popinDisplay="Inline">
+                <Label text="{i18n>WAREHOUSE_NAME_420}" tooltip="{i18n>WAREHOUSE_NAME_420}" />
+            </Column>
+            <Column demandPopin="true" minScreenWidth="Phone" popinDisplay="Inline">
+                <Label text="{i18n>WAREHOUSE_STATE_420}" tooltip="{i18n>WAREHOUSE_STATE_420}" />
+            </Column>
+            </columns>
+    </Table>
+</core:FragmentDefinition>
