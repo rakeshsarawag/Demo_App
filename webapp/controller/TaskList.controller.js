@@ -627,7 +627,7 @@ sap.ui.define([
                 aFilters = this._getFilters(this.CLAIMS_TAB, true, false, "ClaimDate");
 
                 if (sSelectedStatusKey) {
-                    aFilters.push(this._createFilter("ClaimStatusCode", this._getFilterModelProperty(sSelectedStatusKey)));
+                    aFilters.push(this._createFilter("ClaimStatusCode", this._getFilterModelProperty("ClaimsTab/ClaimStatusSelectedKey")));
                 }
                 if (sSelectedTypeKey) {
                     aFilters.push(this._createFilter("ClaimType", this._getFilterModelProperty(sSelectedTypeKey)));
