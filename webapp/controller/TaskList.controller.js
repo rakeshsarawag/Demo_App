@@ -1075,7 +1075,7 @@ sap.ui.define([
             aFilters = this.createBaseFilter();
 
             if (sPoRequired && this._getFilterModelProperty(sProperty + "/PurchaseOrder") && this._getViewModelProperty(sProperty + "/PoVisible")) {
-                aFilters.push(this._createFilter("PoNumber ", this._getFilterModelProperty(sProperty + "/PurchaseOrder")));
+                aFilters.push(this._createFilter("PoNumber", this._getFilterModelProperty(sProperty + "/PurchaseOrder")));
             } else if (sPoRequired && this._getFilterModelProperty(sProperty + "/InvoiceNumber") && this._getViewModelProperty(sProperty + "/InvoiceVisible")) {
                 aFilters.push(this._createFilter("InvoiceNumber", this._getFilterModelProperty(sProperty + "/InvoiceNumber")));
             } else if (sPaymentRequired && this._getFilterModelProperty(sProperty + "/PaymentNumber") && this._getViewModelProperty(sProperty + "/PaymentNumberVisible")) {
