@@ -638,7 +638,7 @@ sap.ui.define([
                     aFilters.push(this._createFilter("ClaimStatusCode", this._getFilterModelProperty("ClaimsTab/ClaimStatusSelectedKey")));
                 }
                 if (sSelectedTypeKey) {
-                    aFilters.push(this._createFilter("ClaimType", this._getFilterModelProperty(sSelectedTypeKey)));
+                    aFilters.push(this._createFilter("ClaimType", this._getFilterModelProperty("ClaimsTab/ClaimTypeSelectedKey")));
                 }
                 //Applying filters on table binding
                 oBinding.filter(aFilters);

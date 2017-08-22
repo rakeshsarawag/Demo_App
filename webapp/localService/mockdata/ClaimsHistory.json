@@ -83,7 +83,7 @@
 			"ClaimDate": "\/Date(1494892800000)\/",
 			"ClosedDate": null,
 			"DispositionDesc": "",
-			"ClaimStatusCode": "N",
+			"ClaimStatusCode": "R",
 			"ClaimStatusDesc": "Rejected"
 		}, {
 			"__metadata": {

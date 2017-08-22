@@ -5,12 +5,12 @@
                 <fb:control>
                     <Select ariaLabelledBy="id_Payment_type" change="onClaimStatusChange" selectedKey="{filterData>/ClaimsTab/ClaimStatusSelectedKey}">
                         <core:Item text="{i18n>CLAIM_STATUS_ALL}" key="ALL" />
-                        <core:Item text="{i18n>CLAIM_STATUS_N}" key="NEW" />
-                        <core:Item text="{i18n>CLAIM_STATUS_I}" key="PROCESS" />
-                        <core:Item text="{i18n>CLAIM_STATUS_R}" key="REJECTED" />
-                        <core:Item text="{i18n>CLAIM_STATUS_A}" key="APPROVED" />
-                        <core:Item text="{i18n>CLAIM_STATUS_C}" key="COMPLETED" />
-                        <core:Item text="{i18n>CLAIM_STATUS_X}" key="CANCELED" />
+                        <core:Item text="{i18n>CLAIM_STATUS_N}" key="N" />
+                        <core:Item text="{i18n>CLAIM_STATUS_I}" key="P" />
+                        <core:Item text="{i18n>CLAIM_STATUS_R}" key="R" />
+                        <core:Item text="{i18n>CLAIM_STATUS_A}" key="A" />
+                        <core:Item text="{i18n>CLAIM_STATUS_C}" key="CO" />
+                        <core:Item text="{i18n>CLAIM_STATUS_X}" key="CA" />
                     </Select>
                 </fb:control>
             </fb:FilterItem>
@@ -19,9 +19,9 @@
                     <Select ariaLabelledBy="id_Payment_type" change="onClaimTypeChange" selectedKey="{filterData>/ClaimsTab/ClaimTypeSelectedKey}">
                         <core:Item text="{i18n>CLAIM_TYPES_ALL}" key="90-d" />
                         <core:Item text="{i18n>CLAIM_BUYER_SUPPORT}" key="12-m" />
-                        <core:Item text="{i18n>CLAIM_FREIGHT}" key="custom" />
-                        <core:Item text="{i18n>CLAIM_COUPON}" key="custom" />
-                        <core:Item text="{i18n>CLAIM_ENDCAP}" key="custom" />
+                        <core:Item text="{i18n>CLAIM_FREIGHT}" key="FC_FPT" />
+                        <core:Item text="{i18n>CLAIM_COUPON}" key="AR_CP" />
+                        <core:Item text="{i18n>CLAIM_ENDCAP}" key="AR_EC" />
                     </Select>
                 </fb:control>
             </fb:FilterItem>
