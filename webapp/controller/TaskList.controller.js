@@ -143,7 +143,15 @@ sap.ui.define([
                 }
             });
         },
-
+		onUserSettingPress : function(oEvent) {
+			sap.m.URLHelper.redirect("https://hub.costco.com", true);
+		},
+		onEthicsHotlinePress : function(oEvent) {
+			sap.m.URLHelper.redirect("http://www.costco.com/confidential-ethics-hotline-for-suppliers.html", true);
+		},
+		onLinkTermsPress : function(oEvent) {
+			sap.m.URLHelper.redirect("https://useracceptance.costco.com/terms/termsandconditions/staticpage", true);
+		},
         onPaymentSubTabPress: function(oEvent) {
             var oResource = this.getResourceBundle(),
                 sText = oEvent.getSource().getText(),

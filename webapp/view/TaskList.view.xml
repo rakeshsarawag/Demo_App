@@ -88,9 +88,9 @@
             <OverflowToolbar>
                 <Button text="{i18n>LBL_AR}" press="onAccReceivablePress" />
                 <ToolbarSpacer/>
-                <Button text="{i18n>LINK_USER_SETTINGS}" type="Transparent"/>
-                <Button text="{i18n>LINK_ETHICS_HOTLINE}" type="Transparent"/>
-                <Button text="{i18n>LINK_TERMS}" type="Transparent"/>
+                <Button text="{i18n>LINK_USER_SETTINGS}" press="onUserSettingPress" type="Transparent"/>
+                <Button text="{i18n>LINK_ETHICS_HOTLINE}" press="onEthicsHotlinePress" type="Transparent"/>
+                <Button text="{i18n>LINK_TERMS}" press="onLinkTermsPress" type="Transparent"/>
                 <ToolbarSpacer/>
                 <Button icon="sap-icon://add" press="onCreateClaimPress" tooltip="{i18n>NAV_TITLE_610}" type="Transparent" />
             </OverflowToolbar>
