@@ -17,7 +17,7 @@ sap.ui.define([
 
     return BaseController.extend("sap.cdp.demo.demoApplication5.controller.TaskList", {
         formatter: formatter,
-        // Client Model
+        // Client Model 
         PAYMENTS_TAB: "PaymentsTab",
         REMMITANCE_TAB: "RemmitanceTab",
         PENDING_ITEMS_TAB: "InvoicesTab",
@@ -143,7 +143,15 @@ sap.ui.define([
                 }
             });
         },
-
+		onUserSettingPress : function(oEvent) {
+			sap.m.URLHelper.redirect("https://hub.costco.com", true);
+		},
+		onEthicsHotlinePress : function(oEvent) {
+			sap.m.URLHelper.redirect("http://www.costco.com/confidential-ethics-hotline-for-suppliers.html", true);
+		},
+		onLinkTermsPress : function(oEvent) {
+			sap.m.URLHelper.redirect("https://useracceptance.costco.com/terms/termsandconditions/staticpage", true);
+		},
         onPaymentSubTabPress: function(oEvent) {
             var oResource = this.getResourceBundle(),
                 sText = oEvent.getSource().getText(),
