@@ -223,7 +223,7 @@ sap.ui.define([
                 for (var i = 0; i < oFragment.length; i++) {
                     oLayout.addContent(oFragment[i]);
                 }
-                this._bindItemsAggregation(this.UNPAID_ITEMS_TAB, "/PaymentHistorySet", "UnpaidItems", "UnPaidItemsList");
+                this._bindItemsAggregation(this.UNPAID_ITEMS_TAB, "/PaymentHistorySet", "UnpaidItems", "UnpaidItemsList");
             } else {
                 this._setHeaderTitle("NAV_TITLE_451");
                 oFragment = sap.ui.xmlfragment("sap.cdp.demo.demoApplication5.fragment.UnpaidItems.PaymentForecast",
@@ -266,7 +266,7 @@ sap.ui.define([
                 oSegmentBtn = this._getSegmentButton("idUnpaidItemsSegmentButton");
                 if (oSegmentBtn.getSelectedKey() === "UnpaidItems") {
                     this._setHeaderTitle("NAV_TITLE_450");
-                    this._bindItemsAggregation(this.UNPAID_ITEMS_TAB, "/PaymentHistorySet", "UnpaidItems", "UnPaidItemsList");
+                    this._bindItemsAggregation(this.UNPAID_ITEMS_TAB, "/PaymentHistorySet", "UnpaidItems", "UnpaidItemsList");
                 } else {
                     this._setHeaderTitle("NAV_TITLE_451");
                     this._bindItemsAggregation(this.PAYMENT_FORECAST_TAB, "/PaymentForecastSet", "UnpaidItems", "PaymentForecastItems");
