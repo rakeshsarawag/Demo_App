@@ -6,7 +6,7 @@
                 <Text text="{PoNumber}" />
                 <Text text="{parts : [{path : 'ClaimDate'}], formatter : '.formatter.getDateInDDMMYYYY'}" />
                 <Text text="{ClaimStatusDesc}" />
-                <Text text="{ClaimType}" />
+                <Text text="{ClaimDescription}" />
                 <Text text="{ClaimCount}" />
                 <Text text="{ClaimAmount}" />
                 <Text text="{DispositionAmount}" />
