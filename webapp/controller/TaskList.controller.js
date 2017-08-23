@@ -47,6 +47,9 @@ sap.ui.define([
             this._setHeaderTitle("ABOUT_YOU_BAR");
             this._component = this.getOwnerComponent();
             this._setInitialFragments();
+            
+            // Initalizing Variant Management
+             this._getVariants();
 
             this.getRouter().getRoute("taskList").attachPatternMatched(this._onNavigationPatternMatched, this);
             // Adding the school picker button in launchpad
@@ -1364,7 +1367,43 @@ sap.ui.define([
         _createPdfDownloadUri : function(context) {
             var oModel = this.getModel();
             return "/" + oModel.sServiceUrl + "ViewPdfSet(ViewKey='" + context.ViewKey + "')" + "/$value?$filter=VendorNo eq '" + context.VendorNo + "' and Company eq '" + context.Company + "'";
-        }
+        },
+        /**
+         * Initialize the Variant Management
+         * @Private
+         */
+        _getVariants : function() {
+            var oFilterBar = this.getView().byId("idClaimsFilter");
+
+            oFilterBar.registerFetchData(this._fetchFilterData.bind(this));
+            oFilterBar.registerApplyData(this._applyFilterData.bind(this));
+
+            oFilterBar.fireInitialise();
+        },
+        /**
+         * Fetch Filter Bar data
+         * @returns {Array} Filter Bar Data
+         * @Private
+         */
+        _fetchFilterData: function() {
+            var oJsonData = {},
+                oFilterBarData =  this._getFilterModelProperty("ClaimsTab");
+
+            oJsonData = jQuery.extend(true, {}, oFilterBarData);
+
+            return oJsonData;
+        },
+        /**
+         * Applies Filter data to the Filter Bar
+         * @param  {Array} oJsonData Filter Bar Data
+         * @Private
+         */
+        _applyFilterData: function(oJsonData) {
+
+            //updating values of the variant into the filtermodel
+            this._setFilterModelProperty("ClaimsTab", oJsonData); 
+        	
+        },
 
     });
 });
